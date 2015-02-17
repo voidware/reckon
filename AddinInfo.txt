@@ -1,0 +1,12 @@
+//------------------------------------------------------------------
+// Addin-Application header control file, created with the CASIO SDK
+//------------------------------------------------------------------
+[OUTPUT]     : "RECKON.G1A"
+[BINDATA]    : "FXADDINror.bin"
+[DISPNAME]   : "Reckon"
+[APPNAME]    : "@RECKON"
+[VERSION]    : "01.00.0000"
+[APL_ICON]   : "MainIcon.bmp"
+[MODULE_NUM] : 0
+[MOD1_TITLE] : "Reckon"
+[MOD1_ICON]  : "eActivityIcon.bmp"

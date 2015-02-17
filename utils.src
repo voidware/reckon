@@ -1,0 +1,26 @@
+   .SECTION P,CODE,ALIGN=4 
+  .export _GetVRAMPtr
+_GetVRAMPtr:
+  mov.l #H'0135, r0
+  mov.l #H'80010070, r2
+  jmp @r2
+  nop
+
+  .export _KBD_GetKeyWait 
+  .export _OSVersion
+  .export _OSPowerOff
+  .export _OSInjectKey
+    
+  .MACRO SYSCALL FUNO 
+   mov.l #h'\FUNO, r0 
+   mov.l #H'80010070, r2 
+   jmp @r2 
+   nop 
+   .ENDM 
+    
+_KBD_GetKeyWait: SYSCALL 0247    
+_OSVersion: SYSCALL 015
+_OSPowerOff: SYSCALL 3F4
+_OSInjectKey: SYSCALL 248
+
+  .end
