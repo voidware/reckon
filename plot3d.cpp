@@ -422,7 +422,6 @@ bool Plot3D::createModel()
         }
         
         _model->radius = radius;
-        _model->scale  = 0;
         //init_normals(_model);
         //shade_planes(_model);
 
