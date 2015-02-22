@@ -76,7 +76,7 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\l3api.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Header Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

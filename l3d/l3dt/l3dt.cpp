@@ -122,7 +122,7 @@ int APIENTRY _tWinMain(HINSTANCE hInstance,
    
     //if (!L3Start("dumbell")) return 0;
     if (!L3Start("torus")) return 0;
-    //if (!L3Start("teapot")) return 0;
+   // if (!L3Start("teapot")) return 0;
 
     SetTimer(hWnd, 0, 50, timerHandler);
 

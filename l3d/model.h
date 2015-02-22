@@ -74,7 +74,7 @@ struct Motion
 
 
 
-       /* draw flags        these should be the lowest level flags */
+       /* draw flags        these should be th`e lowest level flags */
 
 #define MOVED             1
 #define TRANSLATING       2
@@ -93,7 +93,6 @@ struct Model
     int                 draw_flags;
     int                 clip_code;
     int                 radius;           /* radius of sphere enclosing model */
-    int                 scale; 
     int                 screen_size;
     Vector3*            light;
     Matrix3             orientat;

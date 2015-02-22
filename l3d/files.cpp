@@ -37,42 +37,42 @@
 
 #define MODEL_VERSION 0x02000000L
 #define MAX_VERTICES 6
-#define SAVExx
+
+// comment in to include "save" code
+//#define SAVE
 
 #ifdef SAVE
-void putByte(char num, FILE *fp)
+static void putByte(char num, FILE *fp)
 {        
     putc(num, fp);
 }
 
-void
-putShort(short num, FILE *fp)
+static void putShort(short num, FILE *fp)
 {        
     putc(num & 0xff, fp);
     putc(num >> 8, fp);
 }
 
-void
-putLong(long num, FILE* fp)
+static void putLong(long num, FILE* fp)
 {        
     putShort((short)(num & 0xffff), fp);
     putShort((short)(num >> 16), fp);
 }
 #endif // SAVE
 
-char getByte(FILE* fp)
+static char getByte(FILE* fp)
 { 
     return getc(fp); 
 }
 
-short getShort(FILE* fp)
+static short getShort(FILE* fp)
 { 
     short tmp = getc(fp);
     tmp |= getc(fp) << 8; 
     return tmp;
 }
 
-long getLong(FILE* fp)
+static long getLong(FILE* fp)
 { 
     long tmp = getShort(fp);
     tmp |=  getShort(fp) << 16;
@@ -81,9 +81,8 @@ long getLong(FILE* fp)
 
 Model* load_object(const char *name)
 {
-    Model *load_model;
-    FILE *fp;  
-    int scale = 0;
+    Model* m;
+    FILE* fp;  
 
     if (!(fp = fopen(name, "rb"))) 
     {
@@ -93,10 +92,10 @@ Model* load_object(const char *name)
      
     if (fp) 
     {
-        int num,radius = 0;
-        int n_vertices    ;
-        int n_planes      ;
-        int n_subgroups   ;
+        int num;
+        int n_vertices;
+        int n_planes;
+        int n_subgroups;
         Point3 *vert_p;
         Plane   *plan_p;
         Group   *sub_p;
@@ -113,39 +112,31 @@ Model* load_object(const char *name)
         n_planes    = getShort(fp);
         n_subgroups = getShort(fp);
          
-        load_model = create_model(n_vertices, n_subgroups, n_planes, n_vertices, n_planes);
-        if (load_model)
+        m = create_model(n_vertices, n_subgroups, n_planes, n_vertices, n_planes);
+        if (m)
         {
-            load_model->radius= getShort(fp); 
+            m->radius= getShort(fp); 
 
-            vert_p = load_model->vertices;
+            vert_p = m->vertices;
             
             for(; n_vertices; n_vertices--) 
             {
-                int x,y,z,tmp;
-                x = getShort(fp)<<scale;
-                y = getShort(fp)<<scale;
-                z = getShort(fp)<<scale;
-                vert_p->x = x;
-                vert_p->y = y;
-                vert_p->z = z;
-                if ((tmp = isqrt(x*x+y*y+z*z)) > radius)
-                    radius = tmp;
+                vert_p->x = getShort(fp);
+                vert_p->y = getShort(fp);
+                vert_p->z = getShort(fp);
                 vert_p++;
             }
 
-            load_model->radius = radius;
-
-            plan_p = load_model->planes;
-            sub_p  = load_model->subgroups;
-            load_model->num_subgroups = n_subgroups;                          
+            plan_p = m->planes;
+            sub_p  = m->subgroups;
+            m->num_subgroups = n_subgroups;                          
 
             for(; n_subgroups; n_subgroups--) 
             {
                 Point3 **op;
                 int i;
                 int subnum;
-                Point3 *base = load_model->vertices;
+                Point3 *base = m->vertices;
 
                 sub_p->plane      = plan_p;
                 subnum            = getByte(fp);
@@ -160,10 +151,10 @@ Model* load_object(const char *name)
                     if (plan_p->num_verts > MAX_VERTICES)
                         plan_p->num_verts = MAX_VERTICES;
 
-                    op = &(plan_p->p1);
+                    op = &plan_p->p1;
                     for (i = 0; i < plan_p->num_verts; i++) 
                     {
-                        (*op)   = base + getShort(fp);
+                        (*op)  = base + getShort(fp);
                         if (*op < base) *op = base;
                         op++;
                     }	   
@@ -179,70 +170,73 @@ Model* load_object(const char *name)
                 }
                 sub_p++;
             }
-            load_model->scale  = scale;
-            init_normals(load_model);
-            shade_planes(load_model);
-            calcVertexRefs(load_model);
+            init_normals(m);
+            shade_planes(m);
+            calcVertexRefs(m);
+
 #ifdef SUPPORT_GOURAUD
-            shade_vertices(load_model);
+            shade_vertices(m);
 #endif
+            
         }
         fclose(fp);
     }
-    return load_model;
+    return m;
 }
 
 #ifdef SAVE
-void save_object(Model* save_model, char* name)
+void save_object(Model* m, char* name)
 {
     FILE *fp = fopen(name, "wb");
-    Point3 *vert_p = save_model->_vertices;
-    int n_verts      = save_model->num_vertices;    
-    int n_subs       = save_model->num_subgroups;
-    Plane *plan_p   = save_model->planes;
-    Group *sub_p    = save_model->subgroups;
+    Point3 *vert_p = m->vertices;
+    int n_verts    = m->num_vertices;    
+    int n_subs     = m->num_subgroups;
+    Plane *plan_p  = m->planes;
+    Group *sub_p   = m->subgroups;
 
-    if (fp) {  
-        int n_plans;
-
+    if (fp)
+    {  
         putLong( MODEL_VERSION, fp);   
 
         printf("saving - %s ",name);
-        putShort(save_model->num_vertices , fp);
-        putShort(save_model->num_planes   , fp );
-        putShort(save_model->num_subgroups, fp);
-        putShort(save_model->radius, fp);                             
+        putShort(m->num_vertices, fp);
+        putShort(m->num_planes, fp );
+        putShort(m->num_subgroups, fp);
+        putShort(m->radius, fp);                             
 
-        for(; n_verts; n_verts--) {
+        for(; n_verts; n_verts--)
+        {
             putShort(vert_p->x, fp);
             putShort(vert_p->y, fp);
             putShort(vert_p->z, fp);
             vert_p++;
         }
 
-        for(; n_subs; n_subs--) {
-	    Point3 **op;
-	    int i;
-            Point3 *base = save_model->_vertices;
+        for(; n_subs; n_subs--)
+        {
+            Point3 **op;
+            int i;
+            Point3 *base = m->vertices;
             putByte(1/*sub_p->num*/, fp);  
             putShort(sub_p->num_planes, fp);
             putShort(sub_p->point, fp);
-            n_plans = sub_p->num_planes;
+            int np = sub_p->num_planes;
             plan_p  = sub_p->plane;     
         
-            for(; n_plans; n_plans--) {
+            for(; np; np--)
+            {
                 putByte(plan_p->num_verts, fp);
-		op = &(plan_p->p1);
-	        for (i = 0; i < plan_p->num_verts; i++) {
+                op = &plan_p->p1;
+                for (i = 0; i < plan_p->num_verts; i++)
+                {
                     putShort((*op) - base, fp);
-	    	    op++;
-		}
+                    op++;
+                }
                 putByte(plan_p->color, fp);
                 plan_p++;
             }
             sub_p++;
         }
-        printf("ok\n");
         fclose(fp);
     }
 }

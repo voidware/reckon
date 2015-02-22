@@ -139,8 +139,6 @@ static int modelInView(Viewport *view, Model *m)
         return TRUE;
     }
 
-    m->scale       = scale; 
-
     s1 = (scal * view->scale_x_num) >> 8;
 
     clip_posL = (int)((x - s1) >> 12);

@@ -32,8 +32,5 @@ short  getShort(FILE *fp);
 void   putLong(long num, FILE *fp);
 long   getLong(FILE *fp);
 
-Model*  LoadModelData(char*);
-Model*  LoadModel(void);
-void   SaveModel(Model*, char*);
 Model*  load_model(const char *);
 Model* load_object(const char *name);

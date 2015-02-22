@@ -420,7 +420,6 @@ Model* createDummy()
         plan_p->type = TRIANGLE;
         //plan_p->area = VISIBLE;
     }
-    m->scale  = 0;
     return m;
 }
 
