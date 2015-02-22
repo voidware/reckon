@@ -122,7 +122,7 @@ bool Plot::calibrate(DC2D* dc, BCD& x1, BCD& x2, int w, int h)
         _x1 = x2;
     }
 
-    // size of user cavas not including margins
+    // size of user canvas not including margins
     _width = w;
     _height = h;
 
@@ -209,7 +209,7 @@ int Plot::update1()
             {
                 gl = i;
                 
-                // scan foward to size gap
+                // scan forward to size gap
                 gr = i + 1;
                 while (gr < _nPoints && _points[gr]._gy < 0) ++gr;
                 
@@ -266,7 +266,7 @@ void Plot::eval1(int pt)
     // mark as no longer uneval (even if fail)
     pp->_gy = 0;
 
-    // mark undefined (incase fail)
+    // mark undefined (in case fail)
     pp->_gx = -1; 
 
     BCD y;
@@ -466,7 +466,7 @@ bool Plot::poi(Bitmap2D* scr)
         if (pos >= _nPoints - _margin) 
         {
             pos = _margin;
-            _poiLast = 0; // min/max doesnt wrap.
+            _poiLast = 0; // min/max doesn't wrap.
             if (_poiZero < 0) break; // did not have previous
         }
 

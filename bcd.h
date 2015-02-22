@@ -205,7 +205,7 @@ struct BCD
     static BCD          inf() { return BCDFloat::posInf(); }
 
 
-    // Comparision
+    // Comparison
     friend bool         operator==(const BCD& a, const BCD& b)
                         { return BCDFloat::equal(&a._v, &b._v); }
     friend bool         operator!=(const BCD& a, const BCD& b)

@@ -632,14 +632,14 @@ void BitBlt2D(DC2D* dcDest, int dx1, int dy1, int w, int h,
                             /* turn the destination colour into an intensity,
                              * then use it to mix the fg colour with the
                              * bg colour. BUT use MAX-intensity in order
-                             * to give an intersion effect.
+                             * to give an inversion effect.
                              */
 
                             UNPACK_COLOR16(fr, fg, fb, dcDest->fgCol_);
                             UNPACK_COLOR16(br, bg, bb, dcDest->bgCol_);
                             UNPACK_COLOR16(dr, dg, db, c2);
 
-                            /* dont be too picky about how to turn components
+                            /* don't be too picky about how to turn components
                              * into intensity. although, in general, each
                              * is weighted, just add them together as it
                              * will be good enough for the effect. and

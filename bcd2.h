@@ -165,7 +165,7 @@ struct BCD2
     void                makeInf() { _v.makeInf(); }
 
 
-    // Comparision
+    // Comparison
     friend bool         operator==(const BCD2& a, const BCD2& b)
                         { return BCDFloat2::equal(&a._v, &b._v); }
     friend bool         operator!=(const BCD2& a, const BCD2& b)

@@ -187,7 +187,7 @@ static int bcd_op_uadd(bcd_op* op)
 {
     // `c' has size `pa'
     // result will have size pa
-    // return an upper bound for first insiginificant digit
+    // return an upper bound for first insignificant digit
     // ASSUME ea >= eb
 
     int rd = 0;
@@ -293,7 +293,7 @@ static int bcd_op_usub(bcd_op* op)
 {
     // `c' has size `pa'
     // result size is pa, but pc <= pa to indicate shorter size
-    // return an upper bound for first insiginificant digit
+    // return an upper bound for first insignificant digit
 
     bool neg = false;
     int rd;
@@ -423,7 +423,7 @@ int bcd_op_addsub(bcd_op* op, bool sub)
 {
     // `c' has size `pa'
     // result size is pa, but pc <= pa to indicate shorter size
-    // return an upper bound for first insiginificant digit
+    // return an upper bound for first insignificant digit
     // ASSUME ea >= eb
 
     int rd;
@@ -580,7 +580,7 @@ int bcd_op_mul(bcd_op* op)
     // pa <= pb
     // size of result driven by `pc' which is normally set to 'pa'
     // size can be <= pc.
-    // return an upper bound for first insiginificant digit
+    // return an upper bound for first insignificant digit
     // ASSUME op->ws is pa+pb workspace
 
     int rd;
@@ -893,7 +893,7 @@ int bcd_op_div(bcd_op* op)
     // pa >= pb
     // op->ws, space for max(pa,pb)+2+pb+1
     // driven by `pc' digits. pc <= pa
-    // return an upper bound for first insiginificant digit
+    // return an upper bound for first insignificant digit
 
     int rd;
     int pa = op->pa;
@@ -1115,7 +1115,7 @@ int bcd_cmp(const unsigned short* a,
     if (GET_NAN(a,pa) || GET_NAN(b,pb))
     {
         // NaNs are not equal to anything, even themselves;
-        // ALL comparisions involving them should return 'false'
+        // ALL comparisons involving them should return 'false'
         // (except '!=', which should return 'true').
         // So, I return a special value here.
         return 2;
@@ -1334,7 +1334,7 @@ static bool bcd_asStringFits(const unsigned short* d, int pn,
     // eg 0.333 is 0
     // -1 if no chance
     //
-    // work to `precision' digits not including sign, but inluding the 
+    // work to `precision' digits not including sign, but including the 
     // "0" of the "0."
 
     bool res = false;
@@ -1866,7 +1866,7 @@ bool BCDFloat::sqrt(const BCDFloat* a, BCDFloat* r)
 
             if (ts > P+1) 
             {
-                /* rarely, the tempory size can become bigger than
+                /* rarely, the temporary size can become bigger than
                  * we can handle. this can only happen on the last
                  * digit. if so, stop.
                  */

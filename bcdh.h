@@ -150,7 +150,7 @@ struct BCDh
     void                negate() { _v.negate(); }
 
 
-    // Comparision
+    // Comparison
     friend bool         operator==(const BCDh& a, const BCDh& b)
                         { return BCDFloatH::equal(&a._v, &b._v); }
     friend bool         operator!=(const BCDh& a, const BCDh& b)

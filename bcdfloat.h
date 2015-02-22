@@ -55,11 +55,11 @@
  *
  * there are a number of important considerations for this representation:
  *
- * the postion of the radix must always correspond with the end of a 4dec
+ * the position of the radix must always correspond with the end of a 4dec
  * word. therefore up to one extra 4dec is wasted in the representation.
  * for example, the number 12345.67 will store as [0001][2345].[6700] and
  * utilise 3 4decs rather than two. this is the drawback of using 4decs.
- * bytes would waste up to 1 nibble and nibbles dont waste anything which
+ * bytes would waste up to 1 nibble and nibbles don't waste anything which
  * is why they are normally chosen for short digit (eg 6) representations.
  * for long digit (eg 20) this method is preferable.
  *
@@ -79,15 +79,10 @@
  * it has been suggested that, rather than use an extra 16 bit word, 5 words
  * are used for 20 digits without waste. this is possible but it involves
  * multiplying all 5 terms by 10, 100 or 1000 with carry, in order to align
- * the radix for operation. i didnt want this overhead, but it is true that
- * it would result in smaller representation. but dont forget that the
+ * the radix for operation. i didn't want this overhead, but it is true that
+ * it would result in smaller representation. but don't forget that the
  * overall representation in size will be rounded up to a multiple of 4 bytes
  * anyway.
- *
- * lastly, floating point code is notorious for hiding bugs, often for years.
- * this code is new and there will be some "simple" cases that come out
- * plain wrong. thats the way with floating point. even CPU makers get it
- * wrong sometimes.
  */
 
 #include "customchars.h"

@@ -232,7 +232,7 @@ void PlotGraph3D(Term* t,
                                 if (plot.refineModel())
                                 {
                                     // we refined. 
-                                    // keep going but dont draw
+                                    // keep going but don't draw
                                     if (!more) draw = false;
                                     more = 1;
 
@@ -584,7 +584,7 @@ bool Plot3D::refineModel()
     // perform one refinement step. return false if no more.
     bool res = false;
 
-    // if we're fully refined, dont bother
+    // if we're fully refined, don't bother
     if (_refined) return res;
 
     Point3* p1 = _model->vertices + _model->num_vertices;
@@ -645,7 +645,7 @@ bool Plot3D::refineModel()
                 if (_eval(ax.asBCD(), ay.asBCD(), z))
                 {
                     e = az - z;
-                    if (_zmax != _zmin)   // normalize
+                    if (_zmax != _zmin)   // normalise
                         e/=(_zmax - _zmin);
                     
                     if (e.isNeg()) e.negate();

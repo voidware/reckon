@@ -836,7 +836,7 @@ Big* sqrBig(Big* a)
         Big* c = mulBig(a, a);
         if (compare(c, r))
         {
-            printf("square doesnt match\n");
+            printf("square doesn't match\n");
             destroyBig(r);
             r = c;
         }
@@ -1013,7 +1013,7 @@ Big* divBig(Big* a,Big* b,Big** rem)
     }
     else 
     {
-        /* Normalize,
+        /* Normalise,
          *
          * d  := base/(V1+1),
          * (U0U1U2... Um+n) <- d * (U1U2.. Um+n),
@@ -1062,7 +1062,7 @@ Big* divBig(Big* a,Big* b,Big** rem)
         for (j = 0; j <= m; ++j) 
         {
     
-            /* caclucate normq,
+            /* calculate normq,
              *
              * if ( Uj == V1)   normq <- base -1
              * else
@@ -2313,7 +2313,7 @@ bool factorFrac(const BigFrac* a, BigFrac* c)
             }
             else if (!clamp)
             {
-                // we didnt find a factor up to limit but this limit
+                // we didn't find a factor up to limit but this limit
                 // was less than max, therefore we are prime.
                 c->x_ = constOne;
                 res = true;
