@@ -41,9 +41,9 @@ static Point3* clip_top(Point3 *p1, Point3 *p2)
     int x1 = p1->tx + (p2->tx - p1->tx) * - p1->ty / (p2->ty - p1->ty);
 
     if( x1 >= DestPr->w_) SET_FLAG(clip, CLIP_RIGHT);
-    if( x1      < 0 ) SET_FLAG(clip, CLIP_LEFT);
-    newp->tx    = x1;
-    newp->ty    = 0;
+    else if( x1 < 0 ) SET_FLAG(clip, CLIP_LEFT);
+    newp->tx = x1;
+    newp->ty = 0;
     newp->clip = clip;
     newp->refs = p1->refs > p2->refs ? p1->refs : p2->refs;
     newp->tz = 1; // clip flag
@@ -62,9 +62,9 @@ static Point3* clip_bottom(Point3 *p1, Point3 *p2)
     x1  = x1 + (x2 - x1) * (DestPr->h_ -1 -y1) / (y2 - y1);
 
     if( x1 >= DestPr->w_) SET_FLAG(clip, CLIP_RIGHT);
-    if( x1      < 0 ) SET_FLAG(clip, CLIP_LEFT);
-    newp->tx    = x1;
-    newp->ty    = DestPr->h_ - 1;
+    else if( x1 < 0 ) SET_FLAG(clip, CLIP_LEFT);
+    newp->tx = x1;
+    newp->ty = DestPr->h_ - 1;
     newp->clip = clip;
     newp->refs = p1->refs > p2->refs ? p1->refs : p2->refs;
     newp->tz = 1; // clip flag
@@ -82,8 +82,8 @@ static Point3* clip_right(Point3 *p1, Point3 *p2)
     
     y1 = y1 + (y2 - y1) * (DestPr->w_ - 1 - x1) / (x2 -x1);
 
-    if( y1   < 0 )    SET_FLAG(clip, CLIP_TOP);
-    if( y1 >= DestPr->h_) SET_FLAG(clip, CLIP_BOTTOM);
+    if( y1 < 0 ) SET_FLAG(clip, CLIP_TOP);
+    else if( y1 >= DestPr->h_) SET_FLAG(clip, CLIP_BOTTOM);
     newp->ty = y1;
     newp->tx = DestPr->w_ - 1;
     newp->clip = clip;
@@ -103,8 +103,8 @@ static Point3* clip_left(Point3 *p1, Point3 *p2)
 
     y1 = y1 + (y2 - y1) * -x1 / (x2 - x1);
 
-    if( y1   < 0 )    SET_FLAG(clip, CLIP_TOP);
-    if( y1 >= DestPr->h_) SET_FLAG(clip, CLIP_BOTTOM);
+    if(y1 < 0) SET_FLAG(clip, CLIP_TOP);
+    else if(y1 >= DestPr->h_) SET_FLAG(clip, CLIP_BOTTOM);
     newp->ty = y1;
     newp->tx = 0;                
     newp->clip = clip;
@@ -132,10 +132,11 @@ static int clip_poly_top(Point3** inp, Point3** outp, int n)
             }
         } 
         else
-        { /* if p is inside boundary */
-            if (CHECK_FLAG(s->clip, CLIP_TOP)) {     /* and s is outside */
+        { 
+            /* if p is inside boundary */
+            if (CHECK_FLAG(s->clip, CLIP_TOP))      /* and s is outside */
                 outp[outn++] = clip_top(s, p);
-            }
+            
             outp[outn++] = p;
         }
         s = p;                    /* advance to next pair of vertices */
@@ -155,13 +156,17 @@ static int clip_poly_bottom(Point3** inp, Point3** outp, int n)
         if (CHECK_FLAG(p->clip, CLIP_BOTTOM))
         { 
             /* if flag is set point is outside this boundary */
-            if (!CHECK_FLAG(s->clip, CLIP_BOTTOM)) {    /* if s is inside */
+            if (!CHECK_FLAG(s->clip, CLIP_BOTTOM)) 
+            {
+                /* if s is inside */
                 outp[outn++] = clip_bottom(p, s);
             }
-        } else {                          /* if p is inside boundary */
-            if (CHECK_FLAG(s->clip, CLIP_BOTTOM)) {     /* and s is outside */
+        }
+        else
+        {                          /* if p is inside boundary */
+            if (CHECK_FLAG(s->clip, CLIP_BOTTOM)) /* and s is outside */
                 outp[outn++] = clip_bottom(s, p);
-            }
+            
             outp[outn++] = p;
         }
         s = p;                    /* advance to next pair of vertices */
@@ -181,13 +186,18 @@ static int clip_poly_right(Point3** inp, Point3** outp, int n)
         if (CHECK_FLAG(p->clip, CLIP_RIGHT))
         {    
             /* if flag is set point is outside this boundary */
-            if (!CHECK_FLAG(s->clip, CLIP_RIGHT)) {    /* if s is inside */
+            if (!CHECK_FLAG(s->clip, CLIP_RIGHT))
+            {
+                /* if s is inside */
                 outp[outn++] = clip_right(p, s);
             }
-        } else {                          /* if p is inside boundary */
-            if (CHECK_FLAG(s->clip, CLIP_RIGHT)) {     /* and s is outside */
+        }
+        else
+        { 
+            /* if p is inside boundary */
+            if (CHECK_FLAG(s->clip, CLIP_RIGHT)) /* and s is outside */
                 outp[outn++] = clip_right(s, p);
-            }
+            
             outp[outn++] = p;
         }
         s = p;                    /* advance to next pair of vertices */
@@ -207,13 +217,18 @@ static int clip_poly_left(Point3** inp, Point3** outp, int n)
         if (CHECK_FLAG(p->clip, CLIP_LEFT))
         {   
             /* if flag is set point is outside this boundary */
-            if (!CHECK_FLAG(s->clip, CLIP_LEFT)) {    /* if s is inside */
+            if (!CHECK_FLAG(s->clip, CLIP_LEFT))
+            {
+                /* if s is inside */
                 outp[outn++] = clip_left(p, s);
             }
-        } else {                            /* if p is inside boundary */
-            if (CHECK_FLAG(s->clip, CLIP_LEFT)) {     /* and s is outside */
+        }
+        else
+        {
+            /* if p is inside boundary */
+            if (CHECK_FLAG(s->clip, CLIP_LEFT)) /* and s is outside */
                 outp[outn++] = clip_left(s, p);
-            }
+            
             outp[outn++] = p;
         }
         s = p;                  /* advance to next pair of vertices */
@@ -262,7 +277,7 @@ void clip_polygon(Plane* pln)
     }
 
     if(CHECK_FLAG(accept, CLIP_Z))
-        return;   /* do_z_clip()*/
+        return; 
 
     in_p  = clipin;
     out_p = clipout;

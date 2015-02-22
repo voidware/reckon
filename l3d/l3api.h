@@ -33,17 +33,22 @@ extern Viewport*	current_view;
 
 int set_position(int, int,int,int);
 int set_velocity(int, int,int,int);
-       
+int set_delta_position(int num, int dx, int dy, int dz);
 
 int set_force(int, int, int);
+int set_max_force(int num, int t);
+
 int set_rotating(int, int,int,int);
 int set_accurate_rotating(int num, int t,int a,int i);
 int stop_rotation(int);
+
 int set_orientation(int, int,int,int);
 int set_delta_orientation(int num, int t, int a, int i);
+
 int copy_position(int, int);
 int copy_velocity(int, int);
 int copy_orientation(int, int);
+
 int set_velocity_in_frame(int, int, int,int,int);
 int set_position_in_frame(int, int, int,int,int);
 int set_relative_velocity(int, int, int,int,int);
@@ -51,18 +56,15 @@ int set_relative_position(int, int, int,int,int);
 int set_collision(int);
 int set_view_orientation(Viewport*, int,int,int);
 int set_view_position(Viewport*, int,int,int);
-int set_delta_position(int num, int dx, int dy, int dz);
 
 int  scale_model(int num, int scal, int div);
 
-/* World queries */
 int current_view_model(int* Model);
 int explode_model_h(int);
 int colour_model_h(int, int);
 int position_of_model(int, int*, int*, int*);
 int set_view_model(int);
 int set_model_shading(int, unsigned int type);
-int set_max_force(int num, int t);
 void set_mass(int num, int mass);
 
 #endif 

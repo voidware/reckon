@@ -24,8 +24,8 @@
 #ifndef __editor_h__
 #define __editor_h__
 
-void set_planes_shading(Model*, int type);
-void colour_model(Model*, int col);
+void set_shading_type(Model*, int type);
+void set_model_colour(Model*, int col);
 void flip_plane(Plane *pln);
 void flip_planes(Model *m);
 

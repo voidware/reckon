@@ -25,7 +25,7 @@
 #include "matrix.h"
 
 
-void colour_model(Model* m, int col)
+void set_model_colour(Model* m, int col)
 {                 
     int n = m->num_planes;
     Plane *pln  = m->planes;
@@ -76,7 +76,7 @@ void flip_planes(Model *m)
     for (; n; n--) flip_plane(pln++);
 }
 
-void set_planes_shading(Model *m, int type)
+void set_shading_type(Model *m, int type)
 {
     int n = m->num_planes;
     Plane *pln = m->planes;

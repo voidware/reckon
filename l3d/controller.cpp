@@ -44,7 +44,7 @@ int add_controller(int num)
             motion->mass = 3; /* unit mass */
             motion->damper = 32;
             motion->max_force = 10 << 4;
-            SET_FLAG(motion->manoeuvre_flags, VELOCITY_DAMPERS);
+            SET_FLAG(motion->move_flags, MOVE_DAMPING);
             m->motion = motion;
             ret = 1;
         }
@@ -71,18 +71,11 @@ void move_motion(Motion *motion)
         motion->velocity->z += (force.tz << 4) / motion->mass;
     }
                                                   
-    if (CHECK_FLAG(motion->manoeuvre_flags, VELOCITY_DAMPERS)) 
+    if (CHECK_FLAG(motion->move_flags, MOVE_DAMPING)) 
     {
         int a = motion->velocity->x;
         int b = motion->velocity->y;
         int c = motion->velocity->z;
-
-       /*   	Fdam = k V 
-       	*   	where  k is the damping factor.
-	*   	the force can not exceed the max damping force of
-	*   	the model.
-	*/
-	/* not true at the moment */
 	
      	a = (a / (motion->damper * motion->mass));
      	b = (b / (motion->damper * motion->mass));

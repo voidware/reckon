@@ -88,14 +88,11 @@ int set_force(int num, int t, int on)
     	Motion *cr;
         add_controller(num);
     	cr = sp->motion;
-	if (cr) {
+	if (cr)
+        {
 	    t = t << 4;
-	    
-	    if (t > cr->max_force)
-	        t = cr->max_force;
-	    if (t < (-cr->max_force/2))
-	        t = (-cr->max_force/2);
-
+	    if (t > cr->max_force) t = cr->max_force;
+	    if (t < (-cr->max_force/2)) t = (-cr->max_force/2);
             cr->force = t;
 	}
     }
@@ -105,11 +102,13 @@ int set_force(int num, int t, int on)
 int set_max_force(int num, int t)
 {
     Model *sp = get_model(num);
-    if (sp) {
+    if (sp)
+    {
     	Motion *cr;
         add_controller(num);
     	cr = sp->motion;
-	if (cr) {
+	if (cr)
+        {
             cr->force = t << 4;
             cr->max_force = t << 4;
 	}
@@ -147,7 +146,7 @@ int stop_rotation(int num)
     Model *sp = get_model(num);
     if (sp) 
     {
-        create_matrix(&sp->offset  , 0, 0, 0);
+        create_matrix(&sp->offset, 0, 0, 0);
         CLEAR_FLAG(sp->draw_flags, ROTATING);
     }
     return sp == NULL;
@@ -322,9 +321,10 @@ int scale_model(int num, int scal, int div)
 int set_collision(int num)
 {
     Model *sp = get_model(num);
-    if (sp) {
+    if (sp)
+    {
        add_controller(num);
-       SET_FLAG (sp->motion->manoeuvre_flags,COLLISION_DETECT);
+       SET_FLAG (sp->motion->move_flags,MOVE_COLLISIONS);
     }
     return sp == NULL;
 }
@@ -363,7 +363,7 @@ int set_view_model(int m)
 int colour_model_h(int m, int col)
 {
     Model* sh = get_model(m);
-    if (sh) colour_model(sh, col);
+    if (sh) set_model_colour(sh, col);
     return sh != 0;
 }
 
@@ -386,7 +386,7 @@ int set_model_shading(int m, unsigned int type)
     if (sh)
     {
         if (type < (1<<SHADING_BITS))
-            set_planes_shading(sh, type);
+            set_shading_type(sh, type);
     }
     return sh != 0;
 }

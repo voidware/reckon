@@ -47,41 +47,17 @@ struct Motion
     unsigned short      model;
     unsigned short      damper;
     unsigned short      mass;
-    unsigned short      manoeuvre_flags;
+    unsigned short      move_flags;
 };
 
-                       /* manoeuvre flags */
-#define FORCEING         1
-#define ORBITING          2
-#define VELOCITY_DAMPERS  4
-#define PARTICLES         8
-#define ATTACKING         16
-#define MANOEUVERING      128
-#define FIXED_OBJECT      256
-#define COLLISION_DETECT  512
-#define HIT              1024
+ /* movement flags */
+#define MOVE_DAMPING     1
+#define MOVE_COLLISIONS  2
 
 
-                       /* combat_flags */
-#define ATTACK              1
-#define EVADE               2
-#define LEAVE               3
-#define ACCURATE            4
-#define ALLIGN_ACCURATE     5
-#define ALLIGNING           6
-#define ALLIGN_Y_AXIS_ROUGH 7
-#define ALLIGNING_1         8
-
-
-
-       /* draw flags        these should be th`e lowest level flags */
-
-#define MOVED             1
-#define TRANSLATING       2
-#define TRANSLATED        4
-#define ROTATING          8
-#define ROTATED           16
-#define CLIPPED_BY_WINDOW 32
+// draw flags
+#define ROTATING          1
+#define CLIPPED_BY_WINDOW 2
 
 struct Model
 {
@@ -118,10 +94,7 @@ Model* create_model(int n_points,
                     int vertexCapacity,
                     int planeCapacity);
 void destroy_model(Model*);
-Model* copy_model(Model*);
-void transfer_data_to_model(Model*);
 void move_model(Model*);
-void compufly(Motion*);
 void refine_radius(Model*);
 void shade_planes(Model*);
 void shade_vertices(Model*);
