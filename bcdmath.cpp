@@ -25,7 +25,7 @@
 
 // test for nPI etc.
 // this gives exact results for close to special values
-// casio do this but HP do not
+// Casio do this but HP do not
 #define TRIG_SPECIAL_CASESxx
 
 #ifdef ARDUINO
@@ -832,7 +832,7 @@ BCD exp(const BCD& v)
      * exp(v) = exp(kr + nln(2)) = exp(kr)*2^n
      *        = exp(r)^64 * 2^n
      *
-     * then r is small enough for taylor series.
+     * then r is small enough for Taylor series.
      */
     if (v.isSpecial()) 
     {
@@ -1084,7 +1084,7 @@ BCD atan(const BCD& v)
     if (invert)
         a = 1/a;
     
-    /* reduce to small enough limit to use taylor series.
+    /* reduce to small enough limit to use Taylor series.
      * using
      *  tan(x/2) = tan(x)/(1+sqrt(1+tan(x)^2))
      */
@@ -1096,7 +1096,7 @@ BCD atan(const BCD& v)
         a = a/(1+sqrt(1+a*a));  // at most 3 iterations.
     }
 
-    /* now use taylor series
+    /* now use Taylor series
      * tan(x) = x(1-x^2/3+x^4/5-x^6/7...)
      */
     
@@ -1428,7 +1428,7 @@ BCD alog(const BCD& y)
 
 #ifdef SMALL_INT
 
-// dont do the fancy mod2pi
+// don't do the fancy mod2pi
 
 BCD modtwopi(const BCD& a)
 {
@@ -1482,7 +1482,7 @@ BCD modtwopi(const BCD& a)
     unsigned short xd[2*P+1];
     int i;
 
-    /* copy digits of manstissa as double precision */
+    /* copy digits of mantissa as double precision */
     for (i = 0; i < P; ++i) xd[i] = a.digit(i);
 
     while (i <= 2*P) // clear extended digits.
@@ -1548,7 +1548,7 @@ BCD modtwopi(const BCD& a)
 BCD hypot(const BCD& a, const BCD& b)
 {
     // return sqrt(a^2 + b^2)
-    // use numerically stable method, Numerical Recipies 3rd p226
+    // use numerically stable method, Numerical Recipes 3rd p226
 
     BCD fa, fb, t;
 
@@ -1603,7 +1603,7 @@ BCD fmod(const BCD& a, const BCD& b)
             --em;
         }
 
-        // peform mod of mantissa
+        // perform mod of mantissa
         c = v - m*trunc(v/m);
     
         int e = ev - em;

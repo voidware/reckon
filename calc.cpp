@@ -85,7 +85,7 @@ bool Calc::eval(const char* p, TermRef& resStr, TermRef& errStr)
 
     if (!o)
     {
-        // revaluate last expression
+        // reevaluate last expression
         o = lastAnswerSymbol_;
     }
 
@@ -118,7 +118,7 @@ TermRef Calc::eval(TermRef& o)
         }
 
         /* remember the last answer.        
-         * unless we are evaluating "ans", which case case dont
+         * unless we are evaluating "ans", which case case don't
          */
         if (res.valid() && o != lastAnswerSymbol_)
             SYMBOL(lastAnswerSymbol_)->assign(*res);

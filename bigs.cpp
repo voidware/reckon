@@ -43,7 +43,7 @@ bool isOddCompositeAux(CompState& st)
     // false means not necessarily composite, may be prime
     // true, definitely composite
 
-    // peform one test
+    // perform one test
     bool res = false;
 
     /* find a^s mod n */
@@ -93,7 +93,7 @@ int isPrime(const BigInt& n)
 {
     // 1 => prime
     // 0 => not prime (composite unless 1)
-    // -1 => dont know
+    // -1 => don't know
 
     if (n == 1) return 0;
     if (n <= 0) return -1;

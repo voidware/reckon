@@ -277,7 +277,7 @@ int luDecomp(Mat& a, unsigned int n, int* indx, int* d)
 {
     /* LU Decomposition.
      *
-     * a(n,n) is decomposed (overwriten)
+     * a(n,n) is decomposed (overwritten)
      * and `indx' records the permutations and `d' is +/-1 depending
      * on even or odd row interchanges.
      *
@@ -569,7 +569,7 @@ void svd(Mat a, unsigned int m, unsigned int n, VALUE* w, Mat v)
      * a(m,n) -> u(m,n) * w(n) * v(n,n)^T 
      * where a is replaced by u.
      *
-     * u is orthogonal, w is a diagnoal and v is othogonal.
+     * u is orthogonal, w is a diagonal and v is orthogonal.
      */
     int flag, i, its, j, k, nm;
     VALUE  anorm, c, f, g, h, s, scale, x, y, z;

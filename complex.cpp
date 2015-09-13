@@ -277,7 +277,7 @@ bool power(const Complex& a, const Complex& b, Complex& c)
     }
 
     /* this might fail if we contain zero. if so, then power
-     * fails as we dont know enough precision.
+     * fails as we don't know enough precision.
      */
     
     /* use complex logs and exp */
