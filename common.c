@@ -31,18 +31,22 @@
 
 Pos pos;
 
+#define _Print(_s) Print((const unsigned char*)(_s))
+#define _PrintC(_s) PrintC((const unsigned char*)(_s))
+#define _PrintMini(_x, _y, _s, _t) PrintMini(_x, _y, (const unsigned char*)(_s), _t)
+
 void displayInfo()
 {
     unsigned short c = 0xe59e;
     unsigned int k;
     PopUpWin(4);
     locate(3,2);
-    Print("Reckon " VERSION);
+    _Print("Reckon " VERSION);
     locate(3,3);
-    Print("(");
-    PrintC(&c);
-    Print(") Voidware 2011");
-    PrintMini(13, 24, "www.voidware.com/reckon", MINI_OVER);
+    _Print("(");
+    _PrintC(&c);
+    _Print(") Voidware 2011");
+    _PrintMini(13, 24, "www.voidware.com/reckon", MINI_OVER);
     GetKey(&k);
 }
 

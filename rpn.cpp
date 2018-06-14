@@ -252,9 +252,9 @@ static TermRef binOp(char c)
             /* we have a binop functional */
             f = Function::create(2);
             f->symbol_ = op->symbol_;
-            f->arg_[0] = *stack[1]; f->arg_[0]->incRef();
+            f->setArg(0, *stack[1]);
             f->prec_ = op->prec_;
-            f->arg_[1] = *stack[0]; f->arg_[1]->incRef();
+            f->setArg(1, *stack[0]);
             f->flags_ = op->flags_;
             
             Pop();

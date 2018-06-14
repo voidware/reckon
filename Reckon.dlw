@@ -3,18 +3,18 @@
 [_1]
 Type=5
 Order=0
-Top=4860
-Left=2100
+Top=5580
+Left=3000
 Height=12240
 Width=13755
 State=0
 Flags=00000020
-Setting=37:13:nran.h
+Setting=47:47:nran.h
 OptionA=0
 
 [_2]
 Type=1
-Order=2
+Order=3
 Top=465
 Left=13785
 Height=4905
@@ -48,10 +48,10 @@ OptionA=0
 
 [_5]
 Type=8
-Order=4
-Top=7800
-Left=9675
-Height=8865
+Order=2
+Top=7080
+Left=4410
+Height=6045
 Width=9165
 State=0
 Flags=00000000
@@ -92,7 +92,7 @@ OptionA=0
 
 [_9]
 Type=15
-Order=3
+Order=4
 Top=3765
 Left=3990
 Height=8430

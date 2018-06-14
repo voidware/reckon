@@ -1,0 +1,7 @@
+*.lst
+*~
+*.obj
+TAGS
+*.ilk
+*.pdb
+mktags.bat

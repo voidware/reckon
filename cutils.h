@@ -47,26 +47,7 @@ extern "C" {
 #define u_isalnum(_c)  (u_isalpha(_c) || u_isdigit(_c))
 #define u_isprint(_c)  (((_c) >= 0x20) & ((_c) <= 127))
 
-inline int u_strnicmp(const char* s1, const char* s2, size_t n)
-{
-    int v = 0;
-    while (n) 
-    {
-        --n;
-
-        int c1 = *s1;
-        int c2 = *s2;
-
-        if (u_isupper(c1)) c1 = u_tolower(c1);
-        if (u_isupper(c2)) c2 = u_tolower(c2);
-        
-        v = (c2 - c1);
-        if (v || !*s1) break;
-        ++s1;
-        ++s2;
-    }
-    return v;
-}
+int u_strnicmp(const char* s1, const char* s2, int n);
 
 #ifdef __cplusplus
 };

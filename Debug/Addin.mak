@@ -3,10 +3,10 @@
 #
 ############################
 # Directory defines
-TCDIR = C:\9860gsdk\OS\SH
-OSDIR = C:\9860gsdk\OS
-APPDIR = W:\hugh\9860g\reckon
-OUTDIR = W:\hugh\9860g\reckon\Debug
+TCDIR = I:\9860sdk\OS\SH
+OSDIR = I:\9860sdk\OS
+APPDIR = V:\sw\reckon
+OUTDIR = V:\sw\reckon\Debug
 
 ################
 # Main Defines
@@ -48,35 +48,35 @@ FILEOBJ5="$(OUTDIR)\$(FILE5).obj"
 FILE6=clip
 FILESRC6="$(APPDIR)\l3d\$(FILE6).cpp"
 FILEOBJ6="$(OUTDIR)\$(FILE6).obj"
-FILE7=common
-FILESRC7="$(APPDIR)\$(FILE7).c"
+FILE7=l3api
+FILESRC7="$(APPDIR)\l3d\$(FILE7).cpp"
 FILEOBJ7="$(OUTDIR)\$(FILE7).obj"
-FILE8=complex
-FILESRC8="$(APPDIR)\$(FILE8).cpp"
+FILE8=common
+FILESRC8="$(APPDIR)\$(FILE8).c"
 FILEOBJ8="$(OUTDIR)\$(FILE8).obj"
-FILE9=craft
-FILESRC9="$(APPDIR)\l3d\$(FILE9).cpp"
+FILE9=cutils
+FILESRC9="$(APPDIR)\$(FILE9).c"
 FILEOBJ9="$(OUTDIR)\$(FILE9).obj"
-FILE10=dlist
+FILE10=complex
 FILESRC10="$(APPDIR)\$(FILE10).cpp"
 FILEOBJ10="$(OUTDIR)\$(FILE10).obj"
-FILE11=drawpoly
+FILE11=controller
 FILESRC11="$(APPDIR)\l3d\$(FILE11).cpp"
 FILEOBJ11="$(OUTDIR)\$(FILE11).obj"
-FILE12=editor
-FILESRC12="$(APPDIR)\l3d\$(FILE12).cpp"
+FILE12=dlist
+FILESRC12="$(APPDIR)\$(FILE12).cpp"
 FILEOBJ12="$(OUTDIR)\$(FILE12).obj"
-FILE13=eeval
-FILESRC13="$(APPDIR)\$(FILE13).cpp"
+FILE13=drawpoly
+FILESRC13="$(APPDIR)\l3d\$(FILE13).cpp"
 FILEOBJ13="$(OUTDIR)\$(FILE13).obj"
-FILE14=Eval
-FILESRC14="$(APPDIR)\$(FILE14).cpp"
+FILE14=editor
+FILESRC14="$(APPDIR)\l3d\$(FILE14).cpp"
 FILEOBJ14="$(OUTDIR)\$(FILE14).obj"
-FILE15=handles
-FILESRC15="$(APPDIR)\l3d\$(FILE15).cpp"
+FILE15=eeval
+FILESRC15="$(APPDIR)\$(FILE15).cpp"
 FILEOBJ15="$(OUTDIR)\$(FILE15).obj"
-FILE16=helpers
-FILESRC16="$(APPDIR)\$(FILE16).c"
+FILE16=Eval
+FILESRC16="$(APPDIR)\$(FILE16).cpp"
 FILEOBJ16="$(OUTDIR)\$(FILE16).obj"
 FILE17=init
 FILESRC17="$(APPDIR)\l3d\$(FILE17).cpp"
@@ -318,7 +318,7 @@ $(FILEOBJ7) : $(FILESRC7) $(SHCC02_DEP)
 -chgincpath
 -errorpath
 $(FILESRC7)
--lang=c
+-lang=cpp
 -nologo
 -debug
 <<
@@ -335,7 +335,7 @@ $(FILEOBJ8) : $(FILESRC8) $(SHCC02_DEP)
 -chgincpath
 -errorpath
 $(FILESRC8)
--lang=cpp
+-lang=c
 -nologo
 -debug
 <<
@@ -352,7 +352,7 @@ $(FILEOBJ9) : $(FILESRC9) $(SHCC02_DEP)
 -chgincpath
 -errorpath
 $(FILESRC9)
--lang=cpp
+-lang=c
 -nologo
 -debug
 <<
@@ -471,7 +471,7 @@ $(FILEOBJ16) : $(FILESRC16) $(SHCC02_DEP)
 -chgincpath
 -errorpath
 $(FILESRC16)
--lang=c
+-lang=cpp
 -nologo
 -debug
 <<

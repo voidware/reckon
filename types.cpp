@@ -2455,7 +2455,9 @@ void fltConvert(TermRef& res, Term* t)
 
 void plotExpr(TermRef& res, Term* t, Float* xmin, Float* xmax)
 {
-    PlotGraph(t, xmin->v_.asBCD(), xmax->v_.asBCD());
+    BCD a = xmin->v_.asBCD();
+    BCD b = xmax->v_.asBCD();
+    PlotGraph(t, a, b);
     res = t;
 }
 

@@ -26,7 +26,7 @@
 
 #define DIM(_X)                 (sizeof(_X)/sizeof((_X)[0]))
 
-#define VERSION "v2.1"
+#define VERSION "v2.2"
 
 #ifdef __cplusplus
 
