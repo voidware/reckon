@@ -1374,7 +1374,7 @@ BCD pow(const BCD& x, const BCD& y)
     if (y.isInteger()) 
     {
         int4 n = ifloor(y);
-        if (n) return pow(x, n);
+        if (n) return powInt(x, n);
         
         /* otherwise power is too large */
         bool a = (fabs(x) > 1);
@@ -1603,7 +1603,7 @@ BCD fmod(const BCD& a, const BCD& b)
             --em;
         }
 
-        // perform mod of mantissa
+        // peform mod of mantissa
         c = v - m*trunc(v/m);
     
         int e = ev - em;

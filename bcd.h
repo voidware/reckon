@@ -223,8 +223,13 @@ struct BCD
     static char         _buf[40];
 };
 
-BCD pow(const BCD& a, int4 n);
+BCD powInt(const BCD& a, int4 n);
 BCD sqrt(const BCD&);
+
+inline BCD pow(const BCD& a, int4 n)
+{
+    return powInt(a, n);
+}
 
 inline bool operator==(const BCDFloatData& a, const BCDFloatData& b)
 {

@@ -212,7 +212,7 @@ struct BCDFloat: public BCDFloatData
         bcd_fromString(_d, P, s);
     }
 
-    BCDFloat(int4 v)
+    explicit BCDFloat(int4 v)
     {
         _init();
         if (v)
@@ -225,14 +225,14 @@ struct BCDFloat: public BCDFloatData
         }
     }
 
-    BCDFloat(uint4 v)
+    explicit BCDFloat(uint4 v)
     {
         _init();
         if (v) _fromUInt(v);
     }
 
 #ifdef SMALL_INT
-    BCDFloat(int v)
+    explicit BCDFloat(int v)
     {
         _init();
         bool neg = v < 0;
@@ -241,7 +241,7 @@ struct BCDFloat: public BCDFloatData
         if (neg) negate();
     }
     
-    BCDFloat(unsigned int v)
+    explicit BCDFloat(unsigned int v)
     {
         _init();
         bcd_fromUShort(_d, P, v); 

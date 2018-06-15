@@ -3,18 +3,18 @@
 [_1]
 Type=5
 Order=0
-Top=5580
-Left=3000
+Top=2400
+Left=30
 Height=12240
 Width=13755
 State=0
 Flags=00000020
-Setting=47:47:nran.h
+Setting=1763:1:types.cpp
 OptionA=0
 
 [_2]
 Type=1
-Order=3
+Order=2
 Top=465
 Left=13785
 Height=4905
@@ -27,8 +27,8 @@ OptionB=15
 [_3]
 Type=6
 Order=1
-Top=540
-Left=7275
+Top=1125
+Left=7005
 Height=6315
 Width=5535
 State=0
@@ -48,9 +48,9 @@ OptionA=0
 
 [_5]
 Type=8
-Order=2
-Top=7080
-Left=4410
+Order=6
+Top=8505
+Left=13260
 Height=6045
 Width=9165
 State=0
@@ -71,8 +71,8 @@ OptionA=0
 [_7]
 Type=2
 Order=5
-Top=8940
-Left=25785
+Top=3285
+Left=20805
 Height=8790
 Width=8910
 State=0
@@ -81,7 +81,7 @@ OptionA=0
 
 [_8]
 Type=17
-Order=7
+Order=8
 Top=1785
 Left=930
 Height=11115
@@ -92,9 +92,9 @@ OptionA=0
 
 [_9]
 Type=15
-Order=4
-Top=3765
-Left=3990
+Order=3
+Top=5250
+Left=13560
 Height=8430
 Width=13395
 State=0
@@ -126,18 +126,18 @@ OptionA=0
 
 [_12]
 Type=11
-Order=9
-Top=4020
-Left=2385
-Height=12915
-Width=16290
-State=16
+Order=4
+Top=2325
+Left=11370
+Height=9255
+Width=12105
+State=0
 Flags=00000020
 OptionA=0
 
 [_32]
 Type=16
-Order=8
+Order=9
 Top=2385
 Left=2745
 Height=12180
@@ -149,7 +149,7 @@ OptionA=0
 
 [_33]
 Type=16
-Order=6
+Order=7
 Top=6930
 Left=3750
 Height=9690

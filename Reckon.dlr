@@ -339,3 +339,8 @@ Flags=00001012
 File=V:\sw\reckon\types.cpp
 Line=2205
 Flags=00001012
+
+[Breakpoint]
+File=V:\sw\reckon\types.cpp
+Line=1762
+Flags=00001012

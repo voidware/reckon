@@ -1559,20 +1559,25 @@ int bigAsInt(Big* b)
     unsigned int d = DIGITS(b);
     int v;
     
-    if (d > 2) {
+    if (d > 2)
+    {
         if (NEGATIVE(b)) v = 0x80000000;
         else v = 0x7fffffff;
     }
-    else {
+    else
+    {
         unsigned int u = b[1];
-        if (d > 1) {
+        if (d > 1)
+        {
             u += ((unsigned int)b[2]) << BASEBITS;
         }
-        if (!NEGATIVE(b)) {
+        if (!NEGATIVE(b))
+        {
             if (u > 0x7fffffff) u = 0x7fffffff;
             v = (int)u;
         }
-        else {
+        else
+        {
             if (u > 0x80000000) u = 0x80000000;
             v = (int)u;
             v = -v;
@@ -1591,7 +1596,8 @@ unsigned int bigAsUint(Big* b)
     else 
     {
         if (d > 2) u = 0xffffffff;
-        else {
+        else
+        {
             u = b[1];
             if (d > 1) u += ((unsigned int)b[2]) << BASEBITS;
         }

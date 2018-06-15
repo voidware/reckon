@@ -45,8 +45,7 @@ BCD sqrt(const BCD& a)
     return c;
 }
 
-
-BCD pow(const BCD& a, int4 n)
+BCD powInt(const BCD& a, int4 n)
 {
     int4 m;
     if (n == 0) return 1U;
