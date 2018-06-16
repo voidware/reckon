@@ -2243,11 +2243,13 @@ bool BigToMF(Big* b, MF* er)
     MF bp(1);
     MF res(0);
 
-    for (i = 1; i <= d; ++i)
+    i = 1;
+    if (i <= d) for (;;)
     {
         v = b[i];
         MF dv(v);
         res += (dv*bp);
+        if (++i > d) break;
         bp *= base;
     }
 

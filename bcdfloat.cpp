@@ -161,27 +161,27 @@ void bcd_op_fin(bcd_op* op)
 {
     if (!GET_SPECIAL(op->c, op->pc))
     {
+        int neg = GET_NEG_BIT(op->c, op->pc);
+
         if (op->ec > EXPLIMIT)
         {
             // overflow
             CLEAR(op->c, op->pc);
             op->ec = POS_INF_EXP;
         }
-        else if (op->ec <= -EXPLIMIT) 
+        else if (op->ec <= -EXPLIMIT || GET_ZERO_NORM(op->c, op->pc))
         {
-            /* underflow */
+            /* zero or underflow */
             CLEAR(op->c, op->pc);
-            //op->ec = 0;
-        }
-
-        int neg = GET_NEG_BIT(op->c, op->pc);
-        if (IS_ZERO(op->c, op->pc))
-        {
             op->ec = 0;
             neg = false; // no neg zero
         }
+        else
+        {
+            op->ec &= EXPMASK;
+        }
     
-        SET_EXP(op->c, op->pc, op->ec);
+        op->c[op->pc] = op->ec;
         if (neg) SET_NEG_BIT(op->c, op->pc);
     }
 }
@@ -192,35 +192,21 @@ static int bcd_op_uadd(bcd_op* op)
     // result will have size pa
     // return an upper bound for first insignificant digit
     // ASSUME ea >= eb
+    //
+    // NB: leaves c[pc] as digit not exponent
 
     int rd = 0;
     int ca;
     int v;
     int d = op->ea - op->eb;
-    int j = op->pa-d;
+    int j = op->pa-d; // overlap
     int i = op->pa;
 
     // first insignificant digit of `b' used by final rounding
-    if (j < op->pb)
-    {
-        if (j >= 0) rd = op->b[j];
+    if (j >= 0 && j < op->pb) rd = op->b[j];
 
-        // scan remainder of `b' for rd upper bound
-        int k = j+1;
-        if (k < 0) k = 0;
-        while (k < op->pb)
-        {
-            if (op->b[k])
-            {
-                ++rd;
-                break;
-            }
-            ++k;
-        }
-    }
-
-    // clear pc+1 term where exponent lives
-    op->c[i--] = 0;
+    // any insignificant digit in pc+1 term where exponent lives
+    op->c[i--] = rd;
 
     // nb: if j == bp, then both are the same size, so no
     // hidden digit to add nor rounding value
@@ -263,15 +249,18 @@ static int bcd_op_uadd(bcd_op* op)
     if (ca)
     {
         // overall carry, shift down
-        if (rd) rd = 1;
-        if (op->c[op->pc-1]) rd = op->c[op->pc-1];
-
         for (i = op->pc; i > 0; --i) op->c[i] = op->c[i-1];
         op->c[0] = ca;
 
         // bump result exponent
         ++op->ec;
     }
+
+    // retrieve exponent slot as first insignificant digit
+    // and clear slot
+    rd = op->c[op->pc];
+    op->c[op->pc] = 0;
+
     return rd;
 }
 
@@ -286,7 +275,7 @@ void bcd_uadd(const unsigned short* a, const unsigned short* b,
     // NB: `uadd' never changes pc
     
     // round to nearest
-    if (rd >= 5000)
+    if (rd >= BASE/2)
         if (bcd_bup(op.c, op.pc))
             ++op.ec;
     
@@ -305,31 +294,17 @@ static int bcd_op_usub(bcd_op* op)
     int d = op->ea - op->eb;
     int ca;
     int v;
-    int j = op->pa-d;
+    int j = op->pa-d; // overlap
     int i = op->pa;
 
     ca = 0;
     v = 0;
 
     // find the first insignificant digit
-    if (j < op->pb)
+    if (j >= 0 && j < op->pb)
     {
-        if (j >= 0) v = op->b[j];
-
-        // scan remainder of `b', round up to 1 
-        int k = j+1;
-        if (k < 0) k = 0;
-        while (k < op->pb)
-        {
-            if (op->b[k])
-            {
-                // a further digit. add 1 to first insig digit
-                ++v;
-                break;
-            }
-            ++k;
-        }
-
+        v = op->b[j];
+    
         if (v)
         {
             v = BASE - v;
@@ -392,10 +367,8 @@ static int bcd_op_usub(bcd_op* op)
         neg = true;
     }
 
-    rd = op->c[op->pc];
 
     // deal with cancellation. initial digits may be zero
-    // NB: `rd' remains correct when we change both size and exponent
     i = 0;
     while (op->c[i] == 0 && i <= op->pc) i++;
 
@@ -405,7 +378,6 @@ static int bcd_op_usub(bcd_op* op)
         {
             /* is zero */
             op->ec = 0;
-            op->pc = 1; 
         }
         else 
         {
@@ -414,13 +386,14 @@ static int bcd_op_usub(bcd_op* op)
             int j;
             for (j = 0; j <= op->pc - i; j++) op->c[j] = op->c[j + i];
             for (; j <= op->pc; j++) op->c[j] = 0;
-
-            // indicate that c can be shorter, but work with size pa
-            op->pc -= i;
         }
     }
+
+    // retrieve least significant digit
+    rd = op->c[op->pc];
+    op->c[op->pc] = 0;
  
-    if (neg) NEGATE_SIGN(op->c, op->pa); // use PA
+    if (neg) NEGATE_SIGN(op->c, op->pc); 
     return rd;
 }
 
@@ -474,7 +447,7 @@ int bcd_op_addsub(bcd_op* op, bool sub)
                     NEGATE_SIGN(op->c, op->pc);
             }
         }
-        rd = -1; 
+        rd = -1;  // NA
     }
     else
     {
@@ -482,12 +455,19 @@ int bcd_op_addsub(bcd_op* op, bool sub)
         if (GET_ZERO_NORM(op->a, op->pa))
         {
             // a == 0, ASSUME pc >= pb
+#if 1
+            COPY(op->c, op->b, op->pb+1); // include exponent
+            op->pc = op->pb;
+			op->ec = op->eb;
+            if (sub) NEGATE_SIGN(op->c, op->pc);
+#else            
             int pc = op->pb; 
             COPY(op->c, op->b, pc); // copy mant of b
             op->pc = pc; // signal size (if different)
             op->ec = op->eb;
             op->c[op->pa] = op->b[pc];  // put copy of exponent at pa
             if (sub) NEGATE_SIGN(op->c, op->pa);
+#endif            
             return rd;
        }
        if (GET_ZERO_NORM(op->b,op->pb))
@@ -555,13 +535,10 @@ void bcd_add(const unsigned short* a,
     // prevent size change
     op.pc = op.pa;
 
-    if (rd >= 0)
-    {
-        // round to nearest
-        if (rd >= 5000)
-            if (bcd_bup(op.c, op.pc))
-                ++op.ec;
-    }
+    // round to nearest
+    if (rd >= BASE/2)
+        if (bcd_bup(op.c, op.pc))
+            ++op.ec;
     
     bcd_op_fin(&op);
 }
@@ -579,13 +556,10 @@ void bcd_sub(const unsigned short* a,
     // prevent size change
     op.pc = op.pa;
 
-    if (rd >= 0)
-    {
-        // round to nearest
-        if (rd >= 5000)
-            if (bcd_bup(op.c, op.pc))
-                ++op.ec;
-    }
+    // round to nearest
+    if (rd >= BASE/2)
+        if (bcd_bup(op.c, op.pc))
+            ++op.ec;
     
     bcd_op_fin(&op);
 }
@@ -600,24 +574,25 @@ int bcd_op_mul(bcd_op* op)
 
     int rd;
 
-    // zero flags assuming not special
-    bool az = GET_ZERO_NORM(op->a,op->pa);
-    bool bz = GET_ZERO_NORM(op->b,op->pb);
+    int as = GET_SPECIAL(op->a,op->pa);
+    int bs = GET_SPECIAL(op->b,op->pb);
 
-    // neg flag assuming non-zero and non-special
-    int na = GET_NEG_BIT(op->a,op->pa);
-    int nb = GET_NEG_BIT(op->b,op->pb);
-
-    if (GET_SPECIAL(op->a,op->pa) || GET_SPECIAL(op->b,op->pb))
+    bool az = GET_ZERO_NORM(op->a,op->pa) && !as;
+    bool bz = GET_ZERO_NORM(op->b,op->pb) && !bs;
+    
+    if (!az && !bz)
     {
-        /* all others -> nan */
-        CLEAR(op->c, op->pc);
-        op->c[op->pc] = NAN_EXP;
+        // neg flag assuming non-zero and non-special
+        int na = GET_NEG_BIT(op->a,op->pa);
+        int nb = GET_NEG_BIT(op->b,op->pb);
 
-        if (!GET_NAN(op->a,op->pa) && !GET_NAN(op->b,op->pb))
+        if (as || bs)
         {
-            if ((GET_INF(op->a,op->pa) && (GET_INF(op->b,op->pb) || !bz))
-                || !az)
+            /* all others -> nan */
+            CLEAR(op->c, op->pc);
+            op->c[op->pc] = NAN_EXP;
+
+            if (!GET_NAN(op->a,op->pa) && !GET_NAN(op->b,op->pb))
             {
                 // inf * inf -> inf
                 // inf * non-zero -> inf
@@ -625,93 +600,79 @@ int bcd_op_mul(bcd_op* op)
                 op->c[op->pc] = POS_INF_EXP;
                 if (na != nb) NEGATE_SIGN(op->c, op->pc);
             }
+            rd = -1;
         }
-        rd = -1;
-    }
-    else if (!az && !bz)
-    {
-        int ca;
-        int i, j;
-        int4 u, v;
-
-        // will build the product in the `op' workspace.
-        // this must be enough for pa + pb terms
-
-        unsigned short* w = op->ws;
-        int pb = op->pb;
-        i = op->pa;
-        w += i;
-        CLEAR(w, pb);  // need only clear pb terms
-
-        int nw = i + pb;
-
-        --i;
-        for (;;)
+        else
         {
-            ca = 0;
-            u = op->a[i];
-            if (u)
-            {
-                for (j = pb-1; j >= 0; --j) 
-                {
-                    v = op->b[j]*u + w[j] + ca;
-                    ca = 0;
-                    if (v >= BASE) 
-                    {
-                        ca = v / BASE;
-                        v = v - ca*BASE;
-                    }
-                    w[j] = v;
-                }
-            }
+            int ca;
+            int i, j;
+            int4 u, v;
 
-            *--w = ca;
+            // will build the product in the `op' workspace.
+            // this must be enough for pa + pb terms
 
-            if (!i) break;
+            unsigned short* w = op->ws;
+            int pb = op->pb;
+            i = op->pa;
+            w += i;
+            CLEAR(w, pb);  // need only clear pb terms
+
+            int nw = i + pb;
+
             --i;
-        }
-
-        // `w' now points to start of product
-
-        // skip possible 0 term
-        if (!w[0])
-        {
-            --op->ec;
-            --nw;
-            ++w;
-        }
-        op->ec += op->eb;
-
-        // limit by what we have
-        if (op->pc > nw) op->pc = nw;
-
-        // copy into c, `pc' terms requested
-        COPY(op->c, w, op->pc);
-
-        // clear exponent
-        op->c[op->pc] = 0;
-
-        // first ignored term
-        rd = 0;
-        i = op->pc;
-        if (i < nw)
-        {
-            rd = w[i];
-
-            // examine remaining digits
-            while (++i < nw)
+            for (;;)
             {
-                if (w[i])
+                ca = 0;
+                u = op->a[i];
+                if (u)
                 {
-                    // add 1 to ignored term to make upper bound
-                    ++rd;
-                    break;
+                    for (j = pb-1; j >= 0; --j) 
+                    {
+                        v = op->b[j]*u + w[j] + ca;
+                        ca = 0;
+                        if (v >= BASE) 
+                        {
+                            ca = v / BASE;
+                            v = v - ca*BASE;
+                        }
+                        w[j] = v;
+                    }
                 }
+
+                *--w = ca;
+
+                if (!i) break;
+                --i;
             }
-        }
+
+            // `w' now points to start of product
+
+            // skip possible 0 term
+            if (!w[0])
+            {
+                --op->ec;
+                --nw;
+                ++w;
+            }
+            op->ec += op->eb;
+
+            // limit by what we have
+            if (op->pc > nw) op->pc = nw;
+
+            // copy into c, `pc' terms requested
+            COPY(op->c, w, op->pc);
+
+            // clear exponent
+            op->c[op->pc] = 0;
+
+            // first ignored term
+            rd = 0;
+            i = op->pc;
+            if (i < nw) rd = w[i];
         
-        /* fix sign */
-        if (na != nb) NEGATE_SIGN(op->c,op->pc);
+            /* fix sign */
+            if (na != nb) NEGATE_SIGN(op->c,op->pc);
+        }
     }
     else
     {
@@ -737,13 +698,10 @@ void bcd_mul(const unsigned short* a,
     // `op.pc' is the requested size
     int rd = bcd_op_mul(&op);
     
-    if (rd >= 0)
-    {
-        // round to nearest
-        if (rd >= 5000)
-            if (bcd_bup(op.c, op.pc))
-                ++op.ec;
-    }
+    // round to nearest
+    if (rd >= BASE/2)
+        if (bcd_bup(op.c, op.pc))
+            ++op.ec;
     
     bcd_op_fin(&op);
 }
@@ -1112,13 +1070,10 @@ void bcd_div(const unsigned short* a,
 
     int rd = bcd_op_div(&op);
     
-    if (rd >= 0)
-    {
-        // round to nearest
-        if (rd >= 5000)
-            if (bcd_bup(op.c, op.pc))
-                ++op.ec;
-    }
+    // round to nearest
+    if (rd >= BASE/2)
+        if (bcd_bup(op.c, op.pc))
+            ++op.ec;
     
     bcd_op_fin(&op);
 }

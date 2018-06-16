@@ -1,7 +1,7 @@
 @echo off
 rem Do not edit! This batch file is created by CASIO fx-9860G SDK.
 
-
+if exist debug\*.obj  del debug\*.obj
 if exist RECKON.G1A  del RECKON.G1A
 
 cd debug

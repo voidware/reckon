@@ -147,6 +147,8 @@ struct BigInt
     void operator*=(const BigInt& b) { *this = (*this * b).give(); }
     void operator*=(int b) { *this = (*this * b).give(); }
 
+    void operator/=(const BigInt& b) { *this = (*this / b).give(); }
+
     // Comparison
     friend bool operator<(const BigInt& a, const BigInt& b)
     { return compare(a._big, b._big) < 0; }
