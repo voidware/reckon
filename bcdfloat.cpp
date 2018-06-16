@@ -1732,22 +1732,19 @@ int bcd_fromString(unsigned short* d, int pn, const char* s)
                         di += (*p - '0')*BCDDecade[i];
                         ++i;
                     }
-                    ++p;
-                    if (p == endp) break;
+                    if (++p == endp) break;
                 }
-                if (leading_zero && di == 0) 
+                if (leading_zero && di == 0) e--;
+                else
                 {
-                    e--;
-                    i = 0;
-                    continue;
+                    leading_zero = false;
+                    if (d) d[j] = di;
+
+                    if (++j > pn)
+                        // full up.
+                        break;
+                    
                 }
-                leading_zero = false;
-                if (d) d[j] = di;
-
-                if (++j > pn)
-                    // full up.
-                    break;
-
                 if (p == endp) break;
                 i = 0;
             }

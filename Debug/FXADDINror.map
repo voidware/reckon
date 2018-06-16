@@ -1,8 +1,8 @@
-Hitachi Optimizing Linkage Editor (Ver. 7.1.03.000)16-Jun-2018 01:56:42
+Hitachi Optimizing Linkage Editor (Ver. 7.1.03.000)16-Jun-2018 02:28:03
 
 *** Options ***
 
--subcommand=C:\Users\hugh\AppData\Local\Temp\hmk4D3C.tmp
+-subcommand=C:\Users\hugh\AppData\Local\Temp\hmk3E1.tmp
 noprelink
 sdebug
 rom D=R
@@ -120,7 +120,7 @@ FILE=V:\sw\reckon\Debug\bcdfloat.obj
                                   0030102a        50   func ,g         * 
   _$bcd_op_usub(bcd_op *)
                                   0030107a       1ce   func ,l         * 
-  ___T25673872$380
+  ___T26722448$380
                                   003010da         0   none ,l         * 
   bcd_op_addsub(bcd_op *, bool)
                                   00301248       1fc   func ,g         * 
@@ -130,31 +130,31 @@ FILE=V:\sw\reckon\Debug\bcdfloat.obj
                                   0030149e        5a   func ,g         * 
   bcd_op_mul(bcd_op *)
                                   003014f8       234   func ,g         * 
-  ___T25732948$500
+  ___T26781524$500
                                   00301684         0   none ,l         * 
   bcd_mul(const unsigned short *, const unsigned short *, unsigned short *, unsigned short *, int, int)
                                   0030172c        5c   func ,g         * 
   bcd_fma(const unsigned short *, const unsigned short *, const unsigned short *, unsigned short *, int)
                                   00301788       37c   func ,g         * 
-  ___T25760308$570
+  ___T26808884$570
                                   003019a4         0   none ,l         * 
   bcd_op_div(bcd_op *)
                                   00301b04       450   func ,g         * 
-  ___T25862484$645
+  ___T26911060$645
                                   00301f08         0   none ,l         * 
   bcd_div(const unsigned short *, const unsigned short *, unsigned short *, unsigned short *, int, int)
                                   00301f54        60   func ,g         * 
   bcd_cmp(const unsigned short *, const unsigned short *, int, int)
                                   00301fb4       16e   func ,g         * 
-  ___T25884760$694
+  ___T26933336$694
                                   003020f6         0   none ,l         * 
   bcd_fromUInt(unsigned short *, int, unsigned int)
                                   00302122        7a   func ,g         * 
   bcd_floor(unsigned short *, int)
                                   0030219c       104   func ,g         * 
-  ___T25894224$718
+  ___T26942800$718
                                   003021f2         0   none ,l         * 
-  ___T25963860$726
+  ___T27012436$726
                                   00302284         0   none ,l         * 
   bcd_roundDigits(const unsigned short *, int, int, unsigned int, unsigned short *)
                                   003022a0       134   func ,g         * 
@@ -166,21 +166,21 @@ FILE=V:\sw\reckon\Debug\bcdfloat.obj
                                   003027f6       12e   func ,g         * 
   bcd_fromString(unsigned short *, int, const char *)
                                   00302924       2a0   func ,g         * 
-  ___T26020688$868
+  ___T27069264$868
                                   003029a4         0   none ,l         * 
-  ___T26033688$903
+  ___T27082200$902
                                   00302ad2         0   none ,l         * 
-  ___T26035092$908
+  ___T27083432$907
                                   00302afa         0   none ,l         * 
   isqrt(unsigned int)
                                   00302bc4        30   func ,g         * 
-  ___T26044344$934
+  ___T27092600$933
                                   00302bec         0   none ,l         * 
   BCDFloat::isInteger() const
                                   00302bf4        46   func ,g         * 
   BCDFloat::sqrt(const BCDFloat *, BCDFloat *)
                                   00302c3a       3ce   func ,g         * 
-  ___T26057120$971
+  ___T27105376$970
                                   00302fc2         0   none ,l         * 
   BCDFloat::trunc(const BCDFloat *, BCDFloat *)
                                   00303008        3a   func ,g         * 
@@ -188,7 +188,7 @@ FILE=V:\sw\reckon\Debug\bcdfloat.obj
                                   00303042        1a   func ,l         * 
   BCDFloat::mul2(const unsigned short *, int, const unsigned short *, int, unsigned short *, int &)
                                   0030305c       118   func ,g         * 
-  ___T26281424$1040
+  ___T27329692$1039
                                   00303144         0   none ,l         * 
   BCDFloat::asInt() const
                                   00303174        74   func ,g         * 
