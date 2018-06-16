@@ -14,7 +14,7 @@ OptionA=0
 
 [_2]
 Type=1
-Order=2
+Order=3
 Top=465
 Left=13785
 Height=4905
@@ -92,7 +92,7 @@ OptionA=0
 
 [_9]
 Type=15
-Order=3
+Order=2
 Top=5250
 Left=13560
 Height=8430

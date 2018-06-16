@@ -159,28 +159,31 @@ static void bcd_op_swap(bcd_op* op)
 
 void bcd_op_fin(bcd_op* op)
 {
-    if (op->ec > EXPLIMIT)
+    if (!GET_SPECIAL(op->c, op->pc))
     {
-        // overflow
-        CLEAR(op->c, op->pc);
-        op->ec = POS_INF_EXP;
-    }
-    else if (op->ec <= -EXPLIMIT) 
-    {
-        /* underflow */
-        CLEAR(op->c, op->pc);
-        //op->ec = 0;
-    }
+        if (op->ec > EXPLIMIT)
+        {
+            // overflow
+            CLEAR(op->c, op->pc);
+            op->ec = POS_INF_EXP;
+        }
+        else if (op->ec <= -EXPLIMIT) 
+        {
+            /* underflow */
+            CLEAR(op->c, op->pc);
+            //op->ec = 0;
+        }
 
-    int neg = GET_NEG_BIT(op->c, op->pc);
-    if (IS_ZERO(op->c, op->pc))
-    {
-        op->ec = 0;
-        neg = false; // no neg zero
-    }
+        int neg = GET_NEG_BIT(op->c, op->pc);
+        if (IS_ZERO(op->c, op->pc))
+        {
+            op->ec = 0;
+            neg = false; // no neg zero
+        }
     
-    SET_EXP(op->c, op->pc, op->ec);
-    if (neg) SET_NEG_BIT(op->c, op->pc);
+        SET_EXP(op->c, op->pc, op->ec);
+        if (neg) SET_NEG_BIT(op->c, op->pc);
+    }
 }
 
 static int bcd_op_uadd(bcd_op* op)
@@ -265,6 +268,8 @@ static int bcd_op_uadd(bcd_op* op)
 
         for (i = op->pc; i > 0; --i) op->c[i] = op->c[i-1];
         op->c[0] = ca;
+
+        // bump result exponent
         ++op->ec;
     }
     return rd;
@@ -437,11 +442,24 @@ int bcd_op_addsub(bcd_op* op, bool sub)
          */
         if (!GET_NAN(op->a,op->pa) && !GET_NAN(op->b,op->pb))
         {
-            if (GET_INF(op->a,op->pa))
+            int infa = GET_INF(op->a,op->pa);
+            if (infa)
             {
+                int infb = GET_INF(op->b,op->pb);
+                
                 // add: b not inf or inf + inf or (-inf) + (-inf)
                 // sub: b not inf or inf - inf or (-inf) - (-inf)
-                if (!GET_INF(op->b,op->pb) || (op->a[op->pa] == op->b[op->pb]))
+                if (infb)
+                {
+                    bool same = op->a[op->pa] == op->b[op->pb];
+                    if (same != sub)
+                    {
+                        // same & not sub; inf + inf, -inf + (-inf)
+                        // not same & sub; inf - (-inf), (-inf) - (inf)
+                        op->c[op->pc] = op->a[op->pa];
+                    }
+                }
+                else
                 {
                     // inf +/- x = inf
                     op->c[op->pc] = op->a[op->pa];

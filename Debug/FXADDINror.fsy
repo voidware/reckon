@@ -1,4 +1,4 @@
-;HITACHI OPTIMIZING LINKAGE EDITOR GENERATED FILE 2018.06.15
+;HITACHI OPTIMIZING LINKAGE EDITOR GENERATED FILE 2018.06.16
 ;fsymbol = P
 
 ;SECTION NAME = P
@@ -39,1443 +39,1443 @@ _bcd_op_prep__FP6bcd_opPCUsT2PUsiT5: .equ h'00300dca
  .export _bcd_op_fin__FP6bcd_op
 _bcd_op_fin__FP6bcd_op: .equ h'00300e36
  .export _bcd_uadd__FPCUsT1PUsiT4
-_bcd_uadd__FPCUsT1PUsiT4: .equ h'0030101a
+_bcd_uadd__FPCUsT1PUsiT4: .equ h'0030102a
  .export _bcd_op_addsub__FP6bcd_opb
-_bcd_op_addsub__FP6bcd_opb: .equ h'00301238
+_bcd_op_addsub__FP6bcd_opb: .equ h'00301248
  .export _bcd_add__FPCUsT1PUsiT4
-_bcd_add__FPCUsT1PUsiT4: .equ h'00301422
+_bcd_add__FPCUsT1PUsiT4: .equ h'00301444
  .export _bcd_sub__FPCUsT1PUsiT4
-_bcd_sub__FPCUsT1PUsiT4: .equ h'0030147c
+_bcd_sub__FPCUsT1PUsiT4: .equ h'0030149e
  .export _bcd_op_mul__FP6bcd_op
-_bcd_op_mul__FP6bcd_op: .equ h'003014d6
+_bcd_op_mul__FP6bcd_op: .equ h'003014f8
  .export _bcd_mul__FPCUsT1PUsT3iT5
-_bcd_mul__FPCUsT1PUsT3iT5: .equ h'0030170c
+_bcd_mul__FPCUsT1PUsT3iT5: .equ h'0030172c
  .export _bcd_fma__FPCUsN21PUsi
-_bcd_fma__FPCUsN21PUsi: .equ h'00301768
+_bcd_fma__FPCUsN21PUsi: .equ h'00301788
  .export _bcd_op_div__FP6bcd_op
-_bcd_op_div__FP6bcd_op: .equ h'00301ae4
+_bcd_op_div__FP6bcd_op: .equ h'00301b04
  .export _bcd_div__FPCUsT1PUsT3iT5
-_bcd_div__FPCUsT1PUsT3iT5: .equ h'00301f34
+_bcd_div__FPCUsT1PUsT3iT5: .equ h'00301f54
  .export _bcd_cmp__FPCUsT1iT3
-_bcd_cmp__FPCUsT1iT3: .equ h'00301f94
+_bcd_cmp__FPCUsT1iT3: .equ h'00301fb4
  .export _bcd_fromUInt__FPUsiUi
-_bcd_fromUInt__FPUsiUi: .equ h'00302102
+_bcd_fromUInt__FPUsiUi: .equ h'00302122
  .export _bcd_floor__FPUsi
-_bcd_floor__FPUsi: .equ h'0030217c
+_bcd_floor__FPUsi: .equ h'0030219c
  .export _bcd_roundDigits__FPCUsiT2UiPUs
-_bcd_roundDigits__FPCUsiT2UiPUs: .equ h'00302280
+_bcd_roundDigits__FPCUsiT2UiPUs: .equ h'003022a0
  .export _bcd_asString__FPCUsiPUsPcN22
-_bcd_asString__FPCUsiPUsPcN22: .equ h'003027d6
+_bcd_asString__FPCUsiPUsPcN22: .equ h'003027f6
  .export _bcd_fromString__FPUsiPCc
-_bcd_fromString__FPUsiPCc: .equ h'00302904
+_bcd_fromString__FPUsiPCc: .equ h'00302924
  .export _isqrt__FUi
-_isqrt__FUi: .equ h'00302ba4
+_isqrt__FUi: .equ h'00302bc4
  .export _isInteger__8BCDFloatCFv
-_isInteger__8BCDFloatCFv: .equ h'00302bd4
+_isInteger__8BCDFloatCFv: .equ h'00302bf4
  .export _sqrt__8BCDFloatSFPC8BCDFloatP8BCDFloat
-_sqrt__8BCDFloatSFPC8BCDFloatP8BCDFloat: .equ h'00302c1a
+_sqrt__8BCDFloatSFPC8BCDFloatP8BCDFloat: .equ h'00302c3a
  .export _trunc__8BCDFloatSFPC8BCDFloatP8BCDFloat
-_trunc__8BCDFloatSFPC8BCDFloatP8BCDFloat: .equ h'00302fe8
+_trunc__8BCDFloatSFPC8BCDFloatP8BCDFloat: .equ h'00303008
  .export _mul2__8BCDFloatSFPCUsiT1T2PUsRi
-_mul2__8BCDFloatSFPCUsiT1T2PUsRi: .equ h'0030303c
+_mul2__8BCDFloatSFPCUsiT1T2PUsRi: .equ h'0030305c
  .export _asInt__8BCDFloatCFv
-_asInt__8BCDFloatCFv: .equ h'00303154
+_asInt__8BCDFloatCFv: .equ h'00303174
  .export _isInteger__9BCDFloat2CFv
-_isInteger__9BCDFloat2CFv: .equ h'003031d8
+_isInteger__9BCDFloat2CFv: .equ h'003031f8
  .export _sqrt__9BCDFloat2SFPC9BCDFloat2P9BCDFloat2
-_sqrt__9BCDFloat2SFPC9BCDFloat2P9BCDFloat2: .equ h'00303268
+_sqrt__9BCDFloat2SFPC9BCDFloat2P9BCDFloat2: .equ h'00303288
  .export _trunc__9BCDFloat2SFPC9BCDFloat2P9BCDFloat2
-_trunc__9BCDFloat2SFPC9BCDFloat2P9BCDFloat2: .equ h'003033a4
+_trunc__9BCDFloat2SFPC9BCDFloat2P9BCDFloat2: .equ h'003033c4
  .export __init__9BCDFloat2Fv
-__init__9BCDFloat2Fv: .equ h'003033de
+__init__9BCDFloat2Fv: .equ h'003033fe
  .export _asInt__9BCDFloat2CFv
-_asInt__9BCDFloat2CFv: .equ h'0030340a
+_asInt__9BCDFloat2CFv: .equ h'0030342a
  .export _pi__7bcdmathFv
-_pi__7bcdmathFv: .equ h'00303726
+_pi__7bcdmathFv: .equ h'00303746
  .export _pi2__7bcdmathFv
-_pi2__7bcdmathFv: .equ h'00303746
+_pi2__7bcdmathFv: .equ h'00303766
  .export _sincos__7bcdmathFRC3BCDP3BCDT2
-_sincos__7bcdmathFRC3BCDP3BCDT2: .equ h'00303b62
+_sincos__7bcdmathFRC3BCDP3BCDT2: .equ h'00303b82
  .export _sinhcosh__7bcdmathFRC3BCDP3BCDT2
-_sinhcosh__7bcdmathFRC3BCDP3BCDT2: .equ h'0030413c
+_sinhcosh__7bcdmathFRC3BCDP3BCDT2: .equ h'0030415c
  .export _sin__7bcdmathFRC3BCD
-_sin__7bcdmathFRC3BCD: .equ h'0030428e
+_sin__7bcdmathFRC3BCD: .equ h'003042ae
  .export _sinDeg__7bcdmathFRC3BCD
-_sinDeg__7bcdmathFRC3BCD: .equ h'003042f0
+_sinDeg__7bcdmathFRC3BCD: .equ h'00304310
  .export _sinGrad__7bcdmathFRC3BCD
-_sinGrad__7bcdmathFRC3BCD: .equ h'003043bc
+_sinGrad__7bcdmathFRC3BCD: .equ h'003043dc
  .export _cos__7bcdmathFRC3BCD
-_cos__7bcdmathFRC3BCD: .equ h'003044b0
+_cos__7bcdmathFRC3BCD: .equ h'003044d0
  .export _cosDeg__7bcdmathFRC3BCD
-_cosDeg__7bcdmathFRC3BCD: .equ h'003044e8
+_cosDeg__7bcdmathFRC3BCD: .equ h'00304508
  .export _cosGrad__7bcdmathFRC3BCD
-_cosGrad__7bcdmathFRC3BCD: .equ h'003045de
+_cosGrad__7bcdmathFRC3BCD: .equ h'003045fe
  .export _tanDeg__7bcdmathFRC3BCD
-_tanDeg__7bcdmathFRC3BCD: .equ h'003046d6
+_tanDeg__7bcdmathFRC3BCD: .equ h'003046f6
  .export _tanGrad__7bcdmathFRC3BCD
-_tanGrad__7bcdmathFRC3BCD: .equ h'003047ee
+_tanGrad__7bcdmathFRC3BCD: .equ h'0030480e
  .export _tan__7bcdmathFRC3BCD
-_tan__7bcdmathFRC3BCD: .equ h'0030490e
+_tan__7bcdmathFRC3BCD: .equ h'0030492e
  .export _powfmod__7bcdmathFRC3BCDiT1
-_powfmod__7bcdmathFRC3BCDiT1: .equ h'0030496e
+_powfmod__7bcdmathFRC3BCDiT1: .equ h'0030498e
  .export _exp__7bcdmathFRC3BCD
-_exp__7bcdmathFRC3BCD: .equ h'00304bea
+_exp__7bcdmathFRC3BCD: .equ h'00304c0a
  .export _ln10constant__7bcdmathFv
-_ln10constant__7bcdmathFv: .equ h'003058c6
+_ln10constant__7bcdmathFv: .equ h'003058e6
  .export _halfConstant__7bcdmathFv
-_halfConstant__7bcdmathFv: .equ h'003058e6
+_halfConstant__7bcdmathFv: .equ h'00305906
  .export _log__7bcdmathFRC3BCD
-_log__7bcdmathFRC3BCD: .equ h'00305940
+_log__7bcdmathFRC3BCD: .equ h'00305960
  .export _log10__7bcdmathFRC3BCD
-_log10__7bcdmathFRC3BCD: .equ h'00305ab0
+_log10__7bcdmathFRC3BCD: .equ h'00305ad0
  .export _atan__7bcdmathFRC3BCD
-_atan__7bcdmathFRC3BCD: .equ h'00305c28
+_atan__7bcdmathFRC3BCD: .equ h'00305c48
  .export _atanDeg__7bcdmathFRC3BCD
-_atanDeg__7bcdmathFRC3BCD: .equ h'003061e8
+_atanDeg__7bcdmathFRC3BCD: .equ h'00306208
  .export _atanGrad__7bcdmathFRC3BCD
-_atanGrad__7bcdmathFRC3BCD: .equ h'003062c4
+_atanGrad__7bcdmathFRC3BCD: .equ h'003062e4
  .export _atan2__7bcdmathFRC3BCDT1
-_atan2__7bcdmathFRC3BCDT1: .equ h'003063a0
+_atan2__7bcdmathFRC3BCDT1: .equ h'003063c0
  .export _atan2Deg__7bcdmathFRC3BCDT1
-_atan2Deg__7bcdmathFRC3BCDT1: .equ h'00306510
+_atan2Deg__7bcdmathFRC3BCDT1: .equ h'00306530
  .export _atan2Grad__7bcdmathFRC3BCDT1
-_atan2Grad__7bcdmathFRC3BCDT1: .equ h'003065a4
+_atan2Grad__7bcdmathFRC3BCDT1: .equ h'003065c4
  .export _asin__7bcdmathFRC3BCD
-_asin__7bcdmathFRC3BCD: .equ h'00306668
+_asin__7bcdmathFRC3BCD: .equ h'00306688
  .export _asinDeg__7bcdmathFRC3BCD
-_asinDeg__7bcdmathFRC3BCD: .equ h'00306824
+_asinDeg__7bcdmathFRC3BCD: .equ h'00306844
  .export _asinGrad__7bcdmathFRC3BCD
-_asinGrad__7bcdmathFRC3BCD: .equ h'00306978
+_asinGrad__7bcdmathFRC3BCD: .equ h'00306998
  .export _acos__7bcdmathFRC3BCD
-_acos__7bcdmathFRC3BCD: .equ h'00306ac0
+_acos__7bcdmathFRC3BCD: .equ h'00306ae0
  .export _acosDeg__7bcdmathFRC3BCD
-_acosDeg__7bcdmathFRC3BCD: .equ h'00306cea
+_acosDeg__7bcdmathFRC3BCD: .equ h'00306d0a
  .export _acosGrad__7bcdmathFRC3BCD
-_acosGrad__7bcdmathFRC3BCD: .equ h'00306eb0
+_acosGrad__7bcdmathFRC3BCD: .equ h'00306ed0
  .export _rationalise2__7bcdmathF3BCDRC3BCDR3BCDT3
-_rationalise2__7bcdmathF3BCDRC3BCDR3BCDT3: .equ h'00307018
+_rationalise2__7bcdmathF3BCDRC3BCDR3BCDT3: .equ h'00307038
  .export _rationalise__7bcdmathFRC3BCDT1PiT3
-_rationalise__7bcdmathFRC3BCDT1PiT3: .equ h'0030752c
+_rationalise__7bcdmathFRC3BCDT1PiT3: .equ h'0030754c
  .export _pow__7bcdmathFRC3BCDT1
-_pow__7bcdmathFRC3BCDT1: .equ h'0030792c
+_pow__7bcdmathFRC3BCDT1: .equ h'0030794c
  .export _alog__7bcdmathFRC3BCD
-_alog__7bcdmathFRC3BCD: .equ h'00307ec8
+_alog__7bcdmathFRC3BCD: .equ h'00307ee8
  .export _modtwopi__7bcdmathFRC3BCD
-_modtwopi__7bcdmathFRC3BCD: .equ h'00307ffc
+_modtwopi__7bcdmathFRC3BCD: .equ h'0030801c
  .export _hypot__7bcdmathFRC3BCDT1
-_hypot__7bcdmathFRC3BCDT1: .equ h'00308192
+_hypot__7bcdmathFRC3BCDT1: .equ h'003081b2
  .export _fmod__7bcdmathFRC3BCDT1
-_fmod__7bcdmathFRC3BCDT1: .equ h'00308472
+_fmod__7bcdmathFRC3BCDT1: .equ h'00308492
  .export _ln1p__7bcdmathFRC3BCD
-_ln1p__7bcdmathFRC3BCD: .equ h'00308908
+_ln1p__7bcdmathFRC3BCD: .equ h'00308928
  .export _lanczConstants__7bcdmathFv
-_lanczConstants__7bcdmathFv: .equ h'00308a98
+_lanczConstants__7bcdmathFv: .equ h'00308ab8
  .export _gammaFactorial__7bcdmathFRC3BCD
-_gammaFactorial__7bcdmathFRC3BCD: .equ h'00308e48
+_gammaFactorial__7bcdmathFRC3BCD: .equ h'00308e68
  .export _gammaln__7bcdmathFRC3BCD
-_gammaln__7bcdmathFRC3BCD: .equ h'00309190
+_gammaln__7bcdmathFRC3BCD: .equ h'003091b0
  .export _expm1__7bcdmathFRC3BCD
-_expm1__7bcdmathFRC3BCD: .equ h'0030953e
+_expm1__7bcdmathFRC3BCD: .equ h'0030955e
  .export _sinh__7bcdmathFRC3BCD
-_sinh__7bcdmathFRC3BCD: .equ h'0030967e
+_sinh__7bcdmathFRC3BCD: .equ h'0030969e
  .export _cosh__7bcdmathFRC3BCD
-_cosh__7bcdmathFRC3BCD: .equ h'00309760
+_cosh__7bcdmathFRC3BCD: .equ h'00309780
  .export _tanh__7bcdmathFRC3BCD
-_tanh__7bcdmathFRC3BCD: .equ h'00309838
+_tanh__7bcdmathFRC3BCD: .equ h'00309858
  .export _asinh__7bcdmathFRC3BCD
-_asinh__7bcdmathFRC3BCD: .equ h'0030990c
+_asinh__7bcdmathFRC3BCD: .equ h'0030992c
  .export _acosh__7bcdmathFRC3BCD
-_acosh__7bcdmathFRC3BCD: .equ h'00309aa8
+_acosh__7bcdmathFRC3BCD: .equ h'00309ac8
  .export _atanh__7bcdmathFRC3BCD
-_atanh__7bcdmathFRC3BCD: .equ h'00309bb8
+_atanh__7bcdmathFRC3BCD: .equ h'00309bd8
  .export _ceil__7bcdmathFRC3BCD
-_ceil__7bcdmathFRC3BCD: .equ h'00309d70
+_ceil__7bcdmathFRC3BCD: .equ h'00309d90
  .export _difftimeBCD__7bcdmathFiT1
-_difftimeBCD__7bcdmathFiT1: .equ h'00309e1c
+_difftimeBCD__7bcdmathFiT1: .equ h'00309e3c
  .export _erfNonNeg__7bcdmathFRC3BCD
-_erfNonNeg__7bcdmathFRC3BCD: .equ h'00309e3a
+_erfNonNeg__7bcdmathFRC3BCD: .equ h'00309e5a
  .export _erf__7bcdmathFRC3BCD
-_erf__7bcdmathFRC3BCD: .equ h'0030a6f0
+_erf__7bcdmathFRC3BCD: .equ h'0030a710
  .export _normalProbability__7bcdmathFRC3BCD
-_normalProbability__7bcdmathFRC3BCD: .equ h'0030a79e
+_normalProbability__7bcdmathFRC3BCD: .equ h'0030a7be
  .export _npr__7bcdmathFRC3BCDT1
-_npr__7bcdmathFRC3BCDT1: .equ h'0030a898
+_npr__7bcdmathFRC3BCDT1: .equ h'0030a8b8
  .export _ncr__7bcdmathFRC3BCDT1
-_ncr__7bcdmathFRC3BCDT1: .equ h'0030a91c
+_ncr__7bcdmathFRC3BCDT1: .equ h'0030a93c
  .export ___dt__4CalcFv
-___dt__4CalcFv: .equ h'0030aa8c
+___dt__4CalcFv: .equ h'0030aaac
  .export _start__4CalcFv
-_start__4CalcFv: .equ h'0030ab14
+_start__4CalcFv: .equ h'0030ab34
  .export _clearContext__4CalcFv
-_clearContext__4CalcFv: .equ h'0030abc6
+_clearContext__4CalcFv: .equ h'0030abe6
  .export _eval__4CalcFPCcR7TermRefT2
-_eval__4CalcFPCcR7TermRefT2: .equ h'0030abe6
+_eval__4CalcFPCcR7TermRefT2: .equ h'0030ac06
  .export _eval__4CalcFR7TermRef
-_eval__4CalcFR7TermRef: .equ h'0030acf2
+_eval__4CalcFR7TermRef: .equ h'0030ad12
  .export _parse__4CalcFPPCc
-_parse__4CalcFPPCc: .equ h'0030ad94
+_parse__4CalcFPPCc: .equ h'0030adb4
  .export _approximate__4CalcFR7TermRef
-_approximate__4CalcFR7TermRef: .equ h'0030ae28
+_approximate__4CalcFR7TermRef: .equ h'0030ae48
  .export _asString__4CalcFR7TermRefT1
-_asString__4CalcFR7TermRefT1: .equ h'0030af8e
+_asString__4CalcFR7TermRefT1: .equ h'0030afae
  .export _storeVar__4CalcFPCcR7TermRef
-_storeVar__4CalcFPCcR7TermRef: .equ h'0030afc4
+_storeVar__4CalcFPCcR7TermRef: .equ h'0030afe4
  .export _recallVar__4CalcFPCc
-_recallVar__4CalcFPCc: .equ h'0030b000
+_recallVar__4CalcFPCc: .equ h'0030b020
  .export __setupConstants__4CalcFv
-__setupConstants__4CalcFv: .equ h'0030b058
+__setupConstants__4CalcFv: .equ h'0030b078
  .export _clip_polygon__FP5Plane
-_clip_polygon__FP5Plane: .equ h'0030b5e2
+_clip_polygon__FP5Plane: .equ h'0030b602
  .export _gclip_polygon__FP5Plane
-_gclip_polygon__FP5Plane: .equ h'0030bc62
+_gclip_polygon__FP5Plane: .equ h'0030bc82
  .export ___sti__clip_cpp_e1a7e098
-___sti__clip_cpp_e1a7e098: .equ h'0030be00
+___sti__clip_cpp_e1a7e098: .equ h'0030be20
  .export _set_position__FiN31
-_set_position__FiN31: .equ h'0030be1c
+_set_position__FiN31: .equ h'0030be3c
  .export _set_delta_position__FiN31
-_set_delta_position__FiN31: .equ h'0030be46
+_set_delta_position__FiN31: .equ h'0030be66
  .export _set_velocity__FiN31
-_set_velocity__FiN31: .equ h'0030be7c
+_set_velocity__FiN31: .equ h'0030be9c
  .export _set_mass__FiT1
-_set_mass__FiT1: .equ h'0030beba
+_set_mass__FiT1: .equ h'0030beda
  .export _set_force__FiN21
-_set_force__FiN21: .equ h'0030bed6
+_set_force__FiN21: .equ h'0030bef6
  .export _set_max_force__FiT1
-_set_max_force__FiT1: .equ h'0030bf44
+_set_max_force__FiT1: .equ h'0030bf64
  .export _set_rotating__FiN31
-_set_rotating__FiN31: .equ h'0030bf7e
+_set_rotating__FiN31: .equ h'0030bf9e
  .export _set_accurate_rotating__FiN31
-_set_accurate_rotating__FiN31: .equ h'0030bff2
+_set_accurate_rotating__FiN31: .equ h'0030c012
  .export _stop_rotation__Fi
-_stop_rotation__Fi: .equ h'0030c036
+_stop_rotation__Fi: .equ h'0030c056
  .export _set_orientation__FiN31
-_set_orientation__FiN31: .equ h'0030c084
+_set_orientation__FiN31: .equ h'0030c0a4
  .export _set_delta_orientation__FiN31
-_set_delta_orientation__FiN31: .equ h'0030c0ea
+_set_delta_orientation__FiN31: .equ h'0030c10a
  .export _copy_position__FiT1
-_copy_position__FiT1: .equ h'0030c16e
+_copy_position__FiT1: .equ h'0030c18e
  .export _copy_velocity__FiT1
-_copy_velocity__FiT1: .equ h'0030c1d0
+_copy_velocity__FiT1: .equ h'0030c1f0
  .export _copy_orientation__FiT1
-_copy_orientation__FiT1: .equ h'0030c21a
+_copy_orientation__FiT1: .equ h'0030c23a
  .export _set_velocity_in_frame__FiN41
-_set_velocity_in_frame__FiN41: .equ h'0030c262
+_set_velocity_in_frame__FiN41: .equ h'0030c282
  .export _set_relative_velocity__FiN41
-_set_relative_velocity__FiN41: .equ h'0030c2dc
+_set_relative_velocity__FiN41: .equ h'0030c2fc
  .export _set_relative_position__FiN41
-_set_relative_position__FiN41: .equ h'0030c33c
+_set_relative_position__FiN41: .equ h'0030c35c
  .export _set_position_in_frame__FiN41
-_set_position_in_frame__FiN41: .equ h'0030c392
+_set_position_in_frame__FiN41: .equ h'0030c3b2
  .export _scale_model__FiN21
-_scale_model__FiN21: .equ h'0030c410
+_scale_model__FiN21: .equ h'0030c430
  .export _set_collision__Fi
-_set_collision__Fi: .equ h'0030c4bc
+_set_collision__Fi: .equ h'0030c4dc
  .export _set_view_position__FP8ViewportiN22
-_set_view_position__FP8ViewportiN22: .equ h'0030c4ea
+_set_view_position__FP8ViewportiN22: .equ h'0030c50a
  .export _set_view_orientation__FP8ViewportiN22
-_set_view_orientation__FP8ViewportiN22: .equ h'0030c4f4
+_set_view_orientation__FP8ViewportiN22: .equ h'0030c514
  .export _current_view_model__FPi
-_current_view_model__FPi: .equ h'0030c546
+_current_view_model__FPi: .equ h'0030c566
  .export _set_view_model__Fi
-_set_view_model__Fi: .equ h'0030c574
+_set_view_model__Fi: .equ h'0030c594
  .export _colour_model_h__FiT1
-_colour_model_h__FiT1: .equ h'0030c5a4
+_colour_model_h__FiT1: .equ h'0030c5c4
  .export _position_of_model__FiPiN22
-_position_of_model__FiPiN22: .equ h'0030c5cc
+_position_of_model__FiPiN22: .equ h'0030c5ec
  .export _set_model_shading__FiUi
-_set_model_shading__FiUi: .equ h'0030c5fc
+_set_model_shading__FiUi: .equ h'0030c61c
  .export _displayInfo
-_displayInfo: .equ h'0030c648
+_displayInfo: .equ h'0030c668
  .export _AC
-_AC: .equ h'0030c6d0
+_AC: .equ h'0030c6f0
  .export _scroll1
-_scroll1: .equ h'0030c78c
+_scroll1: .equ h'0030c7ac
  .export _newline
-_newline: .equ h'0030c7ca
+_newline: .equ h'0030c7ea
  .export _printc
-_printc: .equ h'0030c878
+_printc: .equ h'0030c898
  .export _print
-_print: .equ h'0030c8b4
+_print: .equ h'0030c8d4
  .export _translateKey
-_translateKey: .equ h'0030c8ee
+_translateKey: .equ h'0030c90e
  .export _clearLine
-_clearLine: .equ h'0030c6f2
+_clearLine: .equ h'0030c712
  .export _printAt
-_printAt: .equ h'0030c8d0
+_printAt: .equ h'0030c8f0
  .export _findExpandKey
-_findExpandKey: .equ h'0030c69e
+_findExpandKey: .equ h'0030c6be
  .export _waitForKey
-_waitForKey: .equ h'0030c914
+_waitForKey: .equ h'0030c934
  .export _refreshScreen
-_refreshScreen: .equ h'0030c922
+_refreshScreen: .equ h'0030c942
  .export _GetKeyNonblocking
-_GetKeyNonblocking: .equ h'0030ca68
+_GetKeyNonblocking: .equ h'0030ca88
  .export _EscapeKeyPressed
-_EscapeKeyPressed: .equ h'0030cbee
+_EscapeKeyPressed: .equ h'0030cc0e
  .export _CPUSpeedNormal
-_CPUSpeedNormal: .equ h'0030c958
+_CPUSpeedNormal: .equ h'0030c978
  .export _CPUSpeedFast
-_CPUSpeedFast: .equ h'0030c980
+_CPUSpeedFast: .equ h'0030c9a0
  .export _StartTimer
-_StartTimer: .equ h'0030c932
+_StartTimer: .equ h'0030c952
  .export _ReadTimer
-_ReadTimer: .equ h'0030c942
+_ReadTimer: .equ h'0030c962
  .export _StopTimer
-_StopTimer: .equ h'0030c952
+_StopTimer: .equ h'0030c972
  .export __printc
-__printc: .equ h'0030c7ea
+__printc: .equ h'0030c80a
  .export _IsSlim
-_IsSlim: .equ h'0030c9a8
+_IsSlim: .equ h'0030c9c8
  .export _keyMatrix
-_keyMatrix: .equ h'0030c9dc
+_keyMatrix: .equ h'0030c9fc
  .export _u_strnicmp
-_u_strnicmp: .equ h'0030cc1c
+_u_strnicmp: .equ h'0030cc3c
  .export ___ml__FRC7ComplexT1
-___ml__FRC7ComplexT1: .equ h'0030cd28
+___ml__FRC7ComplexT1: .equ h'0030cd48
  .export ___dv__FRC7ComplexT1
-___dv__FRC7ComplexT1: .equ h'0030cf3c
+___dv__FRC7ComplexT1: .equ h'0030cf5c
  .export _square__FRC7Complex
-_square__FRC7Complex: .equ h'0030d458
+_square__FRC7Complex: .equ h'0030d478
  .export _inv__FRC7Complex
-_inv__FRC7Complex: .equ h'0030d57c
+_inv__FRC7Complex: .equ h'0030d59c
  .export _sqrt__FRC7Complex
-_sqrt__FRC7Complex: .equ h'0030d794
+_sqrt__FRC7Complex: .equ h'0030d7b4
  .export _fabs__FRC7Complex
-_fabs__FRC7Complex: .equ h'0030de88
+_fabs__FRC7Complex: .equ h'0030dea8
  .export _log__FRC7ComplexR7Complex
-_log__FRC7ComplexR7Complex: .equ h'0030dec0
+_log__FRC7ComplexR7Complex: .equ h'0030dee0
  .export _log10__FRC7ComplexR7Complex
-_log10__FRC7ComplexR7Complex: .equ h'0030df04
+_log10__FRC7ComplexR7Complex: .equ h'0030df24
  .export _exp__FRC7ComplexR7Complex
-_exp__FRC7ComplexR7Complex: .equ h'0030df82
+_exp__FRC7ComplexR7Complex: .equ h'0030dfa2
  .export _alog__FRC7ComplexR7Complex
-_alog__FRC7ComplexR7Complex: .equ h'0030e03c
+_alog__FRC7ComplexR7Complex: .equ h'0030e05c
  .export _power__FRC7ComplexlR7Complex
-_power__FRC7ComplexlR7Complex: .equ h'0030e07c
+_power__FRC7ComplexlR7Complex: .equ h'0030e09c
  .export _power__FRC7ComplexRC3BCDR7Complex
-_power__FRC7ComplexRC3BCDR7Complex: .equ h'0030e174
+_power__FRC7ComplexRC3BCDR7Complex: .equ h'0030e194
  .export _power__FRC7ComplexT1R7Complex
-_power__FRC7ComplexT1R7Complex: .equ h'0030e258
+_power__FRC7ComplexT1R7Complex: .equ h'0030e278
  .export _sin__FRC7ComplexR7Complex
-_sin__FRC7ComplexR7Complex: .equ h'0030e3a8
+_sin__FRC7ComplexR7Complex: .equ h'0030e3c8
  .export _cos__FRC7ComplexR7Complex
-_cos__FRC7ComplexR7Complex: .equ h'0030e432
+_cos__FRC7ComplexR7Complex: .equ h'0030e452
  .export _sincos__FRC7ComplexP7ComplexT2
-_sincos__FRC7ComplexP7ComplexT2: .equ h'0030e50c
+_sincos__FRC7ComplexP7ComplexT2: .equ h'0030e52c
  .export _tan__FRC7ComplexR7Complex
-_tan__FRC7ComplexR7Complex: .equ h'0030e6ac
+_tan__FRC7ComplexR7Complex: .equ h'0030e6cc
  .export _asin__FRC7ComplexR7Complex
-_asin__FRC7ComplexR7Complex: .equ h'0030e80c
+_asin__FRC7ComplexR7Complex: .equ h'0030e82c
  .export _acos__FRC7ComplexR7Complex
-_acos__FRC7ComplexR7Complex: .equ h'0030e934
+_acos__FRC7ComplexR7Complex: .equ h'0030e954
  .export _atan__FRC7ComplexR7Complex
-_atan__FRC7ComplexR7Complex: .equ h'0030ee10
+_atan__FRC7ComplexR7Complex: .equ h'0030ee30
  .export _sinh__FRC7ComplexR7Complex
-_sinh__FRC7ComplexR7Complex: .equ h'0030f160
+_sinh__FRC7ComplexR7Complex: .equ h'0030f180
  .export _cosh__FRC7ComplexR7Complex
-_cosh__FRC7ComplexR7Complex: .equ h'0030f1c0
+_cosh__FRC7ComplexR7Complex: .equ h'0030f1e0
  .export _tanh__FRC7ComplexR7Complex
-_tanh__FRC7ComplexR7Complex: .equ h'0030f216
+_tanh__FRC7ComplexR7Complex: .equ h'0030f236
  .export _asinh__FRC7ComplexR7Complex
-_asinh__FRC7ComplexR7Complex: .equ h'0030f276
+_asinh__FRC7ComplexR7Complex: .equ h'0030f296
  .export _acosh__FRC7ComplexR7Complex
-_acosh__FRC7ComplexR7Complex: .equ h'0030f2d6
+_acosh__FRC7ComplexR7Complex: .equ h'0030f2f6
  .export _atanh__FRC7ComplexR7Complex
-_atanh__FRC7ComplexR7Complex: .equ h'0030f328
+_atanh__FRC7ComplexR7Complex: .equ h'0030f348
  .export _gammaFactorial__FRC7ComplexR7Complex
-_gammaFactorial__FRC7ComplexR7Complex: .equ h'0030fb18
+_gammaFactorial__FRC7ComplexR7Complex: .equ h'0030fb38
  .export ___ct__7ComplexFPCc
-___ct__7ComplexFPCc: .equ h'0030fe48
+___ct__7ComplexFPCc: .equ h'0030fe68
  .export _asString__7ComplexCFPc
-_asString__7ComplexCFPc: .equ h'0030ff4c
+_asString__7ComplexCFPc: .equ h'0030ff6c
  .export _add_controller__Fi
-_add_controller__Fi: .equ h'00310190
+_add_controller__Fi: .equ h'003101b0
  .export _move_motion__FP6Motion
-_move_motion__FP6Motion: .equ h'003101f0
+_move_motion__FP6Motion: .equ h'00310210
  .export _move_model__FP5Model
-_move_model__FP5Model: .equ h'003102c8
+_move_model__FP5Model: .equ h'003102e8
  .export _append__Q2_5Utils5DListFPQ2_5Utils8DListRec
-_append__Q2_5Utils5DListFPQ2_5Utils8DListRec: .equ h'00310352
+_append__Q2_5Utils5DListFPQ2_5Utils8DListRec: .equ h'00310372
  .export _insert__Q2_5Utils5DListFPQ2_5Utils8DListRec
-_insert__Q2_5Utils5DListFPQ2_5Utils8DListRec: .equ h'00310382
+_insert__Q2_5Utils5DListFPQ2_5Utils8DListRec: .equ h'003103a2
  .export _size__Q2_5Utils5DListCFv
-_size__Q2_5Utils5DListCFv: .equ h'003103b0
+_size__Q2_5Utils5DListCFv: .equ h'003103d0
  .export _extract__Q2_5Utils5DListFPQ2_5Utils8DListRec
-_extract__Q2_5Utils5DListFPQ2_5Utils8DListRec: .equ h'003103c6
+_extract__Q2_5Utils5DListFPQ2_5Utils8DListRec: .equ h'003103e6
  .export _member__Q2_5Utils5DListCFPQ2_5Utils8DListRec
-_member__Q2_5Utils5DListCFPQ2_5Utils8DListRec: .equ h'003103f2
+_member__Q2_5Utils5DListCFPQ2_5Utils8DListRec: .equ h'00310412
  .export _extractFirst__Q2_5Utils5DListFv
-_extractFirst__Q2_5Utils5DListFv: .equ h'00310424
+_extractFirst__Q2_5Utils5DListFv: .equ h'00310444
  .export ___ct__Q2_5Utils13DListIteratorFRCQ2_5Utils5DList
-___ct__Q2_5Utils13DListIteratorFRCQ2_5Utils5DList: .equ h'0031044c
+___ct__Q2_5Utils13DListIteratorFRCQ2_5Utils5DList: .equ h'0031046c
  .export ___as__Q2_5Utils13DListIteratorFRCQ2_5Utils13DListIterator
-___as__Q2_5Utils13DListIteratorFRCQ2_5Utils13DListIterator: .equ h'0031048e
+___as__Q2_5Utils13DListIteratorFRCQ2_5Utils13DListIterator: .equ h'003104ae
  .export ___pp__Q2_5Utils13DListIteratorFv
-___pp__Q2_5Utils13DListIteratorFv: .equ h'0031049a
+___pp__Q2_5Utils13DListIteratorFv: .equ h'003104ba
  .export ___mm__Q2_5Utils13DListIteratorFv
-___mm__Q2_5Utils13DListIteratorFv: .equ h'003104cc
+___mm__Q2_5Utils13DListIteratorFv: .equ h'003104ec
  .export _remove__Q2_5Utils13DListIteratorFv
-_remove__Q2_5Utils13DListIteratorFv: .equ h'0031051a
+_remove__Q2_5Utils13DListIteratorFv: .equ h'0031053a
  .export _extract__Q2_5Utils13DListIteratorFv
-_extract__Q2_5Utils13DListIteratorFv: .equ h'00310542
+_extract__Q2_5Utils13DListIteratorFv: .equ h'00310562
  .export _insert__Q2_5Utils13DListIteratorFPQ2_5Utils8DListRec
-_insert__Q2_5Utils13DListIteratorFPQ2_5Utils8DListRec: .equ h'00310568
+_insert__Q2_5Utils13DListIteratorFPQ2_5Utils8DListRec: .equ h'00310588
  .export _find__Q2_5Utils13DListIteratorFPCQ2_5Utils8DListRec
-_find__Q2_5Utils13DListIteratorFPCQ2_5Utils8DListRec: .equ h'003105c4
+_find__Q2_5Utils13DListIteratorFPCQ2_5Utils8DListRec: .equ h'003105e4
  .export _draw_polygon__FiT1PP6Point3
-_draw_polygon__FiT1PP6Point3: .equ h'003105f4
+_draw_polygon__FiT1PP6Point3: .equ h'00310614
  .export _draw_wire_polygon__FiPP6Point3P5Plane
-_draw_wire_polygon__FiPP6Point3P5Plane: .equ h'0031078c
+_draw_wire_polygon__FiPP6Point3P5Plane: .equ h'003107ac
  .export _draw_gpolygon__FiT1PP6Point3
-_draw_gpolygon__FiT1PP6Point3: .equ h'00310898
+_draw_gpolygon__FiT1PP6Point3: .equ h'003108b8
  .export _set_model_colour__FP5Modeli
-_set_model_colour__FP5Modeli: .equ h'00310a90
+_set_model_colour__FP5Modeli: .equ h'00310ab0
  .export _flip_plane__FP5Plane
-_flip_plane__FP5Plane: .equ h'00310ac4
+_flip_plane__FP5Plane: .equ h'00310ae4
  .export _flip_planes__FP5Model
-_flip_planes__FP5Model: .equ h'00310b02
+_flip_planes__FP5Model: .equ h'00310b22
  .export _set_shading_type__FP5Modeli
-_set_shading_type__FP5Modeli: .equ h'00310b28
+_set_shading_type__FP5Modeli: .equ h'00310b48
  .export _eval__13ExprEvaluatorFRC3BCDR3BCD
-_eval__13ExprEvaluatorFRC3BCDR3BCD: .equ h'00310c64
+_eval__13ExprEvaluatorFRC3BCDR3BCD: .equ h'00310c84
  .export _findVars__13ExprEvaluatorFP4TermPFP4TermPv_bPv
-_findVars__13ExprEvaluatorFP4TermPFP4TermPv_bPv: .equ h'00310cf2
+_findVars__13ExprEvaluatorFP4TermPFP4TermPv_bPv: .equ h'00310d12
  .export __evalReduce__13ExprEvaluatorFR3BCD
-__evalReduce__13ExprEvaluatorFR3BCD: .equ h'00310de0
+__evalReduce__13ExprEvaluatorFR3BCD: .equ h'00310e00
  .export _eval_init
-_eval_init: .equ h'00310e98
+_eval_init: .equ h'00310eb8
  .export _eval_end
-_eval_end: .equ h'00310ee2
+_eval_end: .equ h'00310f02
  .export _eval
-_eval: .equ h'00310ef8
+_eval: .equ h'00310f18
  .export _Init__FP8Bitmap2D
-_Init__FP8Bitmap2D: .equ h'0031101c
+_Init__FP8Bitmap2D: .equ h'0031103c
  .export _SIGN__FRC3BCDT1
-_SIGN__FRC3BCDT1: .equ h'00311034
+_SIGN__FRC3BCDT1: .equ h'00311054
  .export _mul__FRC6MatrixT1R6Matrix
-_mul__FRC6MatrixT1R6Matrix: .equ h'003110d8
+_mul__FRC6MatrixT1R6Matrix: .equ h'003110f8
  .export _add__FRC6MatrixT1R6Matrix
-_add__FRC6MatrixT1R6Matrix: .equ h'00311126
+_add__FRC6MatrixT1R6Matrix: .equ h'00311146
  .export _sub__FRC6MatrixT1R6Matrix
-_sub__FRC6MatrixT1R6Matrix: .equ h'00311178
+_sub__FRC6MatrixT1R6Matrix: .equ h'00311198
  .export _div__FRC6MatrixT1R6Matrix
-_div__FRC6MatrixT1R6Matrix: .equ h'003111ca
+_div__FRC6MatrixT1R6Matrix: .equ h'003111ea
  .export _invert__FRC6MatrixR6MatrixRb
-_invert__FRC6MatrixR6MatrixRb: .equ h'003112f0
+_invert__FRC6MatrixR6MatrixRb: .equ h'00311310
  .export _transpose__FRC6MatrixR6Matrix
-_transpose__FRC6MatrixR6Matrix: .equ h'0031150c
+_transpose__FRC6MatrixR6Matrix: .equ h'0031152c
  .export _luSolve__FRC7TermRefUiPiT1R7TermRefi
-_luSolve__FRC7TermRefUiPiT1R7TermRefi: .equ h'00311dd4
+_luSolve__FRC7TermRefUiPiT1R7TermRefi: .equ h'00311df4
  .export _squelchMat__FRC7TermRefiRC3BCD
-_squelchMat__FRC7TermRefiRC3BCD: .equ h'00312eda
+_squelchMat__FRC7TermRefiRC3BCD: .equ h'00312efa
  .export _prootEigen__FRC6MatrixR6Matrix
-_prootEigen__FRC6MatrixR6Matrix: .equ h'003160c4
+_prootEigen__FRC6MatrixR6Matrix: .equ h'003160e4
  .export __create__6MatrixSFR6MatrixiT2b
-__create__6MatrixSFR6MatrixiT2b: .equ h'0031660c
+__create__6MatrixSFR6MatrixiT2b: .equ h'0031662c
  .export _determinant__6MatrixCFR3BCD
-_determinant__6MatrixCFR3BCD: .equ h'003168be
+_determinant__6MatrixCFR3BCD: .equ h'003168de
  .export _inverse_rotate_vector__FP7Matrix3P7Vector3T2
-_inverse_rotate_vector__FP7Matrix3P7Vector3T2: .equ h'003169d4
+_inverse_rotate_vector__FP7Matrix3P7Vector3T2: .equ h'003169f4
  .export _rotate_vector__FP7Matrix3P7Vector3T2
-_rotate_vector__FP7Matrix3P7Vector3T2: .equ h'00316a40
+_rotate_vector__FP7Matrix3P7Vector3T2: .equ h'00316a60
  .export _rotate_vertex__FP7Matrix3P6Point3
-_rotate_vertex__FP7Matrix3P6Point3: .equ h'00316aac
+_rotate_vertex__FP7Matrix3P6Point3: .equ h'00316acc
  .export _inverse_rotate_vertex__FP7Matrix3P6Point3
-_inverse_rotate_vertex__FP7Matrix3P6Point3: .equ h'00316b18
+_inverse_rotate_vertex__FP7Matrix3P6Point3: .equ h'00316b38
  .export _v_rot_v__FP7Matrix3P6Point3i
-_v_rot_v__FP7Matrix3P6Point3i: .equ h'00316b84
+_v_rot_v__FP7Matrix3P6Point3i: .equ h'00316ba4
  .export _rotate_vertices__FP7Matrix3P6Point3i
-_rotate_vertices__FP7Matrix3P6Point3i: .equ h'00316c6c
+_rotate_vertices__FP7Matrix3P6Point3i: .equ h'00316c8c
  .export _init_matrices__FP5Model
-_init_matrices__FP5Model: .equ h'00316ce4
+_init_matrices__FP5Model: .equ h'00316d04
  .export _matrix_product__FP7Matrix3N21
-_matrix_product__FP7Matrix3N21: .equ h'00316d18
+_matrix_product__FP7Matrix3N21: .equ h'00316d38
  .export _create_matrix__FP7Matrix3iN22
-_create_matrix__FP7Matrix3iN22: .equ h'00316e7a
+_create_matrix__FP7Matrix3iN22: .equ h'00316e9a
  .export _create_inverse__FP7Matrix3T1
-_create_inverse__FP7Matrix3T1: .equ h'00316f86
+_create_inverse__FP7Matrix3T1: .equ h'00316fa6
  .export _magnitude__FP7Vector3
-_magnitude__FP7Vector3: .equ h'00316fac
+_magnitude__FP7Vector3: .equ h'00316fcc
  .export _normalise8__FP7Vector3
-_normalise8__FP7Vector3: .equ h'00316ff4
+_normalise8__FP7Vector3: .equ h'00317014
  .export _normalise_matrix__FP7Matrix3
-_normalise_matrix__FP7Matrix3: .equ h'003170b0
+_normalise_matrix__FP7Matrix3: .equ h'003170d0
  .export _set_model_offset__FP5ModeliN22
-_set_model_offset__FP5ModeliN22: .equ h'003171aa
+_set_model_offset__FP5ModeliN22: .equ h'003171ca
  .export _set_mem_handler__FPFPvUl_Pv
-_set_mem_handler__FPFPvUl_Pv: .equ h'003171c4
+_set_mem_handler__FPFPvUl_Pv: .equ h'003171e4
  .export _xmalloc__FUl
-_xmalloc__FUl: .equ h'003171cc
+_xmalloc__FUl: .equ h'003171ec
  .export _xfree__FPv
-_xfree__FPv: .equ h'003171f0
+_xfree__FPv: .equ h'00317210
  .export _one__Fv
-_one__Fv: .equ h'0031720c
+_one__Fv: .equ h'0031722c
  .export _zero__Fv
-_zero__Fv: .equ h'00317212
+_zero__Fv: .equ h'00317232
  .export _InitBig__Fv
-_InitBig__Fv: .equ h'00317218
+_InitBig__Fv: .equ h'00317238
  .export __destroy__FPUs
-__destroy__FPUs: .equ h'0031724a
+__destroy__FPUs: .equ h'0031726a
  .export _finishBig__Fv
-_finishBig__Fv: .equ h'00317280
+_finishBig__Fv: .equ h'003172a0
  .export _log2__FPUs
-_log2__FPUs: .equ h'003172b8
+_log2__FPUs: .equ h'003172d8
  .export _destroyBig__FPUs
-_destroyBig__FPUs: .equ h'003172d2
+_destroyBig__FPUs: .equ h'003172f2
  .export _parseBig__FPPCc
-_parseBig__FPPCc: .equ h'003172ea
+_parseBig__FPPCc: .equ h'0031730a
  .export _createBig__Fl
-_createBig__Fl: .equ h'0031740a
+_createBig__Fl: .equ h'0031742a
  .export _createBigu__FUl
-_createBigu__FUl: .equ h'00317472
+_createBigu__FUl: .equ h'00317492
  .export _addu__FPUsT1
-_addu__FPUsT1: .equ h'003174d4
+_addu__FPUsT1: .equ h'003174f4
  .export _addint__FPUsi
-_addint__FPUsi: .equ h'00317574
+_addint__FPUsi: .equ h'00317594
  .export _addint__FPUsUi
-_addint__FPUsUi: .equ h'003175a0
+_addint__FPUsUi: .equ h'003175c0
  .export _subint__FPUsUi
-_subint__FPUsUi: .equ h'0031760e
+_subint__FPUsUi: .equ h'0031762e
  .export _subu__FPUsT1
-_subu__FPUsT1: .equ h'0031768c
+_subu__FPUsT1: .equ h'003176ac
  .export _compare__FPUsT1
-_compare__FPUsT1: .equ h'00317726
+_compare__FPUsT1: .equ h'00317746
  .export _compareu__FPUsT1
-_compareu__FPUsT1: .equ h'00317788
+_compareu__FPUsT1: .equ h'003177a8
  .export _addBig__FPUsT1
-_addBig__FPUsT1: .equ h'003177c8
+_addBig__FPUsT1: .equ h'003177e8
  .export _subBig__FPUsT1
-_subBig__FPUsT1: .equ h'00317854
+_subBig__FPUsT1: .equ h'00317874
  .export _negateBig__FPUs
-_negateBig__FPUs: .equ h'003178e4
+_negateBig__FPUs: .equ h'00317904
  .export _lshiftn__FPUsUi
-_lshiftn__FPUsUi: .equ h'00317916
+_lshiftn__FPUsUi: .equ h'00317936
  .export _lshiftBig__FPUsi
-_lshiftBig__FPUsi: .equ h'003179fe
+_lshiftBig__FPUsi: .equ h'00317a1e
  .export _copyBig__FPUs
-_copyBig__FPUs: .equ h'00317ad2
+_copyBig__FPUs: .equ h'00317af2
  .export _mulint__FPUsi
-_mulint__FPUsi: .equ h'00317b20
+_mulint__FPUsi: .equ h'00317b40
  .export _mulBig__FPUsT1
-_mulBig__FPUsT1: .equ h'00317bb6
+_mulBig__FPUsT1: .equ h'00317bd6
  .export _sqrBig__FPUs
-_sqrBig__FPUs: .equ h'00317cd4
+_sqrBig__FPUs: .equ h'00317cf4
  .export _mulBigMod__FPUsN21
-_mulBigMod__FPUsN21: .equ h'00317e1a
+_mulBigMod__FPUsN21: .equ h'00317e3a
  .export _rshiftn__FPUsUi
-_rshiftn__FPUsUi: .equ h'00317e54
+_rshiftn__FPUsUi: .equ h'00317e74
  .export _rshiftBig__FPUs
-_rshiftBig__FPUs: .equ h'00317ede
+_rshiftBig__FPUs: .equ h'00317efe
  .export _divBig__FPUsT1PPUs
-_divBig__FPUsT1PPUs: .equ h'00317f5c
+_divBig__FPUsT1PPUs: .equ h'00317f7c
  .export _gcdBigu__FPUsT1
-_gcdBigu__FPUsT1: .equ h'003183e4
+_gcdBigu__FPUsT1: .equ h'00318404
  .export _gcdBig__FPUsT1
-_gcdBig__FPUsT1: .equ h'0031849a
+_gcdBig__FPUsT1: .equ h'003184ba
  .export __decimalLength__FPUs
-__decimalLength__FPUs: .equ h'00318514
+__decimalLength__FPUs: .equ h'00318534
  .export _log10__FPUs
-_log10__FPUs: .equ h'00318544
+_log10__FPUs: .equ h'00318564
  .export _asString__FPUsPFPvc_vPv
-_asString__FPUsPFPvc_vPv: .equ h'0031855a
+_asString__FPUsPFPvc_vPv: .equ h'0031857a
  .export _powerBig__FPUsUi
-_powerBig__FPUsUi: .equ h'003186b2
+_powerBig__FPUsUi: .equ h'003186d2
  .export _powerBigMod__FPUsN21
-_powerBigMod__FPUsN21: .equ h'00318754
+_powerBigMod__FPUsN21: .equ h'00318774
  .export _powerBigintMod__FPUsUiT1
-_powerBigintMod__FPUsUiT1: .equ h'0031884c
+_powerBigintMod__FPUsUiT1: .equ h'0031886c
  .export _rootBig__FPUs
-_rootBig__FPUs: .equ h'00318906
+_rootBig__FPUs: .equ h'00318926
  .export _bigAsInt__FPUs
-_bigAsInt__FPUs: .equ h'003189d0
+_bigAsInt__FPUs: .equ h'003189f0
  .export _bigAsUint__FPUs
-_bigAsUint__FPUs: .equ h'00318a2c
+_bigAsUint__FPUs: .equ h'00318a4c
  .export _destroyFrac__FP7BigFrac
-_destroyFrac__FP7BigFrac: .equ h'00318ad6
+_destroyFrac__FP7BigFrac: .equ h'00318af6
  .export _copyFrac__FP7BigFracT1
-_copyFrac__FP7BigFracT1: .equ h'00318b5a
+_copyFrac__FP7BigFracT1: .equ h'00318b7a
  .export _addFrac__FP7BigFracN21
-_addFrac__FP7BigFracN21: .equ h'00318c94
+_addFrac__FP7BigFracN21: .equ h'00318cb4
  .export _subFrac__FP7BigFracN21
-_subFrac__FP7BigFracN21: .equ h'00318ca0
+_subFrac__FP7BigFracN21: .equ h'00318cc0
  .export _mulFrac__FP7BigFracN21
-_mulFrac__FP7BigFracN21: .equ h'00318ccc
+_mulFrac__FP7BigFracN21: .equ h'00318cec
  .export _divFrac__FP7BigFracN21
-_divFrac__FP7BigFracN21: .equ h'00318d72
+_divFrac__FP7BigFracN21: .equ h'00318d92
  .export _modFrac__FP7BigFracN21
-_modFrac__FP7BigFracN21: .equ h'00318e30
+_modFrac__FP7BigFracN21: .equ h'00318e50
  .export _invertFrac__FP7BigFrac
-_invertFrac__FP7BigFrac: .equ h'00318eba
+_invertFrac__FP7BigFrac: .equ h'00318eda
  .export _powerFracInt__FP7BigFracUiT1
-_powerFracInt__FP7BigFracUiT1: .equ h'00318ecc
+_powerFracInt__FP7BigFracUiT1: .equ h'00318eec
  .export _powerFrac__FP7BigFracN21
-_powerFrac__FP7BigFracN21: .equ h'00318fa6
+_powerFrac__FP7BigFracN21: .equ h'00318fc6
  .export _asStringFrac__FPC7BigFracPFPvc_vPv
-_asStringFrac__FPC7BigFracPFPvc_vPv: .equ h'0031909c
+_asStringFrac__FPC7BigFracPFPvc_vPv: .equ h'003190bc
  .export _rootFrac__FP7BigFracT1
-_rootFrac__FP7BigFracT1: .equ h'00319146
+_rootFrac__FP7BigFracT1: .equ h'00319166
  .export _nRootFrac__FP7BigFracUiT1
-_nRootFrac__FP7BigFracUiT1: .equ h'00319180
+_nRootFrac__FP7BigFracUiT1: .equ h'003191a0
  .export _fracAsUint__FP7BigFrac
-_fracAsUint__FP7BigFrac: .equ h'0031921c
+_fracAsUint__FP7BigFrac: .equ h'0031923c
  .export _sameFrac__FP7BigFracT1
-_sameFrac__FP7BigFracT1: .equ h'00319272
+_sameFrac__FP7BigFracT1: .equ h'00319292
  .export _parallelFrac__FP7BigFracN21
-_parallelFrac__FP7BigFracN21: .equ h'003192aa
+_parallelFrac__FP7BigFracN21: .equ h'003192ca
  .export _setrandomN__FUl
-_setrandomN__FUl: .equ h'0031956e
+_setrandomN__FUl: .equ h'0031958e
  .export _randomN__Fv
-_randomN__Fv: .equ h'00319574
+_randomN__Fv: .equ h'00319594
  .export _modBig__FPUsUi
-_modBig__FPUsUi: .equ h'0031958c
+_modBig__FPUsUi: .equ h'003195ac
  .export _BigToMF__FPUsP3BCD
-_BigToMF__FPUsP3BCD: .equ h'003195ec
+_BigToMF__FPUsP3BCD: .equ h'0031960c
  .export _BigFracToMF__FP7BigFracP3BCD
-_BigFracToMF__FP7BigFracP3BCD: .equ h'00319760
+_BigFracToMF__FP7BigFracP3BCD: .equ h'00319780
  .export _factorFrac__FPC7BigFracP7BigFrac
-_factorFrac__FPC7BigFracP7BigFrac: .equ h'003197ba
+_factorFrac__FPC7BigFracP7BigFrac: .equ h'003197da
  .export _factorialFrac__FPC7BigFracP7BigFrac
-_factorialFrac__FPC7BigFracP7BigFrac: .equ h'003199f8
+_factorialFrac__FPC7BigFracP7BigFrac: .equ h'00319a18
  .export _BCDToFrac__FRC3BCDT1P7BigFrac
-_BCDToFrac__FRC3BCDT1P7BigFrac: .equ h'00319acc
+_BCDToFrac__FRC3BCDT1P7BigFrac: .equ h'00319aec
  .export ___ct__7BigFracFl
-___ct__7BigFracFl: .equ h'0031a974
+___ct__7BigFracFl: .equ h'0031a994
  .export ___ct__7BigFracFPUs
-___ct__7BigFracFPUs: .equ h'0031a9ac
+___ct__7BigFracFPUs: .equ h'0031a9cc
  .export _create_model__FiN41
-_create_model__FiN41: .equ h'0031aae0
+_create_model__FiN41: .equ h'0031ab00
  .export _shade_planes__FP5Model
-_shade_planes__FP5Model: .equ h'0031abfe
+_shade_planes__FP5Model: .equ h'0031ac1e
  .export _shade_vertices__FP5Model
-_shade_vertices__FP5Model: .equ h'0031ace0
+_shade_vertices__FP5Model: .equ h'0031ad00
  .export _check_visibility__FP5Model
-_check_visibility__FP5Model: .equ h'0031ad5a
+_check_visibility__FP5Model: .equ h'0031ad7a
  .export _draw_model__FP5ModelP8Viewport
-_draw_model__FP5ModelP8Viewport: .equ h'0031afa8
+_draw_model__FP5ModelP8Viewport: .equ h'0031afc8
  .export _destroy_model__FP5Model
-_destroy_model__FP5Model: .equ h'0031b046
+_destroy_model__FP5Model: .equ h'0031b066
  .export _createDummy__Fv
-_createDummy__Fv: .equ h'0031b04c
+_createDummy__Fv: .equ h'0031b06c
  .export _calcVertexRefs__FP5Model
-_calcVertexRefs__FP5Model: .equ h'0031b0d0
+_calcVertexRefs__FP5Model: .equ h'0031b0f0
  .export _init_vertex_normals__FP5Model
-_init_vertex_normals__FP5Model: .equ h'0031b1ac
+_init_vertex_normals__FP5Model: .equ h'0031b1cc
  .export _init_normals__FP5Model
-_init_normals__FP5Model: .equ h'0031b30a
+_init_normals__FP5Model: .equ h'0031b32a
  .export _refine_radius__FP5Model
-_refine_radius__FP5Model: .equ h'0031b360
+_refine_radius__FP5Model: .equ h'0031b380
  .export _GetScreenBitmap2D__Fv
-_GetScreenBitmap2D__Fv: .equ h'0031b408
+_GetScreenBitmap2D__Fv: .equ h'0031b428
  .export _init_os__FP8Bitmap2D
-_init_os__FP8Bitmap2D: .equ h'0031b40e
+_init_os__FP8Bitmap2D: .equ h'0031b42e
  .export _clear_pix__FP8Bitmap2Di
-_clear_pix__FP8Bitmap2Di: .equ h'0031b418
+_clear_pix__FP8Bitmap2Di: .equ h'0031b438
  .export _Time__Fv
-_Time__Fv: .equ h'0031b430
+_Time__Fv: .equ h'0031b450
  .export _PlotGraph__FP4TermR3BCDT2
-_PlotGraph__FP4TermR3BCDT2: .equ h'0031b534
+_PlotGraph__FP4TermR3BCDT2: .equ h'0031b554
  .export _calibrate__4PlotFP4DC2DR3BCDT2iT4
-_calibrate__4PlotFP4DC2DR3BCDT2iT4: .equ h'0031bc24
+_calibrate__4PlotFP4DC2DR3BCDT2iT4: .equ h'0031bc44
  .export _update1__4PlotFv
-_update1__4PlotFv: .equ h'0031bfae
+_update1__4PlotFv: .equ h'0031bfce
  .export _eval1__4PlotFi
-_eval1__4PlotFi: .equ h'0031c040
+_eval1__4PlotFi: .equ h'0031c060
  .export _scalePoints__4PlotFv
-_scalePoints__4PlotFv: .equ h'0031c0a8
+_scalePoints__4PlotFv: .equ h'0031c0c8
  .export _plotPoints__4PlotFv
-_plotPoints__4PlotFv: .equ h'0031c3c0
+_plotPoints__4PlotFv: .equ h'0031c3e0
  .export _plotAxes__4PlotFv
-_plotAxes__4PlotFv: .equ h'0031c496
+_plotAxes__4PlotFv: .equ h'0031c4b6
  .export _recalibrateShift__4PlotFi
-_recalibrateShift__4PlotFi: .equ h'0031c5f4
+_recalibrateShift__4PlotFi: .equ h'0031c614
  .export _poi__4PlotFP8Bitmap2D
-_poi__4PlotFP8Bitmap2D: .equ h'0031c8ac
+_poi__4PlotFP8Bitmap2D: .equ h'0031c8cc
  .export __updateScale__4PlotFi
-__updateScale__4PlotFi: .equ h'0031cf4a
+__updateScale__4PlotFi: .equ h'0031cf6a
  .export __poiMinMax__4PlotFiT1
-__poiMinMax__4PlotFiT1: .equ h'0031d020
+__poiMinMax__4PlotFiT1: .equ h'0031d040
  .export _line__FP8Bitmap2DiN42
-_line__FP8Bitmap2DiN42: .equ h'0031d2dc
+_line__FP8Bitmap2DiN42: .equ h'0031d2fc
  .export _plot__FP8Bitmap2DiN22
-_plot__FP8Bitmap2DiN22: .equ h'0031d306
+_plot__FP8Bitmap2DiN22: .equ h'0031d326
  .export _AddIn_main
-_AddIn_main: .equ h'0031d452
+_AddIn_main: .equ h'0031d472
  .export _init_renderer__FP8Bitmap2D
-_init_renderer__FP8Bitmap2D: .equ h'0031d4e0
+_init_renderer__FP8Bitmap2D: .equ h'0031d500
  .export _render_model_planes__FP5Model
-_render_model_planes__FP5Model: .equ h'0031d4ee
+_render_model_planes__FP5Model: .equ h'0031d50e
  .export _render_clipped_model_planes__FP5Model
-_render_clipped_model_planes__FP5Model: .equ h'0031d57a
+_render_clipped_model_planes__FP5Model: .equ h'0031d59a
  .export _InitRPN__Fv
-_InitRPN__Fv: .equ h'0031d5f4
+_InitRPN__Fv: .equ h'0031d614
  .export _DoNumber__FRUiPcUi
-_DoNumber__FRUiPcUi: .equ h'0031d7b2
+_DoNumber__FRUiPcUi: .equ h'0031d7d2
  .export _do_rpn
-_do_rpn: .equ h'0031de34
+_do_rpn: .equ h'0031de54
  .export ___sti__rpn_cpp_do_rpn
-___sti__rpn_cpp_do_rpn: .equ h'0031e1b0
+___sti__rpn_cpp_do_rpn: .equ h'0031e1d0
  .export _SolveN__FR7TermRefP4TermRC3BCDT3
-_SolveN__FR7TermRefP4TermRC3BCDT3: .equ h'0031e21c
+_SolveN__FR7TermRefP4TermRC3BCDT3: .equ h'0031e23c
  .export _ridderSolveOnly__6SolverFv
-_ridderSolveOnly__6SolverFv: .equ h'0031e688
+_ridderSolveOnly__6SolverFv: .equ h'0031e6a8
  .export __ridderRoot__6SolverFv
-__ridderRoot__6SolverFv: .equ h'0031e7b2
+__ridderRoot__6SolverFv: .equ h'0031e7d2
  .export __searchOut__6SolverFv
-__searchOut__6SolverFv: .equ h'0031ed30
+__searchOut__6SolverFv: .equ h'0031ed50
  .export _derivAdapter__6SolverSFRC3BCDR3BCDR13ExprEvaluator
-_derivAdapter__6SolverSFRC3BCDR3BCDR13ExprEvaluator: .equ h'0031f10c
+_derivAdapter__6SolverSFRC3BCDR3BCDR13ExprEvaluator: .equ h'0031f12c
  .export ___dt__11SymbolTableFv
-___dt__11SymbolTableFv: .equ h'0031f3e4
+___dt__11SymbolTableFv: .equ h'0031f404
  .export _find__11SymbolTableFPCcUi
-_find__11SymbolTableFPCcUi: .equ h'0031f452
+_find__11SymbolTableFPCcUi: .equ h'0031f472
  .export _intern__11SymbolTableFPCcUi
-_intern__11SymbolTableFPCcUi: .equ h'0031f47e
+_intern__11SymbolTableFPCcUi: .equ h'0031f49e
  .export _remove__11SymbolTableFPCc
-_remove__11SymbolTableFPCc: .equ h'0031f4a6
+_remove__11SymbolTableFPCc: .equ h'0031f4c6
  .export _insert__11SymbolTableFPCcUi
-_insert__11SymbolTableFPCcUi: .equ h'0031f514
+_insert__11SymbolTableFPCcUi: .equ h'0031f534
  .export __find__11SymbolTableFPCcUi
-__find__11SymbolTableFPCcUi: .equ h'0031f55e
+__find__11SymbolTableFPCcUi: .equ h'0031f57e
  .export ___sti__symbol_cpp_8304712f
-___sti__symbol_cpp_8304712f: .equ h'0031f5ba
+___sti__symbol_cpp_8304712f: .equ h'0031f5da
  .export _draw_triangle__FP5Plane
-_draw_triangle__FP5Plane: .equ h'0031f5e4
+_draw_triangle__FP5Plane: .equ h'0031f604
  .export _gdraw_span__FiPUcN31
-_gdraw_span__FiPUcN31: .equ h'0031f8c2
+_gdraw_span__FiPUcN31: .equ h'0031f8e2
  .export _draw_gtriangle__FP5Plane
-_draw_gtriangle__FP5Plane: .equ h'0031f8ee
+_draw_gtriangle__FP5Plane: .equ h'0031f90e
  .export _InitSymbols__Fv
-_InitSymbols__Fv: .equ h'0031fe22
+_InitSymbols__Fv: .equ h'0031fe42
  .export _parallelFloat__FR7TermRefP5FloatT2
-_parallelFloat__FR7TermRefP5FloatT2: .equ h'0031ff68
+_parallelFloat__FR7TermRefP5FloatT2: .equ h'0031ff88
  .export _addFloat__FR7TermRefP4TermT2
-_addFloat__FR7TermRefP4TermT2: .equ h'003200f4
+_addFloat__FR7TermRefP4TermT2: .equ h'00320114
  .export _subFloat__FR7TermRefP5FloatT2
-_subFloat__FR7TermRefP5FloatT2: .equ h'003201a4
+_subFloat__FR7TermRefP5FloatT2: .equ h'003201c4
  .export _mulFloat__FR7TermRefP5FloatT2
-_mulFloat__FR7TermRefP5FloatT2: .equ h'00320254
+_mulFloat__FR7TermRefP5FloatT2: .equ h'00320274
  .export _divFloat__FR7TermRefP5FloatT2
-_divFloat__FR7TermRefP5FloatT2: .equ h'00320334
+_divFloat__FR7TermRefP5FloatT2: .equ h'00320354
  .export _powFloat__FR7TermRefP5FloatT2
-_powFloat__FR7TermRefP5FloatT2: .equ h'0032040c
+_powFloat__FR7TermRefP5FloatT2: .equ h'0032042c
  .export _modFloat__FR7TermRefP5FloatT2
-_modFloat__FR7TermRefP5FloatT2: .equ h'003204ec
+_modFloat__FR7TermRefP5FloatT2: .equ h'0032050c
  .export _asFloatRational__FR7TermRefP4Term
-_asFloatRational__FR7TermRefP4Term: .equ h'00320588
+_asFloatRational__FR7TermRefP4Term: .equ h'003205a8
  .export _expMF__FR7TermRefP5Float
-_expMF__FR7TermRefP5Float: .equ h'00320650
+_expMF__FR7TermRefP5Float: .equ h'00320670
  .export _alogMF__FR7TermRefP5Float
-_alogMF__FR7TermRefP5Float: .equ h'00320718
+_alogMF__FR7TermRefP5Float: .equ h'00320738
  .export _piMF__FR7TermRef
-_piMF__FR7TermRef: .equ h'003207be
+_piMF__FR7TermRef: .equ h'003207de
  .export _logMF__FR7TermRefP5Float
-_logMF__FR7TermRefP5Float: .equ h'0032087c
+_logMF__FR7TermRefP5Float: .equ h'0032089c
  .export _log10MF__FR7TermRefP5Float
-_log10MF__FR7TermRefP5Float: .equ h'00320944
+_log10MF__FR7TermRefP5Float: .equ h'00320964
  .export _sqrtMF__FR7TermRefP5Float
-_sqrtMF__FR7TermRefP5Float: .equ h'00320a0c
+_sqrtMF__FR7TermRefP5Float: .equ h'00320a2c
  .export _sinMF__FR7TermRefP5Float
-_sinMF__FR7TermRefP5Float: .equ h'00320aac
+_sinMF__FR7TermRefP5Float: .equ h'00320acc
  .export _cosMF__FR7TermRefP5Float
-_cosMF__FR7TermRefP5Float: .equ h'00320b6c
+_cosMF__FR7TermRefP5Float: .equ h'00320b8c
  .export _tanMF__FR7TermRefP5Float
-_tanMF__FR7TermRefP5Float: .equ h'00320c02
+_tanMF__FR7TermRefP5Float: .equ h'00320c22
  .export _atanMF__FR7TermRefP5Float
-_atanMF__FR7TermRefP5Float: .equ h'00320ccc
+_atanMF__FR7TermRefP5Float: .equ h'00320cec
  .export _atan2MF__FR7TermRefP5FloatT2
-_atan2MF__FR7TermRefP5FloatT2: .equ h'00320d94
+_atan2MF__FR7TermRefP5FloatT2: .equ h'00320db4
  .export _asinMF__FR7TermRefP5Float
-_asinMF__FR7TermRefP5Float: .equ h'00320e60
+_asinMF__FR7TermRefP5Float: .equ h'00320e80
  .export _acosMF__FR7TermRefP5Float
-_acosMF__FR7TermRefP5Float: .equ h'00320f28
+_acosMF__FR7TermRefP5Float: .equ h'00320f48
  .export _sinhMF__FR7TermRefP5Float
-_sinhMF__FR7TermRefP5Float: .equ h'00320ff0
+_sinhMF__FR7TermRefP5Float: .equ h'00321010
  .export _coshMF__FR7TermRefP5Float
-_coshMF__FR7TermRefP5Float: .equ h'003210b8
+_coshMF__FR7TermRefP5Float: .equ h'003210d8
  .export _tanhMF__FR7TermRefP5Float
-_tanhMF__FR7TermRefP5Float: .equ h'00321180
+_tanhMF__FR7TermRefP5Float: .equ h'003211a0
  .export _invMF__FR7TermRefP5Float
-_invMF__FR7TermRefP5Float: .equ h'00321248
+_invMF__FR7TermRefP5Float: .equ h'00321268
  .export _negMF__FR7TermRefP5Float
-_negMF__FR7TermRefP5Float: .equ h'00321308
+_negMF__FR7TermRefP5Float: .equ h'00321328
  .export _factorialMF__FR7TermRefP5Float
-_factorialMF__FR7TermRefP5Float: .equ h'003213b2
+_factorialMF__FR7TermRefP5Float: .equ h'003213d2
  .export _ln1pMF__FR7TermRefP5Float
-_ln1pMF__FR7TermRefP5Float: .equ h'00321448
+_ln1pMF__FR7TermRefP5Float: .equ h'00321468
  .export _expm1MF__FR7TermRefP5Float
-_expm1MF__FR7TermRefP5Float: .equ h'00321514
+_expm1MF__FR7TermRefP5Float: .equ h'00321534
  .export _absFloat__FR7TermRefP5Float
-_absFloat__FR7TermRefP5Float: .equ h'003215aa
+_absFloat__FR7TermRefP5Float: .equ h'003215ca
  .export _sqFloat__FR7TermRefP5Float
-_sqFloat__FR7TermRefP5Float: .equ h'0032167a
+_sqFloat__FR7TermRefP5Float: .equ h'0032169a
  .export _cubeRootFloat__FR7TermRefP5Float
-_cubeRootFloat__FR7TermRefP5Float: .equ h'0032175c
+_cubeRootFloat__FR7TermRefP5Float: .equ h'0032177c
  .export _nthRootFloat__FR7TermRefP5FloatT2
-_nthRootFloat__FR7TermRefP5FloatT2: .equ h'00321880
+_nthRootFloat__FR7TermRefP5FloatT2: .equ h'003218a0
  .export _hms__FRC3BCD
-_hms__FRC3BCD: .equ h'00321a54
+_hms__FRC3BCD: .equ h'00321a74
  .export _dmsToRadFloat__FR7TermRefP5Float
-_dmsToRadFloat__FR7TermRefP5Float: .equ h'00321dac
+_dmsToRadFloat__FR7TermRefP5Float: .equ h'00321dcc
  .export _radToDmsFloat__FR7TermRefP5Float
-_radToDmsFloat__FR7TermRefP5Float: .equ h'00321ef4
+_radToDmsFloat__FR7TermRefP5Float: .equ h'00321f14
  .export _ratFloat__FR7TermRefP5FloatT2
-_ratFloat__FR7TermRefP5FloatT2: .equ h'0032203c
+_ratFloat__FR7TermRefP5FloatT2: .equ h'0032205c
  .export _fmaFloat__FR7TermRefP5FloatN22
-_fmaFloat__FR7TermRefP5FloatN22: .equ h'0032210c
+_fmaFloat__FR7TermRefP5FloatN22: .equ h'0032212c
  .export _floorFloat__FR7TermRefP5Float
-_floorFloat__FR7TermRefP5Float: .equ h'003221a4
+_floorFloat__FR7TermRefP5Float: .equ h'003221c4
  .export _ranFloat__FR7TermRefP5Float
-_ranFloat__FR7TermRefP5Float: .equ h'00322264
+_ranFloat__FR7TermRefP5Float: .equ h'00322284
  .export _erfFloat__FR7TermRefP5Float
-_erfFloat__FR7TermRefP5Float: .equ h'003222fa
+_erfFloat__FR7TermRefP5Float: .equ h'0032231a
  .export _normFloat__FR7TermRefP5Float
-_normFloat__FR7TermRefP5Float: .equ h'00322390
+_normFloat__FR7TermRefP5Float: .equ h'003223b0
  .export _parallelRational__FR7TermRefP8RationalT2
-_parallelRational__FR7TermRefP8RationalT2: .equ h'00322426
+_parallelRational__FR7TermRefP8RationalT2: .equ h'00322446
  .export _addRational__FR7TermRefP8RationalT2
-_addRational__FR7TermRefP8RationalT2: .equ h'003224f0
+_addRational__FR7TermRefP8RationalT2: .equ h'00322510
  .export _subRational__FR7TermRefP8RationalT2
-_subRational__FR7TermRefP8RationalT2: .equ h'00322584
+_subRational__FR7TermRefP8RationalT2: .equ h'003225a4
  .export _mulRational__FR7TermRefP8RationalT2
-_mulRational__FR7TermRefP8RationalT2: .equ h'00322618
+_mulRational__FR7TermRefP8RationalT2: .equ h'00322638
  .export _divRational__FR7TermRefP8RationalT2
-_divRational__FR7TermRefP8RationalT2: .equ h'003226ac
+_divRational__FR7TermRefP8RationalT2: .equ h'003226cc
  .export _invRational__FR7TermRefP8Rational
-_invRational__FR7TermRefP8Rational: .equ h'0032277c
+_invRational__FR7TermRefP8Rational: .equ h'0032279c
  .export _modRational__FR7TermRefP8RationalT2
-_modRational__FR7TermRefP8RationalT2: .equ h'0032282a
+_modRational__FR7TermRefP8RationalT2: .equ h'0032284a
  .export _negRational__FR7TermRefP8Rational
-_negRational__FR7TermRefP8Rational: .equ h'003228d0
+_negRational__FR7TermRefP8Rational: .equ h'003228f0
  .export _powRational__FR7TermRefP8RationalT2
-_powRational__FR7TermRefP8RationalT2: .equ h'00322962
+_powRational__FR7TermRefP8RationalT2: .equ h'00322982
  .export _factorialRational__FR7TermRefP8Rational
-_factorialRational__FR7TermRefP8Rational: .equ h'00322a28
+_factorialRational__FR7TermRefP8Rational: .equ h'00322a48
  .export _factorRational__FR7TermRefP8Rational
-_factorRational__FR7TermRefP8Rational: .equ h'00322ab6
+_factorRational__FR7TermRefP8Rational: .equ h'00322ad6
  .export _isPrimeRational__FR7TermRefP8Rational
-_isPrimeRational__FR7TermRefP8Rational: .equ h'00322b50
+_isPrimeRational__FR7TermRefP8Rational: .equ h'00322b70
  .export _nextPrimeRational__FR7TermRefP8Rational
-_nextPrimeRational__FR7TermRefP8Rational: .equ h'00322c40
+_nextPrimeRational__FR7TermRefP8Rational: .equ h'00322c60
  .export _prevPrimeRational__FR7TermRefP8Rational
-_prevPrimeRational__FR7TermRefP8Rational: .equ h'00322cfe
+_prevPrimeRational__FR7TermRefP8Rational: .equ h'00322d1e
  .export _sqRational__FR7TermRefP8Rational
-_sqRational__FR7TermRefP8Rational: .equ h'00322dbc
+_sqRational__FR7TermRefP8Rational: .equ h'00322ddc
  .export _sqrtRational__FR7TermRefP8Rational
-_sqrtRational__FR7TermRefP8Rational: .equ h'00322f0a
+_sqrtRational__FR7TermRefP8Rational: .equ h'00322f2a
  .export _nRootRational__FR7TermRefP8RationalT2
-_nRootRational__FR7TermRefP8RationalT2: .equ h'00322fc4
+_nRootRational__FR7TermRefP8RationalT2: .equ h'00322fe4
  .export _ranRational__FR7TermRefP8Rational
-_ranRational__FR7TermRefP8Rational: .equ h'003230b0
+_ranRational__FR7TermRefP8Rational: .equ h'003230d0
  .export _sranRational__FR7TermRefP8Rational
-_sranRational__FR7TermRefP8Rational: .equ h'0032323c
+_sranRational__FR7TermRefP8Rational: .equ h'0032325c
  .export _nranRational__FR7TermRefP8RationalT2
-_nranRational__FR7TermRefP8RationalT2: .equ h'0032333c
+_nranRational__FR7TermRefP8RationalT2: .equ h'0032335c
  .export _addComplex__FR7TermRefP8ComplexNT2
-_addComplex__FR7TermRefP8ComplexNT2: .equ h'00323438
+_addComplex__FR7TermRefP8ComplexNT2: .equ h'00323458
  .export _subComplex__FR7TermRefP8ComplexNT2
-_subComplex__FR7TermRefP8ComplexNT2: .equ h'0032355c
+_subComplex__FR7TermRefP8ComplexNT2: .equ h'0032357c
  .export _mulComplex__FR7TermRefP8ComplexNT2
-_mulComplex__FR7TermRefP8ComplexNT2: .equ h'00323680
+_mulComplex__FR7TermRefP8ComplexNT2: .equ h'003236a0
  .export _divComplex__FR7TermRefP8ComplexNT2
-_divComplex__FR7TermRefP8ComplexNT2: .equ h'00323734
+_divComplex__FR7TermRefP8ComplexNT2: .equ h'00323754
  .export _invComplex__FR7TermRefP8ComplexN
-_invComplex__FR7TermRefP8ComplexN: .equ h'00323886
+_invComplex__FR7TermRefP8ComplexN: .equ h'003238a6
  .export _asComplexFloat__FR7TermRefP4Term
-_asComplexFloat__FR7TermRefP4Term: .equ h'00323916
+_asComplexFloat__FR7TermRefP4Term: .equ h'00323936
  .export _asComplexRational__FR7TermRefP4Term
-_asComplexRational__FR7TermRefP4Term: .equ h'003239c2
+_asComplexRational__FR7TermRefP4Term: .equ h'003239e2
  .export _negComplex__FR7TermRefP8ComplexN
-_negComplex__FR7TermRefP8ComplexN: .equ h'00323a18
+_negComplex__FR7TermRefP8ComplexN: .equ h'00323a38
  .export _absComplex__FR7TermRefP8ComplexN
-_absComplex__FR7TermRefP8ComplexN: .equ h'00323b30
+_absComplex__FR7TermRefP8ComplexN: .equ h'00323b50
  .export _sqrtComplex__FR7TermRefP8ComplexN
-_sqrtComplex__FR7TermRefP8ComplexN: .equ h'00323bda
+_sqrtComplex__FR7TermRefP8ComplexN: .equ h'00323bfa
  .export _logComplex__FR7TermRefP8ComplexN
-_logComplex__FR7TermRefP8ComplexN: .equ h'00323c66
+_logComplex__FR7TermRefP8ComplexN: .equ h'00323c86
  .export _log10Complex__FR7TermRefP8ComplexN
-_log10Complex__FR7TermRefP8ComplexN: .equ h'00323cf2
+_log10Complex__FR7TermRefP8ComplexN: .equ h'00323d12
  .export _expComplex__FR7TermRefP8ComplexN
-_expComplex__FR7TermRefP8ComplexN: .equ h'00323db4
+_expComplex__FR7TermRefP8ComplexN: .equ h'00323dd4
  .export _alogComplex__FR7TermRefP8ComplexN
-_alogComplex__FR7TermRefP8ComplexN: .equ h'00323e40
+_alogComplex__FR7TermRefP8ComplexN: .equ h'00323e60
  .export _conjComplex__FR7TermRefP8ComplexN
-_conjComplex__FR7TermRefP8ComplexN: .equ h'00323ecc
+_conjComplex__FR7TermRefP8ComplexN: .equ h'00323eec
  .export _powComplex__FR7TermRefP8ComplexNT2
-_powComplex__FR7TermRefP8ComplexNT2: .equ h'00323f8a
+_powComplex__FR7TermRefP8ComplexNT2: .equ h'00323faa
  .export _sinComplex__FR7TermRefP8ComplexN
-_sinComplex__FR7TermRefP8ComplexN: .equ h'00324048
+_sinComplex__FR7TermRefP8ComplexN: .equ h'00324068
  .export _cosComplex__FR7TermRefP8ComplexN
-_cosComplex__FR7TermRefP8ComplexN: .equ h'003240d4
+_cosComplex__FR7TermRefP8ComplexN: .equ h'003240f4
  .export _tanComplex__FR7TermRefP8ComplexN
-_tanComplex__FR7TermRefP8ComplexN: .equ h'00324160
+_tanComplex__FR7TermRefP8ComplexN: .equ h'00324180
  .export _asinComplex__FR7TermRefP8ComplexN
-_asinComplex__FR7TermRefP8ComplexN: .equ h'003241ec
+_asinComplex__FR7TermRefP8ComplexN: .equ h'0032420c
  .export _acosComplex__FR7TermRefP8ComplexN
-_acosComplex__FR7TermRefP8ComplexN: .equ h'003242a4
+_acosComplex__FR7TermRefP8ComplexN: .equ h'003242c4
  .export _atanComplex__FR7TermRefP8ComplexN
-_atanComplex__FR7TermRefP8ComplexN: .equ h'00324330
+_atanComplex__FR7TermRefP8ComplexN: .equ h'00324350
  .export _sinhComplex__FR7TermRefP8ComplexN
-_sinhComplex__FR7TermRefP8ComplexN: .equ h'003243bc
+_sinhComplex__FR7TermRefP8ComplexN: .equ h'003243dc
  .export _coshComplex__FR7TermRefP8ComplexN
-_coshComplex__FR7TermRefP8ComplexN: .equ h'00324448
+_coshComplex__FR7TermRefP8ComplexN: .equ h'00324468
  .export _tanhComplex__FR7TermRefP8ComplexN
-_tanhComplex__FR7TermRefP8ComplexN: .equ h'00324500
+_tanhComplex__FR7TermRefP8ComplexN: .equ h'00324520
  .export _asinhComplex__FR7TermRefP8ComplexN
-_asinhComplex__FR7TermRefP8ComplexN: .equ h'0032458c
+_asinhComplex__FR7TermRefP8ComplexN: .equ h'003245ac
  .export _acoshComplex__FR7TermRefP8ComplexN
-_acoshComplex__FR7TermRefP8ComplexN: .equ h'00324618
+_acoshComplex__FR7TermRefP8ComplexN: .equ h'00324638
  .export _atanhComplex__FR7TermRefP8ComplexN
-_atanhComplex__FR7TermRefP8ComplexN: .equ h'003246a4
+_atanhComplex__FR7TermRefP8ComplexN: .equ h'003246c4
  .export _varAssign__FR7TermRefP6SymbolP4Term
-_varAssign__FR7TermRefP6SymbolP4Term: .equ h'00324730
+_varAssign__FR7TermRefP6SymbolP4Term: .equ h'00324750
  .export _gammaComplex__FR7TermRefP8ComplexN
-_gammaComplex__FR7TermRefP8ComplexN: .equ h'00324798
+_gammaComplex__FR7TermRefP8ComplexN: .equ h'003247b8
  .export _sqComplex__FR7TermRefP8ComplexN
-_sqComplex__FR7TermRefP8ComplexN: .equ h'00324824
+_sqComplex__FR7TermRefP8ComplexN: .equ h'00324844
  .export _cubeRootComplex__FR7TermRefP8ComplexN
-_cubeRootComplex__FR7TermRefP8ComplexN: .equ h'003248d8
+_cubeRootComplex__FR7TermRefP8ComplexN: .equ h'003248f8
  .export _nthRootComplex__FR7TermRefP8ComplexNT2
-_nthRootComplex__FR7TermRefP8ComplexNT2: .equ h'003249e4
+_nthRootComplex__FR7TermRefP8ComplexNT2: .equ h'00324a04
  .export _parallelComplex__FR7TermRefP8ComplexNT2
-_parallelComplex__FR7TermRefP8ComplexNT2: .equ h'00324ab0
+_parallelComplex__FR7TermRefP8ComplexNT2: .equ h'00324ad0
  .export _fltConvert__FR7TermRefP4Term
-_fltConvert__FR7TermRefP4Term: .equ h'00324c24
+_fltConvert__FR7TermRefP4Term: .equ h'00324c44
  .export _plotExpr__FR7TermRefP4TermP5FloatT3
-_plotExpr__FR7TermRefP4TermP5FloatT3: .equ h'00324f3c
+_plotExpr__FR7TermRefP4TermP5FloatT3: .equ h'00324f5c
  .export _plot3DExpr__FR7TermRefP4TermP5FloatN33
-_plot3DExpr__FR7TermRefP4TermP5FloatN33: .equ h'00324f9c
+_plot3DExpr__FR7TermRefP4TermP5FloatN33: .equ h'00324fbc
  .export _plot3DExpr2__FR7TermRefP4TermP5FloatT3
-_plot3DExpr2__FR7TermRefP4TermP5FloatT3: .equ h'00325058
+_plot3DExpr2__FR7TermRefP4TermP5FloatT3: .equ h'00325078
  .export _plot3DExpr3__FR7TermRefP4TermP5FloatN23
-_plot3DExpr3__FR7TermRefP4TermP5FloatN23: .equ h'003250f0
+_plot3DExpr3__FR7TermRefP4TermP5FloatN23: .equ h'00325110
  .export _solveExpr__FR7TermRefP4TermP5FloatT3
-_solveExpr__FR7TermRefP4TermP5FloatT3: .equ h'00325190
+_solveExpr__FR7TermRefP4TermP5FloatT3: .equ h'003251b0
  .export _purgeExpr__FR7TermRefP4Term
-_purgeExpr__FR7TermRefP4Term: .equ h'003251c8
+_purgeExpr__FR7TermRefP4Term: .equ h'003251e8
  .export _quoteExpr__FR7TermRefP4Term
-_quoteExpr__FR7TermRefP4Term: .equ h'0032521a
+_quoteExpr__FR7TermRefP4Term: .equ h'0032523a
  .export _opArrayScalar__FR7TermRefP5ArrayP6Number7TermRef
-_opArrayScalar__FR7TermRefP5ArrayP6Number7TermRef: .equ h'0032524c
+_opArrayScalar__FR7TermRefP5ArrayP6Number7TermRef: .equ h'0032526c
  .export _addArrayScalar__FR7TermRefP5ArrayP6Number
-_addArrayScalar__FR7TermRefP5ArrayP6Number: .equ h'00325378
+_addArrayScalar__FR7TermRefP5ArrayP6Number: .equ h'00325398
  .export _addScalarArray__FR7TermRefP6NumberP5Array
-_addScalarArray__FR7TermRefP6NumberP5Array: .equ h'003253d4
+_addScalarArray__FR7TermRefP6NumberP5Array: .equ h'003253f4
  .export _mulArrayScalar__FR7TermRefP5ArrayP6Number
-_mulArrayScalar__FR7TermRefP5ArrayP6Number: .equ h'003253e2
+_mulArrayScalar__FR7TermRefP5ArrayP6Number: .equ h'00325402
  .export _mulScalarArray__FR7TermRefP6NumberP5Array
-_mulScalarArray__FR7TermRefP6NumberP5Array: .equ h'0032543e
+_mulScalarArray__FR7TermRefP6NumberP5Array: .equ h'0032545e
  .export _subArrayScalar__FR7TermRefP5ArrayP6Number
-_subArrayScalar__FR7TermRefP5ArrayP6Number: .equ h'0032544c
+_subArrayScalar__FR7TermRefP5ArrayP6Number: .equ h'0032546c
  .export _divArrayScalar__FR7TermRefP5ArrayP6Number
-_divArrayScalar__FR7TermRefP5ArrayP6Number: .equ h'003254a8
+_divArrayScalar__FR7TermRefP5ArrayP6Number: .equ h'003254c8
  .export _negArray__FR7TermRefP5Array
-_negArray__FR7TermRefP5Array: .equ h'00325504
+_negArray__FR7TermRefP5Array: .equ h'00325524
  .export _invArray__FR7TermRefP5Array
-_invArray__FR7TermRefP5Array: .equ h'00325580
+_invArray__FR7TermRefP5Array: .equ h'003255a0
  .export _subScalarArray__FR7TermRefP6NumberP5Array
-_subScalarArray__FR7TermRefP6NumberP5Array: .equ h'00325688
+_subScalarArray__FR7TermRefP6NumberP5Array: .equ h'003256a8
  .export _divScalarArray__FR7TermRefP6NumberP5Array
-_divScalarArray__FR7TermRefP6NumberP5Array: .equ h'003256b6
+_divScalarArray__FR7TermRefP6NumberP5Array: .equ h'003256d6
  .export _mulArrayArray__FR7TermRefP5ArrayT2
-_mulArrayArray__FR7TermRefP5ArrayT2: .equ h'00325728
+_mulArrayArray__FR7TermRefP5ArrayT2: .equ h'00325748
  .export _addArrayArray__FR7TermRefP5ArrayT2
-_addArrayArray__FR7TermRefP5ArrayT2: .equ h'0032580c
+_addArrayArray__FR7TermRefP5ArrayT2: .equ h'0032582c
  .export _subArrayArray__FR7TermRefP5ArrayT2
-_subArrayArray__FR7TermRefP5ArrayT2: .equ h'003258c4
+_subArrayArray__FR7TermRefP5ArrayT2: .equ h'003258e4
  .export _divArrayArray__FR7TermRefP5ArrayT2
-_divArrayArray__FR7TermRefP5ArrayT2: .equ h'0032597c
+_divArrayArray__FR7TermRefP5ArrayT2: .equ h'0032599c
  .export _transposeArray__FR7TermRefP5Array
-_transposeArray__FR7TermRefP5Array: .equ h'00325a34
+_transposeArray__FR7TermRefP5Array: .equ h'00325a54
  .export _absArray__FR7TermRefP5Array
-_absArray__FR7TermRefP5Array: .equ h'00325abc
+_absArray__FR7TermRefP5Array: .equ h'00325adc
  .export _prootArray__FR7TermRefP5Array
-_prootArray__FR7TermRefP5Array: .equ h'00325ba0
+_prootArray__FR7TermRefP5Array: .equ h'00325bc0
  .export _InitFunctions__Fv
-_InitFunctions__Fv: .equ h'00325c14
+_InitFunctions__Fv: .equ h'00325c34
  .export ___as__7TermRefFRC7TermRef
-___as__7TermRefFRC7TermRef: .equ h'00325ff2
+___as__7TermRefFRC7TermRef: .equ h'00326012
  .export _purge__7TermRefFv
-_purge__7TermRefFv: .equ h'00326026
+_purge__7TermRefFv: .equ h'00326046
  .export ___ct__11TermContextFv
-___ct__11TermContextFv: .equ h'00326052
+___ct__11TermContextFv: .equ h'00326072
  .export _internSymbol__11TermContextFPCcUi
-_internSymbol__11TermContextFPCcUi: .equ h'0032607a
+_internSymbol__11TermContextFPCcUi: .equ h'0032609a
  .export _push__11TermContextFv
-_push__11TermContextFv: .equ h'003260f0
+_push__11TermContextFv: .equ h'00326110
  .export _pop__11TermContextFv
-_pop__11TermContextFv: .equ h'00326126
+_pop__11TermContextFv: .equ h'00326146
  .export _convert__4TermCFR7TermRefUi
-_convert__4TermCFR7TermRefUi: .equ h'0032617a
+_convert__4TermCFR7TermRefUi: .equ h'0032619a
  .export _findAnyFunction__4TermSFP6Symbol
-_findAnyFunction__4TermSFP6Symbol: .equ h'003261c6
+_findAnyFunction__4TermSFP6Symbol: .equ h'003261e6
  .export _parse__4TermSFPPCcR11TermContext
-_parse__4TermSFPPCcR11TermContext: .equ h'00326212
+_parse__4TermSFPPCcR11TermContext: .equ h'00326232
  .export _destroy__4TermSFP4Term
-_destroy__4TermSFP4Term: .equ h'00326520
+_destroy__4TermSFP4Term: .equ h'00326540
  .export _asString__6StringCFR7TermRefP10DispFormat
-_asString__6StringCFR7TermRefP10DispFormat: .equ h'00326582
+_asString__6StringCFR7TermRefP10DispFormat: .equ h'003265a2
  .export _clone__6StringFv
-_clone__6StringFv: .equ h'003265a6
+_clone__6StringFv: .equ h'003265c6
  .export _parse__6StringSFPPCc
-_parse__6StringSFPPCc: .equ h'003265f8
+_parse__6StringSFPPCc: .equ h'00326618
  .export _create__6StringSFv
-_create__6StringSFv: .equ h'00326648
+_create__6StringSFv: .equ h'00326668
  .export _enoughFor__6StringFUi
-_enoughFor__6StringFUi: .equ h'003266b0
+_enoughFor__6StringFUi: .equ h'003266d0
  .export _set__6StringFPCcUi
-_set__6StringFPCcUi: .equ h'00326704
+_set__6StringFPCcUi: .equ h'00326724
  .export _append__6StringFPCc
-_append__6StringFPCc: .equ h'00326742
+_append__6StringFPCc: .equ h'00326762
  .export _append__6StringFc
-_append__6StringFc: .equ h'00326798
+_append__6StringFc: .equ h'003267b8
  .export _truncate__6StringFi
-_truncate__6StringFi: .equ h'003267ca
+_truncate__6StringFi: .equ h'003267ea
  .export _init__6StringFv
-_init__6StringFv: .equ h'0032680c
+_init__6StringFv: .equ h'0032682c
  .export _asString__5LabelCFR7TermRefP10DispFormat
-_asString__5LabelCFR7TermRefP10DispFormat: .equ h'0032683e
+_asString__5LabelCFR7TermRefP10DispFormat: .equ h'0032685e
  .export _clone__5LabelFv
-_clone__5LabelFv: .equ h'0032687e
+_clone__5LabelFv: .equ h'0032689e
  .export _create__5LabelSFv
-_create__5LabelSFv: .equ h'003268d0
+_create__5LabelSFv: .equ h'003268f0
  .export ___dt__6SymbolFv
-___dt__6SymbolFv: .equ h'00326962
+___dt__6SymbolFv: .equ h'00326982
  .export _reduce__6SymbolFR7TermRefR11TermContext
-_reduce__6SymbolFR7TermRefR11TermContext: .equ h'003269ca
+_reduce__6SymbolFR7TermRefR11TermContext: .equ h'003269ea
  .export _isOperator__6SymbolCFv
-_isOperator__6SymbolCFv: .equ h'00326a5a
+_isOperator__6SymbolCFv: .equ h'00326a7a
  .export _scan__6SymbolSFPPCc
-_scan__6SymbolSFPPCc: .equ h'00326a92
+_scan__6SymbolSFPPCc: .equ h'00326ab2
  .export _parse__6SymbolSFPPCcR11TermContext
-_parse__6SymbolSFPPCcR11TermContext: .equ h'00326b5a
+_parse__6SymbolSFPPCcR11TermContext: .equ h'00326b7a
  .export _create__6SymbolSFPCcUi
-_create__6SymbolSFPCcUi: .equ h'00326bbc
+_create__6SymbolSFPCcUi: .equ h'00326bdc
  .export _assign__6SymbolFP4Term
-_assign__6SymbolFP4Term: .equ h'00326c22
+_assign__6SymbolFP4Term: .equ h'00326c42
  .export _assignOnly__6SymbolFP4Term
-_assignOnly__6SymbolFP4Term: .equ h'00326c56
+_assignOnly__6SymbolFP4Term: .equ h'00326c76
  .export ___dt__8FunctionFv
-___dt__8FunctionFv: .equ h'00326cb0
+___dt__8FunctionFv: .equ h'00326cd0
  .export _asString__8FunctionCFR7TermRefP10DispFormat
-_asString__8FunctionCFR7TermRefP10DispFormat: .equ h'00326d56
+_asString__8FunctionCFR7TermRefP10DispFormat: .equ h'00326d76
  .export _reduce__8FunctionFR7TermRefR11TermContext
-_reduce__8FunctionFR7TermRefR11TermContext: .equ h'00326f8c
+_reduce__8FunctionFR7TermRefR11TermContext: .equ h'00326fac
  .export _clone__8FunctionFv
-_clone__8FunctionFv: .equ h'003271e0
+_clone__8FunctionFv: .equ h'00327200
  .export _parse__8FunctionSFPPCcR11TermContext
-_parse__8FunctionSFPPCcR11TermContext: .equ h'0032729e
+_parse__8FunctionSFPPCcR11TermContext: .equ h'003272be
  .export _scan__8FunctionSFPPCcT1Pi
-_scan__8FunctionSFPPCcT1Pi: .equ h'003273ae
+_scan__8FunctionSFPPCcT1Pi: .equ h'003273ce
  .export _create__8FunctionSFi
-_create__8FunctionSFi: .equ h'00327502
+_create__8FunctionSFi: .equ h'00327522
  .export _init__8FunctionFv
-_init__8FunctionFv: .equ h'0032756a
+_init__8FunctionFv: .equ h'0032758a
  .export _bind__8FunctionFRQ2_5Utils5DListPP4Term
-_bind__8FunctionFRQ2_5Utils5DListPP4Term: .equ h'0032758c
+_bind__8FunctionFRQ2_5Utils5DListPP4Term: .equ h'003275ac
  .export _fixPrecisions__8FunctionFv
-_fixPrecisions__8FunctionFv: .equ h'00327714
+_fixPrecisions__8FunctionFv: .equ h'00327734
  .export __fixPrecisions__8FunctionFv
-__fixPrecisions__8FunctionFv: .equ h'00327734
+__fixPrecisions__8FunctionFv: .equ h'00327754
  .export __reduce__8FunctionFR7TermRefP7RegInfoPP4Term
-__reduce__8FunctionFR7TermRefP7RegInfoPP4Term: .equ h'003277b8
+__reduce__8FunctionFR7TermRefP7RegInfoPP4Term: .equ h'003277d8
  .export _parse__6NumberSFPPCc
-_parse__6NumberSFPPCc: .equ h'00327954
+_parse__6NumberSFPPCc: .equ h'00327974
  .export _parse__4RealSFPPCc
-_parse__4RealSFPPCc: .equ h'00327abe
+_parse__4RealSFPPCc: .equ h'00327ade
  .export _scan__4RealSFPPCc
-_scan__4RealSFPPCc: .equ h'00327acc
+_scan__4RealSFPPCc: .equ h'00327aec
  .export _asString__8ComplexNCFR7TermRefP10DispFormat
-_asString__8ComplexNCFR7TermRefP10DispFormat: .equ h'00327c38
+_asString__8ComplexNCFR7TermRefP10DispFormat: .equ h'00327c58
  .export _parse__8ComplexNSFPPCc
-_parse__8ComplexNSFPPCc: .equ h'00327df0
+_parse__8ComplexNSFPPCc: .equ h'00327e10
  .export _asString__5FloatCFR7TermRefP10DispFormat
-_asString__5FloatCFR7TermRefP10DispFormat: .equ h'00327f44
+_asString__5FloatCFR7TermRefP10DispFormat: .equ h'00327f64
  .export _parse__5FloatSFPPCc
-_parse__5FloatSFPPCc: .equ h'00327fc2
+_parse__5FloatSFPPCc: .equ h'00327fe2
  .export ___dt__8RationalFv
-___dt__8RationalFv: .equ h'00328118
+___dt__8RationalFv: .equ h'00328138
  .export _parse__8RationalSFPPCc
-_parse__8RationalSFPPCc: .equ h'0032815e
+_parse__8RationalSFPPCc: .equ h'0032817e
  .export _scan__8RationalSFPPCc
-_scan__8RationalSFPPCc: .equ h'003281e2
+_scan__8RationalSFPPCc: .equ h'00328202
  .export _asString__8RationalCFR7TermRefP10DispFormat
-_asString__8RationalCFR7TermRefP10DispFormat: .equ h'003282a0
+_asString__8RationalCFR7TermRefP10DispFormat: .equ h'003282c0
  .export _parse__8OperatorSFPPCci
-_parse__8OperatorSFPPCci: .equ h'00328346
+_parse__8OperatorSFPPCci: .equ h'00328366
  .export _asString__5ArrayCFR7TermRefP10DispFormat
-_asString__5ArrayCFR7TermRefP10DispFormat: .equ h'00328446
+_asString__5ArrayCFR7TermRefP10DispFormat: .equ h'00328466
  .export _clone__5ArrayFv
-_clone__5ArrayFv: .equ h'003284e4
+_clone__5ArrayFv: .equ h'00328504
  .export _reduce__5ArrayFR7TermRefR11TermContext
-_reduce__5ArrayFR7TermRefR11TermContext: .equ h'003285d0
+_reduce__5ArrayFR7TermRefR11TermContext: .equ h'003285f0
  .export ___nw__5ArraySFUli
-___nw__5ArraySFUli: .equ h'0032866e
+___nw__5ArraySFUli: .equ h'0032868e
  .export _create__5ArraySFi
-_create__5ArraySFi: .equ h'0032868a
+_create__5ArraySFi: .equ h'003286aa
  .export _parse__5ArraySFPPCcR11TermContext
-_parse__5ArraySFPPCcR11TermContext: .equ h'003286dc
+_parse__5ArraySFPPCcR11TermContext: .equ h'003286fc
  .export __initFlags__5ArrayFv
-__initFlags__5ArrayFv: .equ h'003287ec
+__initFlags__5ArrayFv: .equ h'0032880c
  .export _create__7RegInfoSFP6SymbolUiie
-_create__7RegInfoSFP6SymbolUiie: .equ h'003289ec
+_create__7RegInfoSFP6SymbolUiie: .equ h'00328a0c
  .export _createN__7RegInfoSFP6SymbolUiiPCUi
-_createN__7RegInfoSFP6SymbolUiiPCUi: .equ h'00328ac2
+_createN__7RegInfoSFP6SymbolUiiPCUi: .equ h'00328ae2
  .export _intern__10FnRegistryFP7RegInfo
-_intern__10FnRegistryFP7RegInfo: .equ h'00328b98
+_intern__10FnRegistryFP7RegInfo: .equ h'00328bb8
  .export _purge__10FnRegistryFv
-_purge__10FnRegistryFv: .equ h'00328bbc
+_purge__10FnRegistryFv: .equ h'00328bdc
  .export _findConverter__10FnRegistryCFUiT1
-_findConverter__10FnRegistryCFUiT1: .equ h'00328c08
+_findConverter__10FnRegistryCFUiT1: .equ h'00328c28
  .export _sizeFor__8TermListFUi
-_sizeFor__8TermListFUi: .equ h'00328c4e
+_sizeFor__8TermListFUi: .equ h'00328c6e
  .export _add__8TermListFRC7TermRef
-_add__8TermListFRC7TermRef: .equ h'00328cfe
+_add__8TermListFRC7TermRef: .equ h'00328d1e
  .export _insert__8TermListFUiRC7TermRef
-_insert__8TermListFUiRC7TermRef: .equ h'00328d2a
+_insert__8TermListFUiRC7TermRef: .equ h'00328d4a
  .export _empty__8TermListFv
-_empty__8TermListFv: .equ h'00328d86
+_empty__8TermListFv: .equ h'00328da6
  .export _init__8TermListFv
-_init__8TermListFv: .equ h'00328daa
+_init__8TermListFv: .equ h'00328dca
  .export ___sti__types_cpp_8cdccfbe
-___sti__types_cpp_8cdccfbe: .equ h'0032909c
+___sti__types_cpp_8cdccfbe: .equ h'003290bc
  .export _OSInjectKey
-_OSInjectKey: .equ h'00329174
+_OSInjectKey: .equ h'00329194
  .export _OSVersion
-_OSVersion: .equ h'00329154
+_OSVersion: .equ h'00329174
  .export _OSPowerOff
-_OSPowerOff: .equ h'00329164
+_OSPowerOff: .equ h'00329184
  .export _GetVRAMPtr
-_GetVRAMPtr: .equ h'00329134
+_GetVRAMPtr: .equ h'00329154
  .export _KBD_GetKeyWait
-_KBD_GetKeyWait: .equ h'00329144
+_KBD_GetKeyWait: .equ h'00329164
  .export _set_view_scale__FP8Viewport
-_set_view_scale__FP8Viewport: .equ h'00329184
+_set_view_scale__FP8Viewport: .equ h'003291a4
  .export _create_viewport__FiN41
-_create_viewport__FiN41: .equ h'003291b0
+_create_viewport__FiN41: .equ h'003291d0
  .export _destroy_viewport__FP8Viewport
-_destroy_viewport__FP8Viewport: .equ h'00329296
+_destroy_viewport__FP8Viewport: .equ h'003292b6
  .export _update_viewport__FP8Viewport
-_update_viewport__FP8Viewport: .equ h'003294bc
+_update_viewport__FP8Viewport: .equ h'003294dc
  .export _align_viewport_with_model__FP8Viewporti
-_align_viewport_with_model__FP8Viewporti: .equ h'00329642
+_align_viewport_with_model__FP8Viewporti: .equ h'00329662
  .export _align_viewport_with_input__FP8Viewport
-_align_viewport_with_input__FP8Viewport: .equ h'00329672
+_align_viewport_with_input__FP8Viewport: .equ h'00329692
  .export _move_viewport__FP8Viewporti
-_move_viewport__FP8Viewporti: .equ h'00329686
+_move_viewport__FP8Viewporti: .equ h'003296a6
  .export _create_world__Fv
-_create_world__Fv: .equ h'003296fc
+_create_world__Fv: .equ h'0032971c
  .export _update_world__Fv
-_update_world__Fv: .equ h'00329730
+_update_world__Fv: .equ h'00329750
  .export _delete_model__Fi
-_delete_model__Fi: .equ h'0032977a
+_delete_model__Fi: .equ h'0032979a
  .export _add_model_to_world__FP5Model
-_add_model_to_world__FP5Model: .equ h'003297f4
+_add_model_to_world__FP5Model: .equ h'00329814
  .export _set_movement__Fi
-_set_movement__Fi: .equ h'00329896
+_set_movement__Fi: .equ h'003298b6
  .export _get_model__Fi
-_get_model__Fi: .equ h'003298a8
+_get_model__Fi: .equ h'003298c8
  .export _get_motion__Fi
-_get_motion__Fi: .equ h'003298c8
+_get_motion__Fi: .equ h'003298e8
  .export _get_models__FP8Viewport
-_get_models__FP8Viewport: .equ h'003298e8
+_get_models__FP8Viewport: .equ h'00329908
  .export _screen_height__Fv
-_screen_height__Fv: .equ h'00329a7a
+_screen_height__Fv: .equ h'00329a9a
  .export _screen_width__Fv
-_screen_width__Fv: .equ h'00329a7e
+_screen_width__Fv: .equ h'00329a9e
  .export _PlotGraph3D__FP4TermRC3BCDN42
-_PlotGraph3D__FP4TermRC3BCDN42: .equ h'00329a84
+_PlotGraph3D__FP4TermRC3BCDN42: .equ h'00329aa4
  .export _createModel__6Plot3DFv
-_createModel__6Plot3DFv: .equ h'0032a4c0
+_createModel__6Plot3DFv: .equ h'0032a4e0
  .export _move__6Plot3DFiN21
-_move__6Plot3DFiN21: .equ h'0032af28
+_move__6Plot3DFiN21: .equ h'0032af48
  .export _spin__6Plot3DFi
-_spin__6Plot3DFi: .equ h'0032af34
+_spin__6Plot3DFi: .equ h'0032af54
  .export _orient__6Plot3DFiN21
-_orient__6Plot3DFiN21: .equ h'0032af4a
+_orient__6Plot3DFiN21: .equ h'0032af6a
  .export _resetView__6Plot3DFv
-_resetView__6Plot3DFv: .equ h'0032af56
+_resetView__6Plot3DFv: .equ h'0032af76
  .export _rescale__6Plot3DFiN21
-_rescale__6Plot3DFiN21: .equ h'0032afb8
+_rescale__6Plot3DFiN21: .equ h'0032afd8
  .export _refineModel__6Plot3DFv
-_refineModel__6Plot3DFv: .equ h'0032b4c0
+_refineModel__6Plot3DFv: .equ h'0032b4e0
  .export _applyRefinement__6Plot3DFv
-_applyRefinement__6Plot3DFv: .equ h'0032ba5c
+_applyRefinement__6Plot3DFv: .equ h'0032ba7c
  .export ___ml__FRC8Complex2T1
-___ml__FRC8Complex2T1: .equ h'0032be50
+___ml__FRC8Complex2T1: .equ h'0032be70
  .export ___dv__FRC8Complex2T1
-___dv__FRC8Complex2T1: .equ h'0032bf98
+___dv__FRC8Complex2T1: .equ h'0032bfb8
  .export _square__FRC8Complex2
-_square__FRC8Complex2: .equ h'0032c4a8
+_square__FRC8Complex2: .equ h'0032c4c8
  .export _inv__FRC8Complex2
-_inv__FRC8Complex2: .equ h'0032c5cc
+_inv__FRC8Complex2: .equ h'0032c5ec
  .export _sqrt__FRC8Complex2
-_sqrt__FRC8Complex2: .equ h'0032c70c
+_sqrt__FRC8Complex2: .equ h'0032c72c
  .export _fabs__FRC8Complex2
-_fabs__FRC8Complex2: .equ h'0032cf2c
+_fabs__FRC8Complex2: .equ h'0032cf4c
  .export _Update3DScreen
-_Update3DScreen: .equ h'0032d0dc
+_Update3DScreen: .equ h'0032d0fc
  .export _qsort2
-_qsort2: .equ h'0032d174
+_qsort2: .equ h'0032d194
  .export _mjdFloat__FR7TermRefP5Float
-_mjdFloat__FR7TermRefP5Float: .equ h'0032d5f4
+_mjdFloat__FR7TermRefP5Float: .equ h'0032d614
  .export _dateFloat__FR7TermRefP5Float
-_dateFloat__FR7TermRefP5Float: .equ h'0032d69c
+_dateFloat__FR7TermRefP5Float: .equ h'0032d6bc
  .export _bondPriceFloat__FR7TermRefP5FloatN52
-_bondPriceFloat__FR7TermRefP5FloatN52: .equ h'0032dc28
+_bondPriceFloat__FR7TermRefP5FloatN52: .equ h'0032dc48
  .export __modifiedDuration__FRC3BCDN41
-__modifiedDuration__FRC3BCDN41: .equ h'0032de24
+__modifiedDuration__FRC3BCDN41: .equ h'0032de44
  .export _bondMDurationFloat__FR7TermRefP5FloatN52
-_bondMDurationFloat__FR7TermRefP5FloatN52: .equ h'0032e5a4
+_bondMDurationFloat__FR7TermRefP5FloatN52: .equ h'0032e5c4
  .export _invert__FRC6BigIntT1R6BigInt
-_invert__FRC6BigIntT1R6BigInt: .equ h'0032ebda
+_invert__FRC6BigIntT1R6BigInt: .equ h'0032ebfa
  .export _isOddCompositeAux__FR9CompState
-_isOddCompositeAux__FR9CompState: .equ h'0032ecfe
+_isOddCompositeAux__FR9CompState: .equ h'0032ed1e
  .export _isOddComposite__FRC6BigInt
-_isOddComposite__FRC6BigInt: .equ h'0032ee02
+_isOddComposite__FRC6BigInt: .equ h'0032ee22
  .export _isComposite__FRC6BigInt
-_isComposite__FRC6BigInt: .equ h'0032ef48
+_isComposite__FRC6BigInt: .equ h'0032ef68
  .export _isPrime__FRC6BigInt
-_isPrime__FRC6BigInt: .equ h'0032ef5e
+_isPrime__FRC6BigInt: .equ h'0032ef7e
  .export _Lenstra__FRC6BigIntR6BigInti
-_Lenstra__FRC6BigIntR6BigInti: .equ h'0032effc
+_Lenstra__FRC6BigIntR6BigInti: .equ h'0032f01c
  .export _nextPrime__FRC6BigIntR6BigInt
-_nextPrime__FRC6BigIntR6BigInt: .equ h'00330a08
+_nextPrime__FRC6BigIntR6BigInt: .equ h'00330a28
  .export _prevPrime__FRC6BigIntR6BigInt
-_prevPrime__FRC6BigIntR6BigInt: .equ h'00330b30
+_prevPrime__FRC6BigIntR6BigInt: .equ h'00330b50
  .export _nRoot__FRC6BigIntUi
-_nRoot__FRC6BigIntUi: .equ h'00330c68
+_nRoot__FRC6BigIntUi: .equ h'00330c88
  .export _muldvd__FUiN21PUi
-_muldvd__FUiN21PUi: .equ h'00330f38
+_muldvd__FUiN21PUi: .equ h'00330f58
  .export _muldvm__FUiN21PUi
-_muldvm__FUiN21PUi: .equ h'00330f8e
+_muldvm__FUiN21PUi: .equ h'00330fae
  .export ___LINK_PROTECT
-___LINK_PROTECT: .equ h'00331034
+___LINK_PROTECT: .equ h'00331054
  .export _SetQuitHandler
-_SetQuitHandler: .equ h'00331038
+_SetQuitHandler: .equ h'00331058
  .export _OnAppCloseDefault
-_OnAppCloseDefault: .equ h'0033103e
+_OnAppCloseDefault: .equ h'0033105e
  .export __INITSCT_ADDIN
-__INITSCT_ADDIN: .equ h'00331092
+__INITSCT_ADDIN: .equ h'003310b2
  .export _INIT_ADDIN_APPLICATION
-_INIT_ADDIN_APPLICATION: .equ h'003310da
+_INIT_ADDIN_APPLICATION: .equ h'003310fa
  .export __divls
-__divls: .equ h'00331150
+__divls: .equ h'00331170
  .export __divlu
-__divlu: .equ h'00331204
+__divlu: .equ h'00331224
  .export __modlu
-__modlu: .equ h'003312ac
+__modlu: .equ h'003312cc
  .export __quick_odd_mvn
-__quick_odd_mvn: .equ h'00331370
+__quick_odd_mvn: .equ h'00331390
  .export __quick_evn_mvn
-__quick_evn_mvn: .equ h'00331364
+__quick_evn_mvn: .equ h'00331384
  .export __slow_mvn
-__slow_mvn: .equ h'00331408
+__slow_mvn: .equ h'00331428
  .export __slow_strcpy
-__slow_strcpy: .equ h'00331440
+__slow_strcpy: .equ h'00331460
  .export __quick_strcmp1
-__quick_strcmp1: .equ h'00331498
+__quick_strcmp1: .equ h'003314b8
  .export __slow_strcmp1
-__slow_strcmp1: .equ h'00331490
+__slow_strcmp1: .equ h'003314b0
  .export ___dl__FPv
-___dl__FPv: .equ h'0033153c
+___dl__FPv: .equ h'0033155c
  .export ___process_needed_destructions__Fv
-___process_needed_destructions__Fv: .equ h'00331550
+___process_needed_destructions__Fv: .equ h'00331570
  .export ___already_marked_for_destruction
-___already_marked_for_destruction: .equ h'00331588
+___already_marked_for_destruction: .equ h'003315a8
  .export ___record_needed_destruction
-___record_needed_destruction: .equ h'0033158e
+___record_needed_destruction: .equ h'003315ae
  .export ___std__needed_destruction_list
-___std__needed_destruction_list: .equ h'003315b4
+___std__needed_destruction_list: .equ h'003315d4
  .export _memcpy
-_memcpy: .equ h'003315c0
+_memcpy: .equ h'003315e0
  .export _memmove
-_memmove: .equ h'00331680
+_memmove: .equ h'003316a0
  .export _memset
-_memset: .equ h'003316c4
+_memset: .equ h'003316e4
  .export ___nw__FUl
-___nw__FUl: .equ h'003316dc
+___nw__FUl: .equ h'003316fc
  .export ___pure_virtual_called
-___pure_virtual_called: .equ h'00331750
+___pure_virtual_called: .equ h'00331770
  .export _sprintf
-_sprintf: .equ h'0033175c
+_sprintf: .equ h'0033177c
  .export _strcat
-_strcat: .equ h'00331798
+_strcat: .equ h'003317b8
  .export _strchr
-_strchr: .equ h'003317b8
+_strchr: .equ h'003317d8
  .export _strlen
-_strlen: .equ h'003317d4
+_strlen: .equ h'003317f4
  .export _strncmp
-_strncmp: .equ h'003317e4
+_strncmp: .equ h'00331804
  .export _tolower
-_tolower: .equ h'00331824
+_tolower: .equ h'00331844
  .export ___dt__Q2_3std9type_infoFv
-___dt__Q2_3std9type_infoFv: .equ h'00331840
+___dt__Q2_3std9type_infoFv: .equ h'00331860
  .export ___eq__Q2_3std9type_infoCFRCQ2_3std9type_info
-___eq__Q2_3std9type_infoCFRCQ2_3std9type_info: .equ h'0033185e
+___eq__Q2_3std9type_infoCFRCQ2_3std9type_info: .equ h'0033187e
  .export ___ne__Q2_3std9type_infoCFRCQ2_3std9type_info
-___ne__Q2_3std9type_infoCFRCQ2_3std9type_info: .equ h'0033187a
+___ne__Q2_3std9type_infoCFRCQ2_3std9type_info: .equ h'0033189a
  .export _before__Q2_3std9type_infoCFRCQ2_3std9type_info
-_before__Q2_3std9type_infoCFRCQ2_3std9type_info: .equ h'00331896
+_before__Q2_3std9type_infoCFRCQ2_3std9type_info: .equ h'003318b6
  .export _name__Q2_3std9type_infoCFv
-_name__Q2_3std9type_infoCFv: .equ h'003318ae
+_name__Q2_3std9type_infoCFv: .equ h'003318ce
  .export ___array_new
-___array_new: .equ h'003319cc
+___array_new: .equ h'003319ec
  .export ___placement_array_new
-___placement_array_new: .equ h'00331a02
+___placement_array_new: .equ h'00331a22
  .export ___vec_new_eh
-___vec_new_eh: .equ h'00331a2a
+___vec_new_eh: .equ h'00331a4a
  .export ___vec_new
-___vec_new: .equ h'00331a50
+___vec_new: .equ h'00331a70
  .export ___vec_cctor_eh
-___vec_cctor_eh: .equ h'00331a74
+___vec_cctor_eh: .equ h'00331a94
  .export ___vec_delete
-___vec_delete: .equ h'00331b64
+___vec_delete: .equ h'00331b84
  .export ___array_delete
-___array_delete: .equ h'00331b7c
+___array_delete: .equ h'00331b9c
  .export __array_pointer_not_from_vec_new
-__array_pointer_not_from_vec_new: .equ h'00331b94
+__array_pointer_not_from_vec_new: .equ h'00331bb4
  .export _Bdel_cychdr
-_Bdel_cychdr: .equ h'00331ba0
+_Bdel_cychdr: .equ h'00331bc0
  .export _Bdisp_AllClr_DDVRAM
-_Bdisp_AllClr_DDVRAM: .equ h'00331bb0
+_Bdisp_AllClr_DDVRAM: .equ h'00331bd0
  .export _Bdisp_PutDisp_DD
-_Bdisp_PutDisp_DD: .equ h'00331bc0
+_Bdisp_PutDisp_DD: .equ h'00331be0
  .export _BfileFLS_CloseFile
-_BfileFLS_CloseFile: .equ h'00331bd0
+_BfileFLS_CloseFile: .equ h'00331bf0
  .export _Bkey_Set_RepeatTime_Default
-_Bkey_Set_RepeatTime_Default: .equ h'00331be0
+_Bkey_Set_RepeatTime_Default: .equ h'00331c00
  .export _CallbackAtQuitMainFunction
-_CallbackAtQuitMainFunction: .equ h'00331bf0
+_CallbackAtQuitMainFunction: .equ h'00331c10
  .export _flsFindClose
-_flsFindClose: .equ h'00331c00
+_flsFindClose: .equ h'00331c20
  .export _free
-_free: .equ h'00331c10
+_free: .equ h'00331c30
  .export _GetKey
-_GetKey: .equ h'00331c20
+_GetKey: .equ h'00331c40
  .export _GLibAddinAplExecutionCheck
-_GLibAddinAplExecutionCheck: .equ h'00331c30
+_GLibAddinAplExecutionCheck: .equ h'00331c50
  .export _Hmem_SetMMU
-_Hmem_SetMMU: .equ h'00331c40
+_Hmem_SetMMU: .equ h'00331c60
  .export _malloc
-_malloc: .equ h'00331c50
+_malloc: .equ h'00331c70
  .export _PopUpWin
-_PopUpWin: .equ h'00331c60
+_PopUpWin: .equ h'00331c80
  .export _Print
-_Print: .equ h'00331c70
+_Print: .equ h'00331c90
  .export _PrintC
-_PrintC: .equ h'00331c80
+_PrintC: .equ h'00331ca0
  .export _PrintMini
-_PrintMini: .equ h'00331c90
+_PrintMini: .equ h'00331cb0
  .export _locate
-_locate: .equ h'00331cac
+_locate: .equ h'00331ccc
  .export _Bdisp_ReadArea_DD
-_Bdisp_ReadArea_DD: .equ h'00331cd4
+_Bdisp_ReadArea_DD: .equ h'00331cf4
  .export _GetSDKLibraryVersion
-_GetSDKLibraryVersion: .equ h'00331e08
+_GetSDKLibraryVersion: .equ h'00331e28
  .export _SetTimer
-_SetTimer: .equ h'00331e0e
+_SetTimer: .equ h'00331e2e
  .export _KillTimer
-_KillTimer: .equ h'00331e62
+_KillTimer: .equ h'00331e82
  .export _Sleep
-_Sleep: .equ h'00331ea6
+_Sleep: .equ h'00331ec6
  .export __modls
-__modls: .equ h'00331f08
+__modls: .equ h'00331f28
  .export __quick_strcpy
-__quick_strcpy: .equ h'00331fd0
+__quick_strcpy: .equ h'00331ff0
  .export _quick_strcpy1
-_quick_strcpy1: .equ h'00331fd4
+_quick_strcpy1: .equ h'00331ff4
  .export __fmtout
-__fmtout: .equ h'00332038
+__fmtout: .equ h'00332058
  .export ___dla__FPv
-___dla__FPv: .equ h'00333124
+___dla__FPv: .equ h'00333144
  .export ___nwa__FUl
-___nwa__FUl: .equ h'00333130
+___nwa__FUl: .equ h'00333150
  .export ___abort_execution
-___abort_execution: .equ h'0033313c
+___abort_execution: .equ h'0033315c
  .export ___default_new_handler__Fv
-___default_new_handler__Fv: .equ h'00333148
+___default_new_handler__Fv: .equ h'00333168
  .export _Bcre_cychdr
-_Bcre_cychdr: .equ h'0033314c
+_Bcre_cychdr: .equ h'0033316c
  .export _BSrl_DummyWAIT
-_BSrl_DummyWAIT: .equ h'0033315c
+_BSrl_DummyWAIT: .equ h'0033317c
  .export _Bsta_cychdr
-_Bsta_cychdr: .equ h'0033316c
+_Bsta_cychdr: .equ h'0033318c
  .export _Bstp_cychdr
-_Bstp_cychdr: .equ h'0033317c
+_Bstp_cychdr: .equ h'0033319c
  .export _DD_GET
-_DD_GET: .equ h'0033318c
+_DD_GET: .equ h'003331ac
  .export _locate_OS
-_locate_OS: .equ h'0033319c
+_locate_OS: .equ h'003331bc
  .export _PrintMiniSd
-_PrintMiniSd: .equ h'003331ac
+_PrintMiniSd: .equ h'003331cc
  .export __eqd
-__eqd: .equ h'003331bc
+__eqd: .equ h'003331dc
  .export __its
-__its: .equ h'00333250
+__its: .equ h'00333270
  .export __xti
-__xti: .equ h'00333380
+__xti: .equ h'003333a0
  .export _abort
-_abort: .equ h'00333610
+_abort: .equ h'00333630
  .export __allzero
-__allzero: .equ h'00333614
+__allzero: .equ h'00333634
  .export __calcnpw
-__calcnpw: .equ h'00333634
+__calcnpw: .equ h'00333654
  .export __log10
-__log10: .equ h'00333734
+__log10: .equ h'00333754
  .export __lsfts
-__lsfts: .equ h'003339fc
+__lsfts: .equ h'00333a1c
  .export __pow5
-__pow5: .equ h'00333a48
+__pow5: .equ h'00333a68
  .export __rsfts
-__rsfts: .equ h'00333a6c
+__rsfts: .equ h'00333a8c
  .export __sub
-__sub: .equ h'00333ac4
+__sub: .equ h'00333ae4
  .export __umemcmp
-__umemcmp: .equ h'00333b58
+__umemcmp: .equ h'00333b78
  .export __unpack
-__unpack: .equ h'00333b8c
+__unpack: .equ h'00333bac
  .export _memcmp
-_memcmp: .equ h'00333c28
+_memcmp: .equ h'00333c48
  .export __addd
-__addd: .equ h'00333d2c
+__addd: .equ h'00333d4c
  .export __subdr
-__subdr: .equ h'00333c74
+__subdr: .equ h'00333c94
  .export __subd
-__subd: .equ h'00333c5c
+__subd: .equ h'00333c7c
  .export __dtoi
-__dtoi: .equ h'00333fec
+__dtoi: .equ h'0033400c
  .export __dtou
-__dtou: .equ h'00333fec
+__dtou: .equ h'0033400c
  .export __itod
-__itod: .equ h'00334078
+__itod: .equ h'00334098
  .export __ltd
-__ltd: .equ h'003340cc
+__ltd: .equ h'003340ec
  .export __muld
-__muld: .equ h'00334218
+__muld: .equ h'00334238
  .export __ned
-__ned: .equ h'00334388
+__ned: .equ h'003343a8
  .export __divws
-__divws: .equ h'0033441c
+__divws: .equ h'0033443c
  .export __div64
-__div64: .equ h'0033446c
+__div64: .equ h'0033448c
  .export __duchek
-__duchek: .equ h'00334600
+__duchek: .equ h'00334620
  .export __lsft
-__lsft: .equ h'00334630
+__lsft: .equ h'00334650
  .export __mult64
-__mult64: .equ h'00334678
+__mult64: .equ h'00334698
  .export __power
-__power: .equ h'003346e8
+__power: .equ h'00334708
  .export __rnd
-__rnd: .equ h'0033483c
+__rnd: .equ h'0033485c
  .export __setsbit
-__setsbit: .equ h'00334928
+__setsbit: .equ h'00334948
  .export __add
-__add: .equ h'003349ac
+__add: .equ h'003349cc
  .export __mult
-__mult: .equ h'00334a08
+__mult: .equ h'00334a28
  .export __pow10
-__pow10: .equ h'00334ae4
+__pow10: .equ h'00334b04
  .export __rsft
-__rsft: .equ h'00334b7c
+__rsft: .equ h'00334b9c
  .end
