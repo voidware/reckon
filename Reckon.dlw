@@ -2,7 +2,7 @@
 
 [_1]
 Type=5
-Order=1
+Order=0
 Top=2400
 Left=30
 Height=12240
@@ -26,7 +26,7 @@ OptionB=15
 
 [_3]
 Type=6
-Order=2
+Order=1
 Top=1125
 Left=7005
 Height=6315
@@ -92,7 +92,7 @@ OptionA=0
 
 [_9]
 Type=15
-Order=0
+Order=2
 Top=5250
 Left=13560
 Height=8430
